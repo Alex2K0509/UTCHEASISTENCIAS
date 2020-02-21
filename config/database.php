@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -35,6 +35,7 @@ return [
 
     'connections' => [
 
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
@@ -42,6 +43,20 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
+
+        'mongodb' => [
+    'driver' => 'mongodb',
+    'host' => env('DB_HOST', 'localhost'),
+    'port' => env('DB_PORT', 27017),
+    'database' => env('DB_DATABASE','prueba'),
+    'username' => env('DB_USERNAME','userweb'),
+    'password' => env('DB_PASSWORD','web21*'),
+    'options' => [
+    'database' => env('DB_AUTHENTICATION_DATABASE', 'prueba'), // sets the authentication database required by mongo 3
+    ]
+],
+
+
 
         'mysql' => [
             'driver' => 'mysql',
