@@ -13,15 +13,9 @@
 </div>
 
 
-
+@include('includes.footer')
 
     @endsection
-@section('footer')
 
-
-    <footer class="footer1">Hola</footer>
-
-
-@endsection
 
 
