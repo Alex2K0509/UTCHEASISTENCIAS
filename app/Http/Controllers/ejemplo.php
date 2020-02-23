@@ -13,7 +13,7 @@ class ejemplo extends Controller
      */
     public function index()
     {
-        return view('vistas_alejandro.ejemplo');
+        return view('vistas_alejandro.primeraVentanaMaestro');
     }
 
     /**

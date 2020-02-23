@@ -10884,14 +10884,15 @@ a.text-dark:focus {
   }
 }
 .footer1 {
-    background: #BB1F35;
+    background:#47525e;
 	color: #fff;
     text-align: center;
 	font-size: 14px;
-	padding: 15px 0;
+	padding: 45px 0;
     width: 100%;
         bottom: 0;
         position:fixed;
+
 }
 .contenedor1 {
 	max-width: 1000px;
