@@ -6,7 +6,6 @@
 
 @section('footer')
 
-
     <footer class="footer1">
 
     </footer>

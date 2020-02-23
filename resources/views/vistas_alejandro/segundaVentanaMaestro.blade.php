@@ -2,17 +2,23 @@
 
 @section('title','Area de maestros')
 
-
 @section('content')
 
-    @include('includes.footer')
-@include('includes.sidebar')
+        @include('includes.footer')
+
+
+    @include('includes.container')
 
 
 
 
 
-    @endsection
+@endsection
+
+
+
+
+
 
 
 

@@ -72,12 +72,14 @@
     </head>
 
 <body>
+@yield('container')
        @yield('content')
+
 </body>
 
-<footer>
+
 @yield('footer')
-</footer>
+
 
 </html>
 

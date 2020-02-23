@@ -4,7 +4,7 @@
 
 @section('title','area de maestros')
 
-@section('sidebar')
+@section('container')
 
 	<div class="wrapper">
 
@@ -48,9 +48,72 @@
                 </div>
 
 
+            <div class="contenedor">
+                <div class="post">
+                    <form class="formulario">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col" colspan="4" style="text-align: center";>Nombre del maestro</th>
+
+    </tr>
+  <tr>
+      <th scope="col" colspan="4" style="text-align: center";>capturar asistencias</th>
+  </tr>
+
+
+  </thead>
+
+  <tbody>
+
+   <tr>
+      <th scope="row">Materia</th>
+      <th scope="row">Grupo</th>
+       <th scope="row">Fecha</th>
+
+    </tr>
+
+
+    <tr>
+      <th scope="row">
+      <select>
+
+	<option>New York </option>
+	<option>Bucarest</option>
+	<option>Madrid</option>
+      </select>
+      </th>
+
+
+      <td>
+          <select>
+
+	<option>New York </option>
+	<option>Bucarest</option>
+	<option>Madrid</option>
+
+</select>
+
+      </td>
+        <td>
+    <input type="date">
+
+</td>
+    </tr>
+
+
+  </tbody>
+</table>
+                        <input type="submit" value="solicitar asisitencias" style="float: right">
+</form>
+
+                </div>
+            </div>
+
+
+
+
         </div>
 
-
-
-
 @endsection
+

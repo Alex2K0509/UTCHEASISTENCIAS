@@ -6,10 +6,10 @@
     box-sizing: border-box;
 }
 
-body {
+.body2 {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    background: #ebebeb;
+    background-color:#d2d2d2 ;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -319,5 +319,5 @@ header .menu ul li a .icono {
 }
 
 .formulario input[type="submit"]:hover{
-    background: #BB1F35;
+    background: #13ce66;
 }

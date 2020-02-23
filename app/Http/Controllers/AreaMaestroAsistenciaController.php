@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ejemplo extends Controller
+class AreaMaestroAsistenciaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,8 @@ class ejemplo extends Controller
      */
     public function index()
     {
-        return view('vistas_alejandro.primeraVentanaMaestro');
+       return view('vistas_alejandro.segundaVentanaMaestro');
+
     }
 
     /**
