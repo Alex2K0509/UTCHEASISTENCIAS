@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8028ed85-fd0e-48b6-bf11-eaac7c732f96" name="Default Changelist" comment="" />
+    <list default="true" id="8028ed85-fd0e-48b6-bf11-eaac7c732f96" name="Default Changelist" comment="creacion de vistas(aun no son funcionales)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jpmarin99" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -105,6 +112,8 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/jenssegers/mongodb" />
+      <path value="$PROJECT_DIR$/vendor/mongodb/mongodb" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Y5Vg51Or4V0r3OBTCAkaHZ5Cc1" />
@@ -116,14 +125,28 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets\css" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public\css" />
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\resources\views\vistas_alejandro" />
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\vendor\phpunit\php-code-coverage\src\Report\Html\Renderer\Template\css" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public" />
-      <recent name="C:\xampp2\htdocs\UTCHEASIST\public\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets\css" />
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets" />
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\resources\statics" />
     </key>
   </component>
   <component name="RunManager">
@@ -143,10 +166,69 @@
       <option name="presentableId" value="Default" />
       <updated>1582232551569</updated>
       <workItem from="1582232567630" duration="1022000" />
+      <workItem from="1582325974350" duration="652000" />
+      <workItem from="1582326811896" duration="16508000" />
+      <workItem from="1582388695875" duration="11461000" />
+      <workItem from="1582475477477" duration="11104000" />
+      <workItem from="1582597834484" duration="3308000" />
+      <workItem from="1582677081278" duration="1582000" />
+      <workItem from="1582679286905" duration="8625000" />
+      <workItem from="1582759606479" duration="356000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="creacion de vistas(aun no son funcionales)" />
+    <option name="LAST_COMMIT_MESSAGE" value="creacion de vistas(aun no son funcionales)" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1582759781036">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582759781036" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1582388798677">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582388798677" />
+    <state x="423" y="198" key="NewPhpClassDialog" timestamp="1582678065373">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="423" y="198" key="NewPhpClassDialog/0.0.1366.768@0.0.1366.768" timestamp="1582678065373" />
+    <state x="517" y="303" key="NewPhpFileDialog" timestamp="1582685025600">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582481691700" />
+    <state x="517" y="303" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1582685025600" />
+    <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582346595797">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1582346595797" />
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1582679351468">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1582679351468" />
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582759764068">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1582759764068" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1582328440121">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582328440121" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/includes/sidebar.blade.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

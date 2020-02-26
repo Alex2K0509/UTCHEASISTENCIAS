@@ -10883,4 +10883,20 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+.footer1 {
+    background:#47525e;
+	color: #fff;
+    text-align: center;
+	font-size: 14px;
+	padding: 45px 0;
+    width: 100%;
+        bottom: 0;
+        position:fixed;
 
+}
+.contenedor1 {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+
+}
