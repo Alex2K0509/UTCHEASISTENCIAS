@@ -24,3 +24,6 @@ Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualiz
 //estas rutas son para la primera area, la de asistencias, las que siguen son para generar los reportes
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
+
+//Rutas Max
+Route::get('/Areacarrera','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
