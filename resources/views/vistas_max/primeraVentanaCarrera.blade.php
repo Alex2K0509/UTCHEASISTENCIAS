@@ -20,11 +20,21 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Opciones</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false" >Generar reporte de asistencias</a>
+                             <a  data-toggle="collapse" href="#" aria-expanded="false" >TI</a>
 
                         </li>
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false">Actualizar asistencias</a>
+                             <a  data-toggle="collapse" href="#" aria-expanded="false">Gastronomia</a>
+
+                        </li>
+
+                        <li>
+                             <a  data-toggle="collapse" href="#" aria-expanded="false" >Mecatronica</a>
+
+                        </li>
+
+                        <li>
+                             <a  data-toggle="collapse" href="#" aria-expanded="false" >Desarrollo empresarial</a>
 
                         </li>
 
