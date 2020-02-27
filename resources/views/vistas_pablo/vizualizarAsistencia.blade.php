@@ -4,7 +4,7 @@
 
 @section('content')
 
-
+    @include('includes.footer')
 
     @include('includes.form1')
 

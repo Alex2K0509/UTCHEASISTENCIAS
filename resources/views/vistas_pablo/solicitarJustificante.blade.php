@@ -3,7 +3,7 @@
 @section('title','Area de alumnos')
 
 @section('content')
-
+    @include('includes.footer')
 
 
     @include('includes.form')

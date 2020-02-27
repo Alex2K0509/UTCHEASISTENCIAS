@@ -1,7 +1,7 @@
 @method('PUT')
 @csrf
 @extends('layouts.app3')
-
+@include('includes.footer')
 @section('title','area de alumnos')
 
 @section('container')
@@ -69,7 +69,7 @@
                             <input type="text" class="form-control" id="motivo" disabled>
 
                         </div>
-                        <button type="submit" class="btn btn-default">Enviar</button>
+                        <div class="float-right"> <button type="submit" class="btn btn-primary">Enviar</button></div>
                     </form>
 
 

@@ -1,7 +1,7 @@
 @method('PUT')
 @csrf
 @extends('layouts.app3')
-
+@include('includes.footer')
 @section('title','area de alumnos')
 
 @section('container')
@@ -50,7 +50,7 @@
 
             <div class="contenedor">
                 <div class="post">
-                    <form action="#">
+                    <di action="#">
                         <div class="form-group">
                             <label for=fecha>Dia:</label>
                             <input type="date">
@@ -70,9 +70,10 @@
                             </div>
 
                         </div>
+                        <div class="float-right">
                         <!-- Trigger the modal with a button -->
                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Solicitar</button>
-
+                </div>
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
                             <div class="modal-dialog modal-sm">
@@ -81,7 +82,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title"> Reporte de asistencias</h4>
+                                        <h4 class="modal-title">    Reporte de asistencias</h4>
                                     </div>
                                     <div class="modal-body">
                                         <p>Asistencias totales: 4</p>
