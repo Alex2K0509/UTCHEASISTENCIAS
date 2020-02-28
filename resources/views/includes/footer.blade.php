@@ -1,14 +1,13 @@
 @method('PUT')
 @csrf
-@extends('layouts.app2')
-
-@section('title','Area de maestros')
+@extends('layouts.app3')
 
 @section('footer')
+
+
 
     <footer class="footer1">
 
     </footer>
-
-
 @endsection
+
