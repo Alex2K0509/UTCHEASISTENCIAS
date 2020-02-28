@@ -17,14 +17,14 @@
             <ul class="list-unstyled components">
                 <p>Bienvenido</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Opciones</a>
+                    <a href="#homeSubmenu" data-toggle="collapse"  class="dropdown-toggle">Opciones</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false" >Generar reporte de asistencias</a>
+                             <a  href="{{ route('AreaMaestroReporte') }}" >Generar reporte de asistencias</a>
 
                         </li>
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false">Actualizar asistencias</a>
+                             <a   href="{{ route('AreaMaestrosAsistencia') }}" aria-expanded="false">Actualizar asistencias</a>
 
                         </li>
 

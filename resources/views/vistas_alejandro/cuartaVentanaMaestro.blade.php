@@ -1,4 +1,5 @@
 @extends('layouts.appReporte')
+@section('title','Area de maestros')
 @section('content')
      <div class="wrapper">
 
@@ -13,13 +14,13 @@
                 <p>Bienvenido</p>
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Opciones</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                   <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false" >Generar reporte de asistencias</a>
+                             <a  href="{{ route('AreaMaestroReporte') }}" >Generar reporte de asistencias</a>
 
                         </li>
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false">Actualizar asistencias</a>
+                             <a   href="{{ route('AreaMaestrosAsistencia') }}" aria-expanded="false">Actualizar asistencias</a>
 
                         </li>
 
@@ -44,7 +45,7 @@
 
 <div class="container">
   <h2>Generar reporte por periodos de fechas</h2>
-  <form action="#">
+  <form action="{{ route('AreaMaestroReporteListo') }}">
 <div class="form-group">
       <label for="materia">Materia:</label>
       <select id="materia" class="custom-select">

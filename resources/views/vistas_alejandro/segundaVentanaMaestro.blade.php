@@ -22,11 +22,11 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Opciones</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false" >Generar reporte de asistencias</a>
+                             <a  href="{{ route('AreaMaestroReporte') }}" >Generar reporte de asistencias</a>
 
                         </li>
                         <li>
-                             <a  data-toggle="collapse" href="#" aria-expanded="false">Actualizar asistencias</a>
+                             <a   href="{{ route('AreaMaestrosAsistencia') }}" aria-expanded="false">Actualizar asistencias</a>
 
                         </li>
 
@@ -51,7 +51,7 @@
 
             <div class="contenedor">
                 <div class="post">
-                    <form class="formulario">
+                    <form class="formulario" action="{{ route('AreaMaestroActualizar') }}">
                         <div class="table-responsive">
 <table class="table table-bordered">
   <thead>
