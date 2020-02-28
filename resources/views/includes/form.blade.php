@@ -1,11 +1,11 @@
 @method('PUT')
 @csrf
 @extends('layouts.app3')
-@include('includes.footer')
+
 @section('title','area de alumnos')
 
 @section('container')
-
+    @include('includes.footer')
     <div class="wrapper">
 
 

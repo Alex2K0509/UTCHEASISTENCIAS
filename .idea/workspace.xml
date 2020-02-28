@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8028ed85-fd0e-48b6-bf11-eaac7c732f96" name="Default Changelist" comment="creacion de vistas(aun no son funcionales)">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AreaMaestroAsistenciaController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AreaMaestroPrincipalController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/primeraVentanaMaestro.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/segundaVentanaMaestro.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/form1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/form1.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +179,8 @@
       <workItem from="1582766515138" duration="1650000" />
       <workItem from="1582768502749" duration="918000" />
       <workItem from="1582851035852" duration="115000" />
+      <workItem from="1582853362625" duration="608000" />
+      <workItem from="1582857865372" duration="1331000" />
     </task>
     <servers />
   </component>
@@ -222,10 +222,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1582346595797" />
-    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1582851037806">
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1582857882093">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1582851037806" />
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1582857882093" />
     <state x="492" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582759764068">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

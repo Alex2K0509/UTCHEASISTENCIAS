@@ -1,10 +1,9 @@
-@method('PUT')
-@csrf
+
 @extends('layouts.app3')
-@include('includes.footer')
-@section('title','area de alumnos')
+@section('title','Area de Alumnos')
 
 @section('container')
+    @include('includes.footer')
 
     <div class="wrapper">
 
@@ -50,30 +49,43 @@
 
             <div class="contenedor">
                 <div class="post">
-                    <di action="#">
+                    <div action="#">
                         <div class="form-group">
                             <label for=fecha>Dia:</label>
                             <input type="date">
                         </div>
                         <div class="form-group">
-                            <label for=Director>Materia:</label>
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                    Seleccione una materia
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Ingles V</a>
-                                    <a class="dropdown-item" href="#">EOYE II</a>
-                                    <a class="dropdown-item" href="#">IOT</a>
-                                    <a class="dropdown-item" href="#">Desarrollo Movil</a>
-                                </div>
-                            </div>
+                            <label for=Director> Seleccione una materia:</label>
 
-                        </div>
-                        <div class="float-right">
-                        <!-- Trigger the modal with a button -->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Solicitar</button>
+                                <select class="form-control" id="sel1">
+                                    <option>Ingles V</option>
+                                    <option>IOT</option>
+                                    <option>EOYE II</option>
+                                    <option>DESARROLLO MOVIL</option>
+
+                                </select>
+                                <div class="float-right">
+                                    <!-- Trigger the modal with a button -->
+                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Solicitar</button>
+                                </div>
+                                </div>
+                                </div>
+
+
+
+
+
+
                 </div>
+              </div>
+
+
+
+
+
+
+
+
                         <!-- Modal -->
                         <div id="myModal" class="modal fade" role="dialog">
                             <div class="modal-dialog modal-sm">
