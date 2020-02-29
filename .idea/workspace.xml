@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8028ed85-fd0e-48b6-bf11-eaac7c732f96" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AreaMaestroAsistenciasActualizarController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AreaMaestroAsistenciasActualizarController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReporteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReporteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReporteListoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReporteListoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app3.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/appReporte.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/cuartaVentanaMaestro.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/primeraVentanaMaestro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vistas_alejandro/primeraVentanaMaestro.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/quintaVentanaMaestro.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/segundaVentanaMaestro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vistas_alejandro/segundaVentanaMaestro.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vistas_alejandro/terceraVentanaMaestro.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +160,7 @@
       <workItem from="1582388695875" duration="11461000" />
       <workItem from="1582475477477" duration="11104000" />
       <workItem from="1582654336096" duration="20651000" />
-      <workItem from="1582948547765" duration="6675000" />
+      <workItem from="1582948547765" duration="7210000" />
     </task>
     <servers />
   </component>
