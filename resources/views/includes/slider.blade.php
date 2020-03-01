@@ -6,7 +6,7 @@
 
 @section('slidebar')
 
-    <title>Area de alumnos</title>
+    <title>Area de alumnosww</title>
     <div class="wrapper">
 
 

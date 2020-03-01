@@ -1,4 +1,4 @@
-<<<<<<< HEA
+
 @method('PUT')
 @csrf
 @extends('layouts.app3')
@@ -55,7 +55,7 @@
 
 
 @endsection
-=======
+
 @extends('layouts.layout')
 @section('sidebar')
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -118,4 +118,4 @@
     <!-- /.sidebar -->
   </aside>
 @endsection()
->>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
+

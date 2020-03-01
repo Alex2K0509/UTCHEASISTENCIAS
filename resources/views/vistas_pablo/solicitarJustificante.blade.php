@@ -1,7 +1,7 @@
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
-    <title>Area de alumnos</title>
+    <title>Area de alumnoss</title>
     <div class="container">
         <h2>Solicitar Justificacion</h2>
         <form action="#">
