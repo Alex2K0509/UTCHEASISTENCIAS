@@ -11,20 +11,20 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Maestros</h3>
+                <h3>Administradores</h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Bienvenido</p>
+                <p>Acciones</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse"  class="dropdown-toggle">Opciones</a>
+                    <a href="#homeSubmenu" data-toggle="collapse"  class="dropdown-toggle">Importar datos</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                             <a  href="{{ route('AreaMaestroReporte') }}" >Generar reporte de asistencias</a>
+                             <a  href="{{ route('AreaMaestroReporte') }}" >Asignaturas</a>
 
                         </li>
                         <li>
-                             <a   href="{{ route('AreaMaestrosAsistencia') }}" aria-expanded="false">Actualizar asistencias</a>
+                             <a   href="{{ route('AreaMaestrosAsistencia') }}" aria-expanded="false">Horarios</a>
 
                         </li>
 
