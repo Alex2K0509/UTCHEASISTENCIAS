@@ -13,7 +13,7 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      */
     public function index()
     {
-       return view('vistas_alejandro.TerceraVentanaMaestro');
+       return view('vistas_alejandro.tercera');
     }
 
     /**
