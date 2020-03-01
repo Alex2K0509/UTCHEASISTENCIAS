@@ -129,6 +129,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -136,19 +137,30 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets" />
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets" />
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets\css" />
+      <recent name="C:\xampp2\htdocs\UTCHEASIST\resources\statics" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets\css" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public\css" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\resources\views\vistas_alejandro" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\vendor\phpunit\php-code-coverage\src\Report\Html\Renderer\Template\css" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public" />
+<<<<<<< HEAD
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets\css" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\public\assets" />
       <recent name="C:\xampp2\htdocs\UTCHEASIST\resources\statics" />
+=======
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
     </key>
   </component>
   <component name="RunManager">
@@ -172,6 +184,7 @@
       <workItem from="1582326811896" duration="16508000" />
       <workItem from="1582388695875" duration="11461000" />
       <workItem from="1582475477477" duration="11104000" />
+<<<<<<< HEAD
       <workItem from="1582597834484" duration="3308000" />
       <workItem from="1582677081278" duration="1582000" />
       <workItem from="1582679286905" duration="8625000" />
@@ -181,12 +194,17 @@
       <workItem from="1582851035852" duration="115000" />
       <workItem from="1582853362625" duration="608000" />
       <workItem from="1582857865372" duration="1331000" />
+=======
+      <workItem from="1582654336096" duration="20651000" />
+      <workItem from="1582948547765" duration="7524000" />
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creacion de vistas(aun no son funcionales)" />
     <option name="LAST_COMMIT_MESSAGE" value="creacion de vistas(aun no son funcionales)" />
@@ -205,10 +223,18 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1582759781036" />
+=======
+  <component name="WindowStateProjectService">
+    <state x="431" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582668446782">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="431" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1582668446782" />
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1582388798677">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582388798677" />
+<<<<<<< HEAD
     <state x="423" y="198" key="NewPhpClassDialog" timestamp="1582678065373">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -218,10 +244,17 @@
     </state>
     <state x="517" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582481691700" />
     <state x="517" y="303" key="NewPhpFileDialog/0.0.1366.768@0.0.1366.768" timestamp="1582685025600" />
+=======
+    <state x="652" y="228" key="NewPhpFileDialog" timestamp="1582951579401">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="652" y="228" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582951579401" />
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
     <state x="530" y="280" key="VCS.ChangelistChooser" timestamp="1582346595797">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="530" y="280" key="VCS.ChangelistChooser/0.0.1366.728@0.0.1366.728" timestamp="1582346595797" />
+<<<<<<< HEAD
     <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1582857882093">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -245,5 +278,15 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+=======
+    <state x="339" y="162" key="run.anything.popup" timestamp="1582949990259">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1582949990259" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1582664606773">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582664606773" />
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
   </component>
 </project>

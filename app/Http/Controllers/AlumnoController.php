@@ -13,7 +13,7 @@ class AlumnoController extends Controller
      */
     public function index()
     {
-        return view('vistas_pablo.slider');
+        return view('includes.slider');
     }
 
     /**

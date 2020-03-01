@@ -15,5 +15,9 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-3.3.1.slim" level="application" />
     <orderEntry type="library" name="popper" level="application" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="font-awesome" level="application" />
+>>>>>>> 18448e9c1d2fb0296305bbef1678369d6cf83b80
   </component>
 </module>
