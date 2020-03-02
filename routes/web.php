@@ -30,3 +30,10 @@ Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualiz
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
 
+<<<<<<< HEAD
+=======
+//Rutas Max
+Route::get('/Areacarrera','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
+Route::get('/Areacarrera2','AreaCarreraSubController@index')->name('AreaCarreraSub');
+Route::get('/Areacarrera3','AreaCarreraTribController@index')->name('AreaCarreraTrib');
+>>>>>>> 8a76cfbaea16940fab1e1e2d0b93558caa4f3940
