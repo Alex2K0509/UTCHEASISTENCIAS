@@ -3,7 +3,7 @@
 @section('content')
     <title>Area de alumnos</title>
     <div class="container">
-        <h2>Solicitar Justificacion</h2>
+        <h2>Solicitar Justificación</h2>
         <form action="#">
             <div class="form-group">
                 <label for="materia">Motivo de la falta:</label>

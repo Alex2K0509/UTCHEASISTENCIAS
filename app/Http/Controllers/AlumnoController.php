@@ -13,7 +13,7 @@ class AlumnoController extends Controller
      */
     public function index()
     {
-        return view('includes.slider');
+        return view('vistas_pablo.solicitarJustificante');
     }
 
     /**
