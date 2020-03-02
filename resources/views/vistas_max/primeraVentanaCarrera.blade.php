@@ -1,9 +1,13 @@
 @extends('layouts.carrera1')
+
+@section('title','Area de D.Carrera')
+
+
 @section('content')
 
 
 
-    @endsection
-@section('sidebar')
-    @include('includes.sidebar')
+@endsection
+@section('footer')
+    @include('includes/sidebarcarrera')
     @endsection

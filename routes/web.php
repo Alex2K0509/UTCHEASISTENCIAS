@@ -28,3 +28,4 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 //Rutas Max
 Route::get('/Areacarrera','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
 Route::get('/Areacarrera2','AreaCarreraSubController@index')->name('AreaCarreraSub');
+Route::get('/Areacarrera3','AreaCarreraTribController@index')->name('AreaCarreraTrib');
