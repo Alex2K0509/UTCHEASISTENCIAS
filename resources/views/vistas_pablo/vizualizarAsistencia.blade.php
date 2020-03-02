@@ -38,6 +38,7 @@
                     <h4 class="modal-title">    Reporte de asistencias</h4>
                 </div>
                 <div class="modal-body">
+                    <p>El dia seleccionado es: 2/03/2020</p>
                     <p>Asistencias totales: 4</p>
                     <p>Faltas totales: 2</p>
                 </div>
