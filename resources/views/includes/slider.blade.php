@@ -58,7 +58,7 @@
 
         @extends('layouts.layout')
         @section('sidebar')
-            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+             <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #118740; color: #000000">
                 <!-- Brand Logo -->
                 <a href="{{ route('AlumnosJustificaciones') }}" class="brand-link">
                     <img src="{{ asset('/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
