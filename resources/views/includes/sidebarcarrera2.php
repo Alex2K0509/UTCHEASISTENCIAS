@@ -33,9 +33,9 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('AreaCarreraSub')}}" class="nav-link active">
+                <a href="{{route('AreaCarreraReporte')}}" class="nav-link active">
 
-                  <p>Generar oooo de asistencias</p>
+                  <p>Generar reporte de asistencias</p>
                 </a>
               </li>
               <li class="nav-item">

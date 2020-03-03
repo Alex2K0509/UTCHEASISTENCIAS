@@ -8,7 +8,7 @@
 <section class="content">
         <div class="container">
   <h2>Generar reporte de asistencias</h2>
-  <form action="http://127.0.0.1:8000/Areacarrera3">
+  <form action="/TablaAsistenciasDirector">
 <div class="form-group">
       <label for="materia">Carrera:</label>
       <select id="materia" class="custom-select">

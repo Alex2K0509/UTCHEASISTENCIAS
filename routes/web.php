@@ -36,5 +36,10 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 
 
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
+<<<<<<< HEAD
 Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraSub');
 Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTrib');
+=======
+Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
+Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
+>>>>>>> d52a2bd399e9ab205ff5e3eecfdeb3dd8a116bb6
