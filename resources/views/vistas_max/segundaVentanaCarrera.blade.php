@@ -8,7 +8,7 @@
 <section class="content">
         <div class="container">
   <h2>Generar reporte de asistencias</h2>
-  <form action="/TablaAsistenciasDirector">
+  <form action="{{ route('TablaAsistenciasDirector') }}">
 <div class="form-group">
       <label for="materia">Carrera:</label>
       <select id="materia" class="custom-select">
