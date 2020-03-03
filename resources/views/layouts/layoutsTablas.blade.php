@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Área de maestros</title>
+  <link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
+  <title>Fingerprint Assistance System</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
