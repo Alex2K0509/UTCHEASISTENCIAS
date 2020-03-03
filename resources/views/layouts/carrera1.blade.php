@@ -8,8 +8,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <title>Area de carrera</title>
+<link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
+    <title>Fingerprint Assistance System</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css')}}">
