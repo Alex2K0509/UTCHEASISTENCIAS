@@ -3,7 +3,7 @@
 @section('content')
     <title>Area de alumnos</title>
     <div class="container">
-        <h2>Vizualizar asistencia</h2>
+        <h2>Visualizar asistencia</h2>
             <div class="form-group">
                 <label for="materia">Materia:</label>
                 <select id="materia" class="custom-select">
@@ -38,7 +38,7 @@
                     <h4 class="modal-title">    Reporte de asistencias</h4>
                 </div>
                 <div class="modal-body">
-                    <p>El dia seleccionado es: 2/03/2020</p>
+                    <p>El día seleccionado es: 2/03/2020</p>
                     <p>Asistencias totales: 4</p>
                     <p>Faltas totales: 2</p>
                 </div>

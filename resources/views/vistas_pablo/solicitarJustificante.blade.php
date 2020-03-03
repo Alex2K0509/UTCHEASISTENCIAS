@@ -1,7 +1,7 @@
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
-    <title>Area de alumnos</title>
+    <title>Área de alumnos</title>
     <div class="container">
         <h2>Solicitar Justificación</h2>
         <form action="#">
@@ -15,7 +15,7 @@
                <input type="file"  id="justificante" name="justificante">
             </div>
             <div class="form-group">
-                <label for="date2">Dia:</label>
+                <label for="date2">Día:</label>
                 <input type="date" class="form-control" id="date2"  name="date2">
             </div>
             <div class="form-group">
