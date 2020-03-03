@@ -1,10 +1,9 @@
 @extends('layouts.carrera1')
 @section('sidebar')
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+ <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #118740; color: #000000">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{ asset('/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+      <i class="fas fa-user-cog"></i>
       <span class="brand-text font-weight-light">Area de D.Carrera</span>
     </a>
 
@@ -14,7 +13,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
 
         <div class="info">
-          <a href="#" class="d-block">"nombre del maestro"</a>
+          <a href="#" class="d-block">"nombre del director de carrera"</a>
         </div>
       </div>
 
