@@ -32,7 +32,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('AreaCarreraSub')}}" class="nav-link active">
+                <a href="{{route('/GenerarReporteDirector')}}" class="nav-link active">
 
                   <p>Generar reporte de asistencias</p>
                 </a>
