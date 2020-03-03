@@ -33,13 +33,8 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 
 
 //Rutas Max
-<<<<<<< HEAD
-Route::get('/Areacarrera','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
-Route::get('/Areacarrera2','AreaCarreraSubController@index')->name('AreaCarreraSub');
-Route::get('/Areacarrera3','AreaCarreraTribController@index')->name('AreaCarreraTrib');
 
-=======
+
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
 Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraSub');
 Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTrib');
->>>>>>> 8ed2f7e15909b7fc6b785be4f2af51c314038b1a
