@@ -1,11 +1,9 @@
-@extends('layouts.app3')
+@extends('layouts.layout')
 
-@section('title','Area de maestros')
+@section('title','Area de Maestros')
 
 
 @section('content')
-
-    <div class="wrapper">
 
 
         <!-- Sidebar  -->
@@ -50,11 +48,8 @@
         </div>
     </div>
 
+
 @endsection
 @section('footer')
-    @include('includes/footer')
+    @include('includes/sidebar')
     @endsection
-
-
-
-
