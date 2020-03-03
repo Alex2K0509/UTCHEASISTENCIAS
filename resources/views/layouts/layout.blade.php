@@ -3,13 +3,13 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <title>Area de maestros</title>
+<link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
+  <title>Fingerprint Assistance System</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css')}}">
@@ -30,10 +30,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">---</a>
+        
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">---</a>
+        
       </li>
     </ul>
 
@@ -81,7 +81,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Creado por: <a href="http://adminlte.io">ARPM</a>.</strong> Derechos Resevardo
+
   </footer>
 </div>
 <!-- ./wrapper -->
