@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #2BF242;
+                background-color: #31FF8D;
                 color: #000000;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -83,12 +83,19 @@
             @endif
 
             <div class="content">
+<style type="text/css">
+    .img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 80%;
+}
 
-                <div class="title m-b-md">
-                    UTCHEASIST
-                </div>
+</style>
+<div class="title m-b-md">
+               <img src="{{ asset('/assets/images3/FPAS3.png') }}" class="img">
+     </div>
 
-                
             </div>
         </div>
     </body>
