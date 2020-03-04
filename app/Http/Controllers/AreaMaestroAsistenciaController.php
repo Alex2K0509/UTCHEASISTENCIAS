@@ -13,7 +13,7 @@ class AreaMaestroAsistenciaController extends Controller
      */
     public function index()
     {
-       return view('vistas_alejandro.segundaVentanaMaestro');
+       return view('vistas_Ramiro.segundaVentana.blade.php');
 
     }
 

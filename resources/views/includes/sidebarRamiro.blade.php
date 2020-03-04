@@ -1,12 +1,10 @@
-
-
-@extends('layouts.layoutsTablas')
-@section('sidebar')
-   <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #118740; color: #000000">
+@extends('layouts.layoutRamiro')
+@sections('sidebar')
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #118740; color: #000000">
                 <!-- Brand Logo -->
                 <a href="{{ route('AlumnosJustificaciones') }}" class="brand-link">
                     <i class="fas fa-user-graduate"></i>
-                    <span class="brand-text font-weight-light">Administradores</span>
+                    <span class="brand-text font-weight-light">Área de Alumnos</span>
                 </a>
 
                 <!-- Sidebar -->
@@ -28,15 +26,15 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="{{ route('ImportarHorarios') }}" class="nav-link active">
+                                        <a href="{{ route('AlumnosJustificaciones') }}" class="nav-link active">
 
-                                            <p>Importar Horarioswwws</p>
+                                            <p>Solicitar justificante</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('') }}" class="nav-link active">
+                                        <a href="{{ route('AlumnosAsistencia') }}" class="nav-link active">
 
-                                            <p>Importar Materias</p>
+                                            <p>Visualizar asistencias</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -56,4 +54,3 @@
                 <!-- /.sidebar -->
             </aside>
 @endsection()
-

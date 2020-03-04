@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ReporteController extends Controller
+class AreaCarreraSubController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class ReporteController extends Controller
      */
     public function index()
     {
-        return view('vistas_Ramiro.cuarta');
+         return view('vistas_max.segundaVentanaCarrera');
     }
 
     /**

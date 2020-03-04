@@ -1,12 +1,12 @@
 @extends('layouts.layoutsTablas')
 
-@section('title','Area de maestros')
+@section('title','Area de Admin')
 
 @section('content')
 
 
 <div class="table-responsive">
-  <form action="{{route('AreaMaestroActualizar')}}" >
+  <form action="{{route('AgregarMaestro')}}" >
 <table class="table table-bordered">
 <thead>
   <tr>
@@ -75,5 +75,5 @@
 
 @endsection
 @section('footer')
-    @include('includes/sidebar')
+    @include('includes/sidebaradmin')
     @endsection

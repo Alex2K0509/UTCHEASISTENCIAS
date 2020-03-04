@@ -3,14 +3,14 @@
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
 -->
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-<link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
-  <title>Fingerprint Assistance System</title>
 
+ <link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
+    <title>Fingerprint Assistance System</title>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('/plugins/fontawesome-free/css/all.min.css')}}">
   <!-- Theme style -->
@@ -30,10 +30,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        
+        <a href="index3.html" class="nav-link"></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        
+        <a href="#" class="nav-link"></a>
       </li>
     </ul>
 
@@ -78,11 +78,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      UTCHEASISTENCIAS
     </div>
     <!-- Default to the left -->
-    <strong>Creado por: <a href="http://adminlte.io">ARPM</a>.</strong> Derechos Resevardo
-
+    <strong>Creado por: ARPM. Derechos Resevardo <a href="https://adminlte.io"></a>.</strong> 
   </footer>
 </div>
 <!-- ./wrapper -->
