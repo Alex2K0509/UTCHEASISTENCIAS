@@ -12,9 +12,10 @@
     <legend>Importar CSV para Materias</legend>
     <?php if (!empty($message_import)) echo $message_import; ?>
     <form enctype="multipart/form-data" method="POST" action="index.php">
-        <label>Selecciona un archivo .csv </label>
-        <input type="file" name="file" class="">
-        <input type="submit" value="Upload" name="submitFileUpload">
+        <label>Selecciona un archivo .csv </label><br>
+        <input class="btn-outline-success" style="float: left" type="file" name="file" class=""><br><br>
+        <input class="btn-outline-success" style="float: left" type="submit" value="Subir" name="submitFileUpload">
+        
     </form>
   </form>
 </div>
