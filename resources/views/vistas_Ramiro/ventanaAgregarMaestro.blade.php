@@ -1,79 +1,29 @@
-@extends('layouts.layoutsTablas')
+@extends('layouts.layoutRamiro')
 
 @section('title','Area de Admin')
-
 @section('content')
 
+          <section class="content">
+        <div class="container">
+  
+  <center><h2>Importar Archivo CSV</h2></center>
 
-<div class="table-responsive">
-  <form action="{{route('AgregarMaestro')}}" >
-<table class="table table-bordered">
-<thead>
-  <tr>
-    <th scope="col" colspan="4" style="text-align: center";>Nombre del Maestro</th>
-    <th scope="row">
-    <select>
+  <form action="{{ route('MaestrosImportados') }}">
+<fieldset>
+    <legend>Importar CSV para Maestros</legend>
+    <?php if (!empty($message_import)) echo $message_import; ?>
+    <form enctype="multipart/form-data" method="POST" action="index.php">
+        <label>Selecciona un archivo .csv </label>
+        <input type="file" name="file" class="">
+        <input type="submit" value="Upload" name="submitFileUpload">
+    </form>
+  </form>
+</div>
+</section>
+</fieldset>
 
-<option>Fernando Uco</option>
-<option>Carlos Villanueva</option>
+@endsection()
 
-    </select>
-    </th>
-  </tr>
-
-
-
-</thead>
-
-<tbody>
-
- <tr>
-    <th scope="row">Materia</th>
-    <th scope="row">Grupo</th>
-     <th scope="row">Horarios</th>
-
-  </tr>
-
-
-  <tr>
-    <th scope="row">
-    <select>
-
-<option>INFORMATICA</option>
-<option>IOT</option>
-
-    </select>
-    </th>
-
-
-    <td>
-        <select>
-
-<option>TIAM5 </option>
-<option>TIAM2</option>
->
-
-</select>
-
-    </td>
-      <td>
-  <input type="date">
-
-</td>
-  </tr>
-
-
-</tbody>
-</table>
-<input type="submit" class="btn-outline-success" style="float: right" value="Agregar Maestro">
-</form>
-                          </div>
-
-
-
-
-
-@endsection
-@section('footer')
-    @include('includes/sidebaradmin')
+@section('sidebaradmin')
+    @include('includes/sidebarRamiro')
     @endsection

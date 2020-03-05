@@ -13,7 +13,7 @@ class AreaMaestroPrincipalController extends Controller
      */
     public function index()
     {
-         return view('vistas_Ramiro.primeraVentanaMaestro');
+         return view('vistas_alejandro.primeraVentanaMaestro');
     }
 
     /**

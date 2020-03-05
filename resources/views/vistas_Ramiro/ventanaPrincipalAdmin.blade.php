@@ -1,8 +1,13 @@
 @extends('layouts.layoutRamiro')
+
+@section('title','Area Admin')
+
+
 @section('content')
 
-@endsection()
 
-@section('sidebar')
-@include('includes.sidebarRamiro')
+
 @endsection
+@section('sidebaradmin')
+    @include('includes/sidebarRamiro')
+    @endsection

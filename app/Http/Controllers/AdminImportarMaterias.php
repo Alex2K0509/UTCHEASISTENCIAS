@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AreaMaestroAsistenciasActualizarController extends Controller
+class AdminImportarMaterias extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,8 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      */
     public function index()
     {
-       return view('vistas_alejandro.tercera');
+        //
+        return view('vistas_Ramiro.ventanaImportarMateria');
     }
 
     /**

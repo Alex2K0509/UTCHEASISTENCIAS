@@ -5,11 +5,12 @@
 
           <section class="content">
         <div class="container">
- 
-<center><h2>Importar Archivo CSV</h2></center>
-  <form action="{{ route('MateriasImportadas') }}">
+  
+  <center><h2>Importar Archivo CSV</h2></center>
+
+  <form action="{{ route('AlumnosImportados') }}">
 <fieldset>
-    <legend>Importar CSV para Materias</legend>
+    <legend>Importar CSV para Alumnos</legend>
     <?php if (!empty($message_import)) echo $message_import; ?>
     <form enctype="multipart/form-data" method="POST" action="index.php">
         <label>Selecciona un archivo .csv </label>

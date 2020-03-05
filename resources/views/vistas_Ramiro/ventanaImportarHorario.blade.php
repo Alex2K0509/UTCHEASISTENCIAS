@@ -1,12 +1,13 @@
-@extends('layouts.layoutsTablas')
+@extends('layouts.layoutRamiro')
+
 @section('title','Area de Admin')
 @section('content')
 
           <section class="content">
         <div class="container">
-  <h2>Importar Archivo CSV</h2>
-
-  <form action="{{ route('ImportarHorarios') }}">
+ 
+<center><h2>Importar Archivo CSV</h2></center>
+  <form action="{{ route('HorariosImportados') }}">
 <fieldset>
     <legend>Importar CSV para Horarios</legend>
     <?php if (!empty($message_import)) echo $message_import; ?>
@@ -23,5 +24,5 @@
 @endsection()
 
 @section('sidebaradmin')
-    @include('includes.sidebaradmin')
+    @include('includes/sidebarRamiro')
     @endsection
