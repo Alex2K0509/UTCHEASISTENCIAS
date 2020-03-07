@@ -23,14 +23,16 @@ Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
 Route::get('/Alumno/justificaciones','AlumnoJustificanteController@index')->name('AlumnosJustificaciones');
 Route::get('/Alumno/asistencias','AlumnoAsistenciaController@index')->name('AlumnosAsistencia');
 //pablo
+
+//Alex
 Route::get('/Areamaestro','AreaMaestroPrincipalController@index')->name('AreaMaestroPrincipal');
 Route::get('/Areamaestro/asistencias','AreaMaestroAsistenciaController@index')->name('AreaMaestrosAsistencia');
 Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index')->name('AreaMaestroActualizar');
-//estas rutas son para la primera area, la de asistencias, las que siguen son para generar los reportes
+
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
 
-
+//Alex
 
 //Rutas Max
 
