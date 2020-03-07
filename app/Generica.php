@@ -7,4 +7,8 @@ use Jense
 class Generica extends Model
 {
   protected $collection= 'Generica';
+
+public function usuarios(){
+	return $this->hasMany('App\user','_id','idusuario');
+}
 }

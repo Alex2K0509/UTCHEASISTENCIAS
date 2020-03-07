@@ -8,3 +8,4 @@ class Alumnos extends Model
 {
   protected $collection= 'Alumnos';
 }
+
