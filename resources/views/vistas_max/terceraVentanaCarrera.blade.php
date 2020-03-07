@@ -19,9 +19,9 @@
 
             </div>
             <!-- /.card-header -->
-            <div class="card-body">
+            <div class="card-body" style="overflow-x:auto;">
                 <form action="">
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="responsive" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>#</th>
