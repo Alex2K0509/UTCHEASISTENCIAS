@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class AreaMaestroAsistenciasActualizarController extends Controller
 {
     /**
@@ -13,6 +14,8 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      */
     public function index()
     {
+       
+     
        return view('vistas_alejandro.tercera');
     }
 

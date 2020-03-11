@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Genericas;
 use Illuminate\Http\Request;
 
 class AreaMaestroAsistenciaController extends Controller
@@ -13,7 +13,9 @@ class AreaMaestroAsistenciaController extends Controller
      */
     public function index()
     {
-       return view('vistas_alejandro.segundaVentanaMaestro');
+           $datos= Genericas::all();
+           
+       return view('vistas_alejandro.segundaVentanaMaestro',compact('datos'));
 
     }
 

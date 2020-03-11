@@ -40,17 +40,19 @@
     </select>
     </th>
 
-
+ 
     <td>
-        <select>
 
-<option>TIAM5 </option>
-<option>TIAM2</option>
->
+      <select>
+@foreach ($datos as $dato)
+<option>{{ $dato->Id_grupo}}</option>
+<option>{{ $dato->Id_Asignatura }}</option>
+ @endforeach
+    </select>
 
-</select>
 
     </td>
+
       <td>
   <input type="date">
 
