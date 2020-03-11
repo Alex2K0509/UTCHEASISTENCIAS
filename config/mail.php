@@ -55,10 +55,8 @@ return [
     |
     */
 
-    'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
+    'from' => ['address' => 'pruebalaravel2020@gmail.com', 'name' => 'App Name'],
+
 
     /*
     |--------------------------------------------------------------------------
