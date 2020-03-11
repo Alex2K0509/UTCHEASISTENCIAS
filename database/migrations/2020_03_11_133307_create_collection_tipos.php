@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCollectionAdministradores extends Migration
+class CreateCollectionTipos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateCollectionAdministradores extends Migration
      */
     public function up()
     {
-        Schema::create('collection_administradores', function (Blueprint $table) {
-            $table->string('matricula_AD');
-            $table->string('ape_pat');
-            $table->string('ape_mat');
-            $table->string('nombre');
-            $table->string('tipo');
+        Schema::create('collection_tipos', function (Blueprint $table) {
+            $table->bigIncrements('_id');
+            $table->string('tipo_usuario');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateCollectionAdministradores extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('collection_administradores');
+        Schema::dropIfExists('collection_tipos');
     }
 }
