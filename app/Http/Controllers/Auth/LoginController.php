@@ -26,7 +26,18 @@ class LoginController extends Controller
      *
      * @var string
      */
+<<<<<<< HEAD
     //protected $redirectTo = RouteServiceProvider::HOME;
+=======
+    ///protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+protected $redirectTo = RouteServiceProvider::HOME;
+>>>>>>> alejandro2
 
     /**
      * Create a new controller instance.
@@ -38,10 +49,13 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+<<<<<<< HEAD
 public function redirectPath(){
     if (auth()->user()->email == 'yos123@gmail.com') {
        return redirect()->action('AreaMaestroAsistenciaController@index'); 
     }
 }
+=======
+>>>>>>> alejandro2
 
 }
