@@ -2,56 +2,37 @@
 @section('title','Area de Alumnos')
 @section('content')
     <title>Area de alumnos</title>
+    <form action="{{route('AlumnosVisualizar')}}" >
     <div class="container">
         <h2>Visualizar asistencia</h2>
             <div class="form-group">
-                <label for="materia">Materia:</label>
-                <select id="materia" class="custom-select">
-                    <option>Inglés V</option>
-                    <option>EOYE II</option>
-                    <option>IOT</option>
-                    <option>Desarrollo movil</option>
-
+                <label for="materia">Materia/Grupo:</label>
+                <select id="materias" class="custom-select">
+                    <option>Inglés V Grupo 5 TIAM18</option>
+                    <option>EOYE II Grupo 5 TIAM18</option>
+                    <option>IOT Grupo 5 TIAM18</option>
+                    <option>Desarrollo movil Grupo 5 TIAM18  </option>
+                    <option>Todas</option>
 
 
                 </select>
             </div>
             <div class="form-group">
-                <label for="date3">Día</label>
+                <label for="date3">Fecha Inicial</label>
                 <input type="date" class="form-control" id="date3"  name="date3">
             </div>
 
 
-            <div class="float-right">
-                <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#myModal">Solicitar</button>
-            </div>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-sm">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">    Reporte de asistencias</h4>
-                </div>
-                <div class="modal-body">
-                    <p>El día seleccionado es: 2/03/2020</p>
-                    <p>Asistencias totales: 4</p>
-                    <p>Faltas totales: 2</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-
+        <div class="form-group">
+            <label for="datea">Fecha Final</label>
+            <input type="date" class="form-control" id="date4"  name="date4">
         </div>
-    </div>
 
-        </form>
+        <input type="submit" class="btn-outline-success" style="float: right" value="Solicitar asistencias">
+
     </div>
+        </form>
+
 @endsection
 @section('sidebar')
     @include('includes.slider')
