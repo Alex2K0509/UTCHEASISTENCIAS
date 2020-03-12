@@ -48,11 +48,11 @@ return [
     'driver' => 'mongodb',
     'host' => env('DB_HOST', 'localhost'),
     'port' => env('DB_PORT', 27017),
-    'database' => env('DB_DATABASE','prueba'),
+    'database' => env('DB_DATABASE','UTCHEASIST2'),
     'username' => env('DB_USERNAME','userweb'),
     'password' => env('DB_PASSWORD','web21*'),
     'options' => [
-    'database' => env('DB_AUTHENTICATION_DATABASE', 'prueba'), // sets the authentication database required by mongo 3
+    'database' => env('DB_AUTHENTICATION_DATABASE', 'UTCHEASIST2'), // sets the authentication database required by mongo 3
     ]
 ],
 

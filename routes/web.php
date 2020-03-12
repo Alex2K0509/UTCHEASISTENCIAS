@@ -41,3 +41,15 @@ Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaC
 Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
 Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
 
+
+//Rutas Ramiro
+
+Route::get('/AdminPrincipal','AdminAreaPrincipal@index')->name('Principal');
+
+Route::get('/HorariosImportarAdmin','AdminImportarHorarios@index')->name('HorariosImportados');
+
+Route::get('/MaestrosImportarAdmin','AdminImportarMaestros@index')->name('MaestrosImportados');
+
+Route::get('/AlumnosImportarAdmin','AdminImportarAlumnos@index')->name('AlumnosImportados');
+
+Route::get('/MateriasImportarAdmin','AdminImportarMaterias@index')->name('MateriasImportadas');
