@@ -1,7 +1,13 @@
+
+
+
 @component('mail::message')
-# Introduction
-The body of your message.
-Button Text
+
+
+
+# Justificacion enviada
+The body of your message.<br>
 Thanks,<br>
 {{ config('app.name') }}
+
 @endcomponent
