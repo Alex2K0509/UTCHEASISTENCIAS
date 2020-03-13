@@ -23,7 +23,7 @@ class AlumnoJustificanteController extends Controller
      */
     public function create()
     {
-        //
+        return view('vistas_pablo.enviarjustificacion');
     }
 
     /**

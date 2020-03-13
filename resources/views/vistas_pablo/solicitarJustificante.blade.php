@@ -1,10 +1,11 @@
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
+
     <title>Área de alumnos</title>
     <div class="container">
         <h2>Solicitar Justificación</h2>
-        <form action="#">
+        <form action="/Alumno/justificaciones/email">
             <div class="form-group">
                 <label for="materia">Motivo de la falta:</label>
                 <input type="text" class="form-control" id="motivo"  name="motivo">
@@ -12,7 +13,7 @@
             <div class="form-group">
                 <label for="justificante">Justificante:</label>
                 <br>
-               <input type="file"  id="justificante" name="justificante">
+                <input type="file"  id="justificante" name="justificante">
             </div>
             <div class="form-group">
                 <label for="date2">Día:</label>
@@ -24,10 +25,11 @@
             </div>
 
 
-            <button type="submit"  class="btn-outline-success">Enviar</button>
+            <button type="submit"   class="btn-outline-success">Enviar</button>
         </form>
     </div>
 @endsection
 @section('sidebar')
     @include('includes.slider')
 @endsection
+

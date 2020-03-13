@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class JustificacionEnviada extends Mailable
+class JustificacionEnvidada extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,8 +28,6 @@ class JustificacionEnviada extends Mailable
      */
     public function build()
     {
-        return $this->view('vistas_pablo.justificacionEnviada')
-            ->text('Justificacion Enviada');
-
+        return $this->markdown('vistas_pablo.enviarjustificacion');
     }
 }
