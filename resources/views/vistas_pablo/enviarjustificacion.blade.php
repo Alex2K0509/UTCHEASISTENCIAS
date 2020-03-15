@@ -1,13 +1,5 @@
-
-
-
 @component('mail::message')
-
-
-
 # Justificacion enviada
-The body of your message.<br>
-Thanks,<br>
-{{ config('app.name') }}
-
+Se ha enviado una justificación<br>
+por favor revise su correo.<br>
 @endcomponent
