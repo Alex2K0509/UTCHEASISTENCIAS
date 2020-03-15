@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use Auth;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        
+       $id=Auth::User()->id;
+        $tipo=user::find($id);
+        if ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '2')  {
+             return view('vistas_alejandro.primeraVentanaMaestro');
+        }elseif ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '1') {
+            return view('vistas_pablo.solicitarJustificante');
+        }
+        
+    
     }
 }
