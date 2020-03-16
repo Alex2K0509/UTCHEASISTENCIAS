@@ -7,7 +7,7 @@
 
         </div>
         <div class="card-header">
-            <h3 class="card-title" style="text-align: center">Vizualizcion general de asistencias</h3>
+            <h3 class="card-title" style="text-align: center">visualización general de asistencias</h3>
 
         </div>
         <!-- /.card-header -->
@@ -28,7 +28,7 @@
                     <tr>
                         <td>8118110121</td>
                         <td>TIAM5</td>
-                        <td>Ingles V</td>
+                        <td>Inglés V</td>
                         <td>16</td>
                         <td>0</td>
 
