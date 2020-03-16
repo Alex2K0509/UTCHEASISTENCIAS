@@ -24,6 +24,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
 Route::get('/Alumno/justificaciones','AlumnoJustificanteController@index')->name('AlumnosJustificaciones');
+Route::get('category', 'DatatablesController@index');
+Route::get('get-category-data', 'DatatablesController@categoryData')->name('datatables.category');
 Route::get('/Alumno/justificaciones/email', function (){
     Mail::to('example@example.com')->send(new JustificacionEnvidada());
 
