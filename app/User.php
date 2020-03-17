@@ -24,7 +24,7 @@ class User extends Eloquent implements Authenticatable
      * @var array
      */
     protected $fillable = [
-'name', 'email', 'password', 'ApePat', 'ApeMat', 'Rfid', 'Tipo_usuario',
+'name', 'email', 'password', 'ApePat', 'ApeMat', 'Rfid', 'Tipo_usuario','Matricula_maestro'
     ];
 
     /**
@@ -44,4 +44,19 @@ class User extends Eloquent implements Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected $collection= "users";
+
+    public function asignaturas()
+    {
+    return $this->hasMany('App\Asignaturas','Matricula_maestro','Matricula_maestro');//asignaturas y user     
+
+    }
+
+
+    public function generica()
+    {
+    return $this->hasMany('App\Genericas','Matricula_maestro','Matricula_maestro');//generica con users        
+
+    }
 }
