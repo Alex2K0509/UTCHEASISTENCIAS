@@ -22,11 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
 Route::get('/Alumno/justificaciones/email', function (){
     Mail::to('example@example.com')->send(new JustificacionEnvidada());
-
     return new JustificacionEnvidada();
 });
 Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistencia');
-
 Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
 
 
