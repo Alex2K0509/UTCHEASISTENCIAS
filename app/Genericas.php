@@ -2,10 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
+//use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
 class Genericas extends Model
 {
    
-protected $collection= 'UTCHEASIST2';
+protected $collection= 'collection_generica';
 }

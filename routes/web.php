@@ -13,55 +13,48 @@
 use App\Mail\JustificacionEnvidada;
 use Illuminate\Support\Facades\Mail;
 
-
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-//pablo
+////////pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
-Route::get('/Alumno/justificaciones','AlumnoJustificanteController@index')->name('AlumnosJustificaciones');
-Route::get('category', 'DatatablesController@index');
-Route::get('get-category-data', 'DatatablesController@categoryData')->name('datatables.category');
 Route::get('/Alumno/justificaciones/email', function (){
     Mail::to('example@example.com')->send(new JustificacionEnvidada());
 
     return new JustificacionEnvidada();
 });
-Route::get('/Alumno/asistencias','AlumnoAsistenciaController@index')->name('AlumnosAsistencia');
-Route::get('/Alumno/asistencias/visualizar','AlumnoVisualizarController@index')->name('AlumnosVisualizar');
+Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistencia');
 
-//pablo
+Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
+
+
+
+///////////Alejandro
+Auth::routes();
+
 Route::get('/Areamaestro','AreaMaestroPrincipalController@index')->name('AreaMaestroPrincipal');
 Route::get('/Areamaestro/asistencias','AreaMaestroAsistenciaController@index')->name('AreaMaestrosAsistencia');
 Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index')->name('AreaMaestroActualizar');
-//estas rutas son para la primera area, la de asistencias, las que siguen son para generar los reportes
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
+///////////Aleajndro
 
 
 
-//Rutas Max
 
-
+///////////max
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
-
-
 Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
 Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
+///////////max
 
 
-//Rutas Ramiro
-
+///////////ramiro
 Route::get('/AdminPrincipal','AdminAreaPrincipal@index')->name('Principal');
-
 Route::get('/HorariosImportarAdmin','AdminImportarHorarios@index')->name('HorariosImportados');
-
 Route::get('/MaestrosImportarAdmin','AdminImportarMaestros@index')->name('MaestrosImportados');
-
 Route::get('/AlumnosImportarAdmin','AdminImportarAlumnos@index')->name('AlumnosImportados');
-
 Route::get('/MateriasImportarAdmin','AdminImportarMaterias@index')->name('MateriasImportadas');
+///////////ramiro

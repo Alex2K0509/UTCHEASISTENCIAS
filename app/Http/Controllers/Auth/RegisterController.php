@@ -49,10 +49,17 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        //dd($data);
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'ApePat' => ['required', 'string', 'max:255'],
+            'Rfid' =>['required', 'string', 'max:255'],
+            'Tipo_usuario' =>['required', 'string', 'max:255'],
+            'Matricula_maestro'=>['required', 'string', 'max:255'],
+
+         
         ]);
     }
 
@@ -64,10 +71,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        //dd($data);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'ApePat' =>$data['ApePat'],
+            'ApeMat' =>$data['ApeMat'],
+            'Rfid' =>$data['Rfid'],
+            'Tipo_usuario' =>$data['Tipo_usuario'],
+            'Matricula_maestro'=>$data['Matricula_maestro'],
+     
         ]);
+
+
     }
 }
