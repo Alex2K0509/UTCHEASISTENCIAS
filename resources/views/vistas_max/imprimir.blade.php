@@ -1,12 +1,3 @@
-@extends('layouts.carrera2')
-
-@section('title','Area de D.Carrera')
-
-
-@section('content')
-
-
-
 <div class="card">
             <div class="card-header">
               <h3 class="card-title" style="float:top">Concentrado de asistencias</h3>
@@ -88,7 +79,7 @@
 <td><div contenteditable>10</div contenteditable></td>
 <td><div contenteditable>10</div contenteditable></td>
 <td><div contenteditable>10</div contenteditable></td>
-<td><div contenteditable>10</div contenteditable></td>               	                	               	
+<td><div contenteditable>10</div contenteditable></td>                                                      
                 </tr>
 
 
@@ -103,8 +94,3 @@
             </div>
             <!-- /.card-body -->
           </div>
-
-@endsection
-@section('footer')
-    @include('includes/sidebarcarrera')
-    @endsection

@@ -14,7 +14,27 @@ class AreaCarreraPrincipalController extends Controller
     public function index()
     {
          return view('vistas_max.primeraVentanaCarrera');
+         
+
     }
+
+    public function index2()
+    {
+         
+         return view('vistas_max.segundaVentanaCarrera');
+
+    }
+
+    public function index3()
+    {
+         
+         return view('vistas_max.terceraVentanaCarrera');
+
+    }
+
+
+
+
 
     /**
      * Show the form for creating a new resource.

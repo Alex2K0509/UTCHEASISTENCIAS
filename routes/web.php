@@ -34,12 +34,10 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 
 //Rutas Max
 
-
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
-
-
-Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
-Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
+Route::get('/GenerarReporteDirector','AreaCarreraPrincipalController@index2')->name('AreaCarreraReporte');
+Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')->name('AreaCarreraTabla');
+Route::get('pdf', 'PDFmaker@gen')->name('GenerarPDF');
 
 
 //Rutas Ramiro
