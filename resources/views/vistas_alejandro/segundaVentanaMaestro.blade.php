@@ -34,20 +34,56 @@
     <th scope="row">
     <select>
 
-<option>INFORMATICA</option>
-<option>IOT</option>
+
+{{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
+  @if ($user->genericas()->count() > 0)
+  {{---en este primer forech nos da sus genericas ---}}
+  @foreach ($user->genericas as $generica)
+     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
+  @foreach ($generica->Materias as $Materias)
+  <option>
+  {{$Materias->nombre_materia}}
+  </option>
+@endforeach  
+     
+  @endforeach  
+@endif
+  
+
+
+
+
 
     </select>
     </th>
 
  
     <td>
+     
+      
 
       <select>
-@foreach ($datos as $dato)
-<option>{{ $dato->Id_grupo}}</option>
-<option>{{ $dato->Id_Asignatura }}</option>
- @endforeach
+
+
+{{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
+@if ($user->genericas()->count() > 0)
+{{---en este primer forech nos da sus genericas ---}}
+@foreach ($user->Genericas as $genericas)
+   {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
+
+<option>
+{{$genericas->Id_grupo}}
+</option>
+
+   
+@endforeach  
+@endif
+
+
+
+
+
+
     </select>
 
 

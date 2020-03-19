@@ -2,9 +2,8 @@
 
 namespace App;
 
-//use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
-
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -15,6 +14,7 @@ class User extends Eloquent implements Authenticatable
 {
     use AuthenticableTrait;
     use Notifiable;
+    protected $primaryKey='matricula';
     protected $connection = 'mongodb';
    
     //protected $collection= 'users';
@@ -24,7 +24,7 @@ class User extends Eloquent implements Authenticatable
      * @var array
      */
     protected $fillable = [
-'name', 'email', 'password', 'ApePat', 'ApeMat', 'Rfid', 'Tipo_usuario','Matricula_maestro'
+'name', 'email', 'password', 'ApePat', 'ApeMat', 'Rfid', 'Tipo_usuario','matricula'
     ];
 
     /**
@@ -45,18 +45,10 @@ class User extends Eloquent implements Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected $collection= "users";
-
-    public function asignaturas()
-    {
-    return $this->hasMany('App\Asignaturas','Matricula_maestro','Matricula_maestro');//asignaturas y user     
-
-    }
-
-
-    public function generica()
-    {
-    return $this->hasMany('App\Genericas','Matricula_maestro','Matricula_maestro');//generica con users        
-
+    
+    protected $collection='users'; 
+    
+    public function Genericas(){
+        return $this->hasMany('App\Genericas','matricula','matricula');
     }
 }

@@ -2,10 +2,11 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
+
 
 class Asignaturas extends Model
 {
-  
+  protected $primarykey='matricula';
 protected $collection= 'collection_asignaturas';
 }

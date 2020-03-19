@@ -14,7 +14,7 @@ class CreateCollectionAsignaturas extends Migration
     public function up()
     {
         Schema::create('collection_asignaturas', function (Blueprint $table) {
-            $table->string('Id_Asignatura');
+            $table->string('matricula');
             $table->string('nombre_materia');
             $table->string('Activa');
             

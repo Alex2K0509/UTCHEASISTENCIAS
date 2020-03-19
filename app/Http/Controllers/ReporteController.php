@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Genericas;
+use App\Asignaturas;
+use Auth;
 class ReporteController extends Controller
 {
     /**
@@ -13,7 +16,11 @@ class ReporteController extends Controller
      */
     public function index()
     {
-        return view('vistas_alejandro.cuarta');
+        $id =Auth::user()->matricula;
+        $user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
+
+      
+        return view('vistas_alejandro.cuarta',compact('user'));
     }
 
     /**
