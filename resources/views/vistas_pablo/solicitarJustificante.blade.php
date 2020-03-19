@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <label for="date2">Día:</label>
-                <input type="date" class="form-control" id="date2"  name="date2"required>
+                <input type="date" class="form-control" id="date2"  name="date2"  required>
             </div>
             <div class="form-group">
                 <label for="director">Director de carrera:</label>
