@@ -41,7 +41,7 @@
   @foreach ($user->genericas as $generica)
      {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
   @foreach ($generica->Materias as $Materias)
-  <option>
+    <option value="{{ $materias->id_asignatura}}">
   {{$Materias->nombre_materia}}
   </option>
 @endforeach  

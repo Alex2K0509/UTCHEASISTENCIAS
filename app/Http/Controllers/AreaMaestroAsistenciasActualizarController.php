@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use App\Genericas;
+use App\Asignaturas;
+use App\Asistencias;
+use Auth;
 
 class AreaMaestroAsistenciasActualizarController extends Controller
 {
@@ -14,9 +18,10 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      */
     public function index()
     {
-       
+       $id=Auth::user()->matricula;
+       $tabla = user::find($id);
      
-       return view('vistas_alejandro.tercera');
+       return view('vistas_alejandro.tercera',compact('tabla'));
     }
 
     /**

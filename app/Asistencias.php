@@ -2,10 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
+use Jenssegers\Mongodb\Eloquent\Model;
+use App\Asignaturas;
+use App\Genericas;
+use App\user;
 class Asistencias extends Model
 {
     protected $primaryKey='matricula_alumno';
-protected $collection= 'UTCHEASIST2';
+protected $collection= 'collection_asistencias';
 }
