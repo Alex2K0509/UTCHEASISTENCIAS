@@ -51,5 +51,7 @@ class User extends Eloquent implements Authenticatable
     public function Genericas(){
         return $this->hasMany('App\Genericas','matricula','matricula');
     }
+
+   
     
 }

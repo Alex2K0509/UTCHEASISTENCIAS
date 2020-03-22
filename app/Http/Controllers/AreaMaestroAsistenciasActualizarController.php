@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\AreaMaestroAsistenciaController;
 use Illuminate\Http\Request;
-use App\User;
+//use App\User;
 use App\Genericas;
 use App\Asignaturas;
 use App\Asistencias;
@@ -16,13 +16,29 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-       $id=Auth::user()->matricula;
-       $tabla = user::find($id);
+       
+     $dato=$request->Id_asignatura;//guardo el request
+     $dato2=$request->Id_grupo;
+     $dato3=$request->fecha;
+     //dd($dato);
+
+    $genericas = Genericas::select('*')->where('Id_Asignatura','=', $dato)->where('Id_grupo', '=',$dato2)->get();
+    //hacer lo de arriba pero para asdignaturas, el chiste es que jale los datos que nos falta pintar en la tabla
+    $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->where('Tipo_usuario','=','1')->get();
+
+    $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->get();
+    
+
      
-       return view('vistas_alejandro.tercera',compact('tabla'));
+
+
+     
+       return view('vistas_alejandro.tercera',compact('genericas','asignaturas','asistencias'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.

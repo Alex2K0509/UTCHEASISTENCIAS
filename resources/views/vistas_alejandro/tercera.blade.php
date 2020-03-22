@@ -26,66 +26,55 @@
                 </thead>
                 <tbody>
 
+                
+                      
+               
+                 
+              
+              
+              
+                      
+                  @if ($genericas->count() > 0)
+                  @foreach ($genericas as $gene)
+                      
+                 @foreach ($asignaturas as $materia)
+                
+                  
                 <tr>
-<td>
-  @if ($tabla->genericas()->count() > 0)
-  {{---en este primer forech nos da sus genericas ---}}
-  @foreach ($tabla->genericas as $generica)
-     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-  @foreach ($generica->Materias as $Materias)
-
-  {{$Materias->Id_Asignatura}}
+                  
+               <td>
   
-@endforeach  
-     
-  @endforeach  
-@endif
-</td>  
-                {{---primero entramos a generica pero con $tabla que es la que ya no jala de matricula del user si no de la matricula de alumno--}}  
+           {{$gene->matricula_alumno}}
+ 
+  
+               </td>  
+              
                 
                 <td>
-                    @if ($tabla->Genericas()->count() > 0)
-                    {{---en este primer forech nos da sus genericas ---}}
-                    @foreach ($tabla->Genericas as $generica){{---aqui entramos a el modelo genericas--}}  
-                       {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-                       @foreach ($generica->Materias as $Materias)
-
-                       @foreach ($Materias->Asistencias as $Asistencias)
-                           {{$Asistencias->estado}}
-                       @endforeach
-                       
-                     @endforeach   
-                       
-                    @endforeach  
-                  @endif
+                 {{$gene->Id_grupo}}
 
                   </td>
-                  <td>Alejandro Yosmar Landaverde Vergara</td>
-                  <td>Informatica</td>
-                    <td><input type="date"></td>
+
+                  <td>
+                   {{$materia->nombre.' '.$materia->ape_pat.' '.$materia->ape_mat}}
+                  </td>
+
+                  <td>
+                 
+                  </td>
+                    <td>
+                    
+                    </td>
 
                     <td>
-                        <select>
-                            <option>Asistencia</option>
-                            <option>Falta</option>
-                        </select>
+                       
                     </td>
                 </tr>
-                <tr>
-                  <td>8118110190</td>
-                  <td>TIAM5</td>
-                  <td>Ramiro Flores Mariano</td>
-                  <td>Informatica</td>
-                  <td><input type="date"></td>
-                    <td>
-                        <select>
-                            <option>Asistencia</option>
-                            <option>Falta</option>
-                        </select>
-                    </td>
-                </tr>
-
-
+                @endforeach  
+                @endforeach   
+                @endif
+              
+              
                 </tbody>
 
               </table>

@@ -6,7 +6,7 @@
 
 
 <div class="table-responsive">
-  <form action="{{route('AreaMaestroActualizar')}}" >
+  <form method="GET" action="{{ route('AreaMaestroActualizar') }}" >
 <table class="table table-bordered">
 <thead>
   <tr>
@@ -19,7 +19,6 @@
 
 
 </thead>
-
 <tbody>
 
  <tr>
@@ -32,7 +31,7 @@
 
   <tr>
     <th scope="row">
-    <select>
+    <select name="Id_asignatura">
 
 
 {{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
@@ -41,56 +40,38 @@
   @foreach ($user->genericas as $generica)
      {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
   @foreach ($generica->Materias as $Materias)
-    <option value="{{ $materias->id_asignatura}}">
-  {{$Materias->nombre_materia}}
-  </option>
+
+  <option value="{{$Materias->Id_Asignatura}}">{{$Materias->nombre_materia}}</option>
 @endforeach  
      
   @endforeach  
 @endif
   
-
-
-
-
-
-    </select>
+</select>
     </th>
 
- 
-    <td>
-     
-      
-
-      <select>
-
-
+  <td>
+      <select name="Id_grupo">
 {{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
 @if ($user->genericas()->count() > 0)
 {{---en este primer forech nos da sus genericas ---}}
 @foreach ($user->Genericas as $genericas)
    {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-
-<option>
+      <option value="{{$genericas->Id_grupo}}">
 {{$genericas->Id_grupo}}
 </option>
 
    
 @endforeach  
 @endif
+  </select>
 
 
-
-
-
-
-    </select>
-
-
-    </td>
+</td>
 
       <td>
-  <input type="date">
+        <input type="date" name="fecha">
+ 
 
 </td>
   </tr>
