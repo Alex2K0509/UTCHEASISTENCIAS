@@ -3,13 +3,30 @@
 @section('content')
 <div class="card">
             <div class="card-header">
-              <h3 class="card-title" style="float:top">Nombre del maestro</h3>
+              <h3 class="card-title" style="float:top">Maestro: 
+              @foreach ($maestro as $datos)
+                  {{$datos->nombre.' '.$datos->ape_pat.' '.$datos->ape_mat}}
+              @endforeach
+              </h3>
 
             </div>
  <div class="card-header">
-              <h3 class="card-title" style="text-align: center">Captura de asistencias</h3>
+              <h3 class="card-title" style="text-align: center">Materia:
+                @foreach ($maestro as $datos)
+                {{$datos->nombre_materia}}
+            @endforeach
+              </h3>
 
             </div>
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Grupo:
+                {{$datos->Id_grupo}}
+              </h3>
+
+            </div>
+            
+</div>
+
             <!-- /.card-header -->
             <div class="card-body">
                 <form action="">
@@ -17,50 +34,28 @@
                 <thead>
                 <tr>
                   <th>Matricula</th>
-                  <th>Grupo</th>
+                  
                   <th>Nombre</th>
-                  <th>Materia</th>
+                
                   <th>Fecha</th>
                     <th>Asistencia/Falta</th>
                 </tr>
                 </thead>
+              
                 <tbody>
-
-                
-                      
-               
-                 
-              
-              
-              
-                      
-                  @if ($genericas->count() > 0)
-                  @foreach ($genericas as $gene)
-                      
-                 @foreach ($asignaturas as $materia)
-                
+            
+              @foreach ($genericas as $gene)
+              @foreach ($asignaturas as $asig)
                   
-                <tr>
-                  
-               <td>
-  
-           {{$gene->matricula_alumno}}
- 
-  
-               </td>  
-              
-                
-                <td>
-                 {{$gene->Id_grupo}}
-
+          
+                  <tr>
+             
+                     <td>
+                  {{$gene->matricula_alumno}}
                   </td>
-
-                  <td>
-                   {{$materia->nombre.' '.$materia->ape_pat.' '.$materia->ape_mat}}
-                  </td>
-
-                  <td>
                  
+                  <td>
+                    {{$asig->nombre}}
                   </td>
                     <td>
                     
@@ -69,13 +64,13 @@
                     <td>
                        
                     </td>
+                
                 </tr>
-                @endforeach  
-                @endforeach   
-                @endif
+                @endforeach
+    @endforeach
+          
+   </tbody>
               
-              
-                </tbody>
 
               </table>
                 <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
