@@ -6,7 +6,7 @@
 
 
 <div class="table-responsive">
-  <form action="{{route('AreaMaestroActualizar')}}" >
+  <form method="GET" action="{{ route('AreaMaestroActualizar') }}" >
 <table class="table table-bordered">
 <thead>
   <tr>
@@ -19,7 +19,6 @@
 
 
 </thead>
-
 <tbody>
 
  <tr>
@@ -32,29 +31,47 @@
 
   <tr>
     <th scope="row">
-    <select>
+    <select name="Id_asignatura">
 
-<option>INFORMATICA</option>
-<option>IOT</option>
 
-    </select>
+{{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
+  @if ($user->genericas()->count() > 0)
+  {{---en este primer forech nos da sus genericas ---}}
+  @foreach ($user->genericas as $generica)
+     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
+  @foreach ($generica->Materias as $Materias)
+
+  <option value="{{$Materias->Id_Asignatura}}">{{$Materias->nombre_materia}}</option>
+@endforeach  
+     
+  @endforeach  
+@endif
+  
+</select>
     </th>
 
- 
-    <td>
+  <td>
+      <select name="Id_grupo">
+{{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
+@if ($user->genericas()->count() > 0)
+{{---en este primer forech nos da sus genericas ---}}
+@foreach ($user->Genericas as $genericas)
+   {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
+      <option value="{{$genericas->Id_grupo}}">
+{{$genericas->Id_grupo}}
+</option>
 
-      <select>
-@foreach ($datos as $dato)
-<option>{{ $dato->Id_grupo}}</option>
-<option>{{ $dato->Id_Asignatura }}</option>
- @endforeach
-    </select>
+   
+@endforeach  
+@endif
+  </select>
 
 
-    </td>
+</td>
 
       <td>
-  <input type="date">
+        <input type="date" name="fecha">
+ 
 
 </td>
   </tr>

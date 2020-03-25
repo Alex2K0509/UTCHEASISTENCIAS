@@ -26,35 +26,55 @@
                 </thead>
                 <tbody>
 
+                
+                      
+               
+                 
+              
+              
+              
+                      
+                  @if ($genericas->count() > 0)
+                  @foreach ($genericas as $gene)
+                      
+                 @foreach ($asignaturas as $materia)
+                
+                  
                 <tr>
-                  <td>8118110121</td>
-                  <td>TIAM5</td>
-                  <td>Alejandro Yosmar Landaverde Vergara</td>
-                  <td>Informatica</td>
-                    <td><input type="date"></td>
+                  
+               <td>
+  
+           {{$gene->matricula_alumno}}
+ 
+  
+               </td>  
+              
+                
+                <td>
+                 {{$gene->Id_grupo}}
+
+                  </td>
+
+                  <td>
+                   {{$materia->nombre.' '.$materia->ape_pat.' '.$materia->ape_mat}}
+                  </td>
+
+                  <td>
+                 
+                  </td>
+                    <td>
+                    
+                    </td>
 
                     <td>
-                        <select>
-                            <option>Asistencia</option>
-                            <option>Falta</option>
-                        </select>
+                       
                     </td>
                 </tr>
-                <tr>
-                  <td>8118110190</td>
-                  <td>TIAM5</td>
-                  <td>Ramiro Flores Mariano</td>
-                  <td>Informatica</td>
-                  <td><input type="date"></td>
-                    <td>
-                        <select>
-                            <option>Asistencia</option>
-                            <option>Falta</option>
-                        </select>
-                    </td>
-                </tr>
-
-
+                @endforeach  
+                @endforeach   
+                @endif
+              
+              
                 </tbody>
 
               </table>

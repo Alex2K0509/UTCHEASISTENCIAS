@@ -25,9 +25,12 @@ class HomeController extends Controller
     public function index()
     {
         
-       $id=Auth::User()->id;
-        $tipo=user::find($id);//analizar la opcion de tipo=2 porque laravel maneja sesisones para cada login
-        if ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '2')  {
+       $id=Auth::User()->matricula;
+
+       
+    $tipo=user::find($id);//analizar la opcion de tipo=2 porque laravel maneja sesisones para cada login
+    
+    if ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '2')  {
              return view('vistas_alejandro.primeraVentanaMaestro');
         }elseif ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '1') {
             return view('vistas_pablo.solicitarJustificante');

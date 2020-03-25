@@ -120,11 +120,11 @@
 
 {{-- MATRICULA MAESTRO --}}
                         <div class="form-group row">
-                            <label for="Matricula_maestro" class="col-md-4 col-form-label text-md-right">{{ __('Matricula de maestro:') }}</label>
+                            <label for="matricula" class="col-md-4 col-form-label text-md-right">{{ __('Matricula:') }}</label>
 
                             <div class="col-md-6">
-                                <input id="Matricula_maestro" type="text" class="form-control @error('Matricula_maestro') is-invalid @enderror" name="Matricula_maestro" value="{{ old('Matricula_maestro') }}" required autocomplete="Matricula_maestro" autofocusApeMat
-                                @error('Matricula_maestro')
+                                <input id="matricula" type="text" class="form-control @error('matricula') is-invalid @enderror" name="matricula" value="{{ old('matricula') }}" required autocomplete="matricula" autofocusApeMat
+                                @error('matricula')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

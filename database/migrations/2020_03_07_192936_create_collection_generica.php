@@ -14,10 +14,8 @@ class CreateCollectionGenerica extends Migration
     public function up()
     {
         Schema::create('collection_generica', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->string('matricula');
             $table->string('Id_Asignatura');
-            $table->string('matricula_alumno');
-            $table->string('matricula_maestro');
             $table->string('Id_grupo');
             $table->string('plan');
             $table->string('Id_carrera');

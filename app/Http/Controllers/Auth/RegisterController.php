@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'ApePat' => ['required', 'string', 'max:255'],
             'Rfid' =>['required', 'string', 'max:255'],
             'Tipo_usuario' =>['required', 'string', 'max:255'],
-            'Matricula_maestro'=>['required', 'string', 'max:255'],
+            'matricula'=>['required', 'string', 'max:255'],
 
          
         ]);
@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'ApeMat' =>$data['ApeMat'],
             'Rfid' =>$data['Rfid'],
             'Tipo_usuario' =>$data['Tipo_usuario'],
-            'Matricula_maestro'=>$data['Matricula_maestro'],
+            'matricula'=>$data['matricula'],
      
         ]);
 

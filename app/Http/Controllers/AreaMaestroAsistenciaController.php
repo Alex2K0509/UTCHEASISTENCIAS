@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Genericas;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use App\User;
+use App\Genericas;
+use App\Asignaturas;
+use App\Http\AreaMaestroAsistenciasActualizarController;
+use Auth;
 class AreaMaestroAsistenciaController extends Controller
 {
     /**
@@ -13,10 +17,12 @@ class AreaMaestroAsistenciaController extends Controller
      */
     public function index()
     {
-           $datos= Genericas::all();
-           
-       return view('vistas_alejandro.segundaVentanaMaestro',compact('datos'));
+        $id =Auth::user()->matricula;
+        $user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
 
+      
+       
+       return view('vistas_alejandro.segundaVentanaMaestro',compact('user'));
     }
 
     /**
