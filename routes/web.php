@@ -32,8 +32,7 @@ Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualiz
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
 
-//Route::match(["get","post"],'/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index');
-//Route::match
+
 ///////////Aleajndro
 
 
