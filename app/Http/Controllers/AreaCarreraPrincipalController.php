@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\insertar_datos;
+use DB;
 
 class AreaCarreraPrincipalController extends Controller
 {
@@ -27,10 +29,13 @@ class AreaCarreraPrincipalController extends Controller
 
     public function index3()
     {
-         
-         return view('vistas_max.terceraVentanaCarrera');
+         $insertar_datoos = insertar_datos::all();
+
+         return view('vistas_max.terceraVentanaCarrera', compact('insertar_datoos'));
 
     }
+
+     
 
 
 
