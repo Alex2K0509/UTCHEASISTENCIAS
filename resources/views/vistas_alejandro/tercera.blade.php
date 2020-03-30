@@ -33,45 +33,24 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Matricula</th>
-                  
-                  <th>Nombre</th>
-                
+                  <th>Matricula</th>          
+                  <th>Nombre</th>      
                   <th>Fecha</th>
-                    <th>Asistencia/Falta</th>
+                  <th>Asistencia/Falta</th>
                 </tr>
                 </thead>
-              
-                <tbody>
-            
-              @foreach ($genericas as $gene)
-              @foreach ($asignaturas as $asig)
-                  
-          
-                  <tr>
-             
-                     <td>
-                  {{$gene->matricula_alumno}}
-                  </td>
-                 
-                  <td>
-                    {{$asig->nombre}}
-                  </td>
-                    <td>
-                    
-                    </td>
-
-                    <td>
-                       
-                    </td>
-                
-                </tr>
-                @endforeach
-    @endforeach
-          
-   </tbody>
-              
-
+                <tbody>           
+                @foreach ($genericas as $gene)
+                    @if($dato3 == $gene->asiste->fecha)
+                      <tr>
+                        <td>{{ $gene->matricula_alumno }}</td>
+                        <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>
+                        <td>{{ $gene->asiste->fecha }}</td>
+                        <td>{{ $gene->asiste->estado }} </td>
+                      </tr>
+                    @endif
+                @endforeach       
+                </tbody>
               </table>
                 <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
                 </form>
