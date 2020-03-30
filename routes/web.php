@@ -37,7 +37,7 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
 Route::get('/GenerarReporteDirector','AreaCarreraPrincipalController@index2')->name('AreaCarreraReporte');
 Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')->name('AreaCarreraTabla');
-Route::get('pdf', 'PDFmaker@gen')->name('GenerarPDF');
+Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
 
 
 //Rutas Ramiro
