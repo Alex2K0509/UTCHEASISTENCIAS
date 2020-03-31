@@ -90,18 +90,15 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$matricula)
-    {
-        $matricula=(int) $matricula;
+    public function update(Request $request,$matricula){
+        //$matricula=(int) $matricula;
    
         $estado=$request->input('estado');
-        
-        $Asistencia= Asistencias::find($matricula);  
+        $Asistencia = Asistencias::find($matricula);  
         $Asistencia->estado=$estado;
         $Asistencia->save();
 
-
-    return redirect()->back()->with('success','estatus modificado');
+     return   redirect()->route('AreaMaestroPrincipal');
     }
 
     /**

@@ -64,19 +64,20 @@
                         <td>{{ $gene->asiste->fecha }}</td>
 
                         <td>
-                   <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
+                        <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
                     @csrf
                  
-                        <select name="estado">
+                        <select name="estados">
                          
                           <option  >{{ $gene->asiste->estado }}</option>
-                          <option value="asistencia">ASISTENCIA</option>
-                          <option value="falta">FALTA</option>
+                          <option value="asistencias">ASISTENCIA</option>
+                          <option value="faltas">FALTA</option>
                         </select>
                         <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
 
                    </form>
                         </td>
+                        <td><option  >{{ $gene->asiste->estado }}</option></td>
                       </tr>
                     @endif
                 @endforeach       
