@@ -10,22 +10,28 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Mail\JustificacionEnvidada;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
 ////////pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
-Route::get('/Alumno/justificaciones','AlumnoJustificanteController@index')->name('AlumnosJustificaciones');
-Route::get('/Alumno/asistencias','AlumnoAsistenciaController@index')->name('AlumnosAsistencia');
-///////////pablo
+Route::get('/Alumno/justificaciones/email', function (){
+    Mail::to('example@example.com')->send(new JustificacionEnvidada());
+    return new JustificacionEnvidada();
+});
+Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistencia');
+Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
+
+
 
 ///////////Alejandro
 Auth::routes();
+
 Route::get('/Areamaestro','AreaMaestroPrincipalController@index')->name('AreaMaestroPrincipal');
 Route::get('/Areamaestro/asistencias','AreaMaestroAsistenciaController@index')->name('AreaMaestrosAsistencia');
 Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index')->name('AreaMaestroActualizar');
@@ -35,7 +41,7 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 Route::post('/Asistencia/{id}','AreaMaestroAsistenciasActualizarController@update')->name('Asistencia.update');
 
 Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->name('Asistencia.test');
-
+Route::get('/pdf','PDFController@PDF')->name('reporte');
 ///////////Aleajndro
 
 

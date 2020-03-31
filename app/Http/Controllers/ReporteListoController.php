@@ -120,4 +120,6 @@ class ReporteListoController extends Controller
     {
         //
     }
+   
+
 }
