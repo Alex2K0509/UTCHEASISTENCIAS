@@ -139,7 +139,7 @@ class AreaMaestroAsistenciasActualizarController extends Controller
     public function test(){
         $test=Asistencias::where('matricula_alumno','=',8118110127)->get();
         dd($test);
-
+//ejemplo
         $A= new Asistencias();
         $A->matricula_alumno='8118110128';
         $A->Id_grupo='TI5';
