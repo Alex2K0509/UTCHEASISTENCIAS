@@ -23,7 +23,7 @@ class AlumnoController extends Controller
      */
     public function create()
     {
-        //
+        return view('vistas_pablo.vizualizarAsistencia');
     }
 
     /**
@@ -32,9 +32,9 @@ class AlumnoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        return view('vistas_pablo.TablaAsistencia');
     }
 
     /**
@@ -43,9 +43,9 @@ class AlumnoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        return view('vistas_pablo.vizualizarAsistencia');
     }
 
     /**
