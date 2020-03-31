@@ -35,7 +35,7 @@ Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('A
 Route::post('/Asistencia/{id}','AreaMaestroAsistenciasActualizarController@update')->name('Asistencia.update');
 
 Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->name('Asistencia.test');
-
+Route::get('/pdf','PDFController@PDF')->name('reporte');
 ///////////Aleajndro
 
 

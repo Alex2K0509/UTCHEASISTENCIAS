@@ -34,10 +34,12 @@
               </h3>
 
             </div>
- 
+          </div>
             <!-- /.card-header -->
+          
+
             <div class="card-body">
-              <form action="">
+              
             <table id="example1" class="table table-bordered table-striped">
               <thead>
               <tr>
@@ -49,7 +51,7 @@
               </thead>
             
                 
-                  
+              
               <tbody>           
                 @foreach ($asistencias as $asistencia)
                     <tr>
@@ -61,9 +63,9 @@
                     
                     @endforeach
               </tbody>
-             
+            <a href="{{ route('reporte')}}">imprimir pdf</a>
                   
-
+            
 
 
 
@@ -72,10 +74,11 @@
 
               
             </table>
-              <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
-              </form>
+            
+             
           </div>
-            <!-- /.card-body -->
+        
+          <!-- /.card-body -->
           </div>
 
 @endsection()
