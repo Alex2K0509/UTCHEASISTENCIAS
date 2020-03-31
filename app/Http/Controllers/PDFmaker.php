@@ -16,12 +16,10 @@ class PDFmaker extends Controller
 
     {
         $insertar_datoos = insertar_datos::all();
-        return \PDF::loadView('vistas_max.TablaAsistencia', ['insertar_datoos' => $insertar_datoos] )
-->setPaper('a4', 'landscape')
-->download('TablaDeAsistencias.pdf');
-        //$pdf = PDF::loadView('vistas_max.TablaAsistencia', compact('insertar_datoos'));
 
-        //$pdf->setPaper('a4','landscape');
-        //return $pdf->stream('asistencias.pdf');
+        $pdf = PDF::loadView('vistas_max.TablaAsistencia', compact('insertar_datoos'));
+
+        $pdf->setPaper('a4','landscape');
+        return $pdf->stream('TablaDeAsistencias.pdf');
     }
 }
