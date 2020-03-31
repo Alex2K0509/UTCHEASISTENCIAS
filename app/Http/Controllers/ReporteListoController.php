@@ -40,11 +40,11 @@ class ReporteListoController extends Controller
     
     $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
     
-<<<<<<< HEAD
-dd($asistencias); //funciona
-=======
+
+//dd($asistencias); //funciona
+
 //dd($asistencias);
->>>>>>> alejandro_prueba
+
 
         return view('vistas_alejandro.quinta',compact('genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
     }
