@@ -1,29 +1,51 @@
-@extends('layouts.carrera2')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TABLA DE ASISTENCIAS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        @page {
+            margin: 0cm 0cm;
+            font-size: 1em;
+        }
+        body {
 
-@section('title','Area de D.Carrera')
-
-
-@section('content')
-
-
-
-<div class="card">
-            <div class="card-header">
-              <h3 class="card-title" style="float:top">Concentrado de asistencias</h3>
-
-            </div>
- <div class="card-header">
-              <h3 class="card-title" style="text-align: center">Carrera: TSU-TECNOLOGIAS DE LA INFORMACION</h3>
-
-            </div>
-            <div class="card-header">
-              <h3 class="card-title" style="text-align: center">GRADO-GRUPO: 5TO-TIAM</h3>
-
-            </div>
-            <!-- /.card-header -->
-            <div class="card-body" style="overflow-x:auto;">
-                <form action="{{ route('GenerarPDF') }}">
-              <table id="responsive" class="table table-bordered table-striped">
+            margin: 3cm 2cm 2cm;
+        }
+        header {
+            position: fixed;
+            top: 0cm;
+            left: 0cm;
+            right: 0cm;
+            height: 2cm;
+            background-color: #46C66B;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+        footer {
+            position: fixed;
+            bottom: 0cm;
+            left: 0cm;
+            right: 0cm;
+            height: 2cm;
+            background-color: #46C66B;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <br>
+        <p><strong>FINGER PRINT ASSISTANCE SYSTEM</strong></p>
+    </header>
+    <main>
+        <div class="container">
+            <h5 style="text-align: center"><strong>TABLA DE ASISTENCIAS</strong></h5>
+              <table id="responsive" class="table table-bordered table-striped center">
                 <thead>
                 <tr>
                   <th>#</th>
@@ -97,16 +119,10 @@
                 </tbody>
                 @endforeach
               </table>
-                <input type="submit" class="btn-outline-success" value="Generar PDF" style="float:right;">
-                <form action="">
-                  
-                </form>
-                </form>
-            </div>
-            <!-- /.card-body -->
-          </div>
-
-@endsection
-@section('footer')
-    @include('includes/sidebarcarrera')
-    @endsection
+        </div>
+    </main>
+    <footer>
+        <p><strong>CREADO POR: APRM</strong></p>
+    </footer>
+</body>
+</html>
