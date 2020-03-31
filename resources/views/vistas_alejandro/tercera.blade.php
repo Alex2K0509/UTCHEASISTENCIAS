@@ -20,61 +20,56 @@
             </div>
             <div class="card-header">
               <h3 class="card-title" style="text-align: center">Grupo:
+                @foreach ($maestro as $datos)
                 {{$datos->Id_grupo}}
               </h3>
-
+              @endforeach
             </div>
             
 
 
             <!-- /.card-header -->
             <div class="card-body">
-                <form action="">
-              <table id="example1" class="table table-bordered table-striped">
+          
+                  
+             
+               
+                
+                  <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Matricula</th>
-                  
-                  <th>Nombre</th>
-                
+                  <th>Matricula</th>          
+                  <th>Nombre</th>      
                   <th>Fecha</th>
-                    <th>Asistencia/Falta</th>
+                  <th>Asistencia/Falta</th>
                 </tr>
                 </thead>
-              
-                <tbody>
-            
-              @foreach ($genericas as $gene)
-              @foreach ($asignaturas as $asig)
-                  
-          
-                  <tr>
-             
-                     <td>
-                  {{$gene->matricula_alumno}}
-                  </td>
+                <tbody>           
+                @foreach ($genericas as $gene)
+                    @if($dato3 == $gene->asiste->fecha)
+                      <tr>
+                        <td>{{ $gene->matricula_alumno }}</td>
+                        <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>
+                        <td>{{ $gene->asiste->fecha }}</td>
+                        <td>
+                   <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
+                    @csrf
                  
-                  <td>
-                    {{$asig->nombre}}
-                  </td>
-                    <td>
-                    
-                    </td>
-
-                    <td>
-                       
-                    </td>
-                
-                </tr>
-                @endforeach
-    @endforeach
-          
-   </tbody>
-              
-
-              </table>
-                <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
+                        <select name="estado">
+                         
+                          <option >{{ $gene->asiste->estado }}</option>
+                          <option value="asistencias">ASISTENCIA</option>
+                          <option value="falta">FALTA</option>
+                        </select>
+                        <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
                 </form>
+                      </td>
+                      </tr>
+                    @endif
+                @endforeach       
+                </tbody>
+              </table>
+                
             </div>
             <!-- /.card-body -->
           </div>

@@ -20,6 +20,7 @@ class ReporteListoController extends Controller
      */
     public function index(Request $request)
     {
+        $id =Auth::user()->matricula;
         
         $materia=$request->materia;
         $grupo=$request->grupo;
@@ -28,8 +29,10 @@ class ReporteListoController extends Controller
         $fecha2=$request->input('date2');
    
        
-    $genericas = Genericas::select('*')->where('Id_Asignatura','=', $materia)->where('Id_grupo', '=',$grupo)->get();
-   
+        $genericas = Genericas::select('*')->where('Id_Asignatura','=', $materia)->where('Id_grupo', '=',$grupo)->get();
+        $genericas = $genericas->where('matricula_alumno','<>',$id);
+
+
     $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->get();
     $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
     
@@ -37,9 +40,9 @@ class ReporteListoController extends Controller
     
     $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
     
-dd($asistencias);
+//dd($asistencias);
 
-        return view('vistas_alejandro.quinta',compact('genericas','asignaturas','asistencias','maestro'));
+        return view('vistas_alejandro.quinta',compact('genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
     }
 
     /**

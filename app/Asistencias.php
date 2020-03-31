@@ -3,11 +3,23 @@
 namespace App;
 
 use Jenssegers\Mongodb\Eloquent\Model;
-use App\Asignaturas;
-use App\Genericas;
-use App\user;
+
 class Asistencias extends Model
 {
+    //protected $fillable = ['estado'];
+	protected $collection= 'collection_asistencias';
     protected $primaryKey='matricula_alumno';
-protected $collection= 'collection_asistencias';
+    protected $connection = 'mongodb';
+
+    public function Materias(){
+	    return $this->belongsTo('App\Asignaturas','matricula_alumno','matricula_alumno');
+	}
+    public function asiste(){
+		return $this->belongsTo('App\Asistencias','matricula_alumno','matricula_alumno');
+	}
+
+	public function genericas(){
+		 return $this->belongsTo('App\Genericas','matricula_alumno','matricula_alumno');
+	}
 }
+

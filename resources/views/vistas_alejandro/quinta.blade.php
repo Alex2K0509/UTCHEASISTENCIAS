@@ -27,54 +27,44 @@
  
             <!-- /.card-header -->
             <div class="card-body">
-                <form action="">
-                    <div class="table-responsive">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>Matricula</th>
-               
-                  <th>Nombre</th>
-                 
-                  <th>27/02/2020</th>
-                    <th>28/02/2020</th>
-                    <th>29/02/2020</th>
-                    <th>30/02/2020</th>
-
-                </tr>
-                </thead>
-                <tbody>
-
-                <tr>
-                  <td>8118110121</td>
+              <form action="">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>Matricula</th>          
+                <th>Nombre</th>      
+                <th>Fecha</th>
+                <th>Asistencia/Falta</th>
+              </tr>
+              </thead>
+            
+                
                   
-                  <td>Alejandro Yosmar Landaverde Vergara</td>
-                 
-                    <td>Asistencia</td>
-                    <td>Falta</td>
-                    <td>Asistencia</td>
-                    <td>Falta</td>
-
-                </tr>
-                <tr>
-                  <td>8118110190</td>
-                 
-                  <td>Ramiro Flores Mariano</td>
-               
-                   <td>Asistencia</td>
-                    <td>Falta</td>
-                    <td>Asistencia</td>
-                    <td>Falta</td>
-                </tr>
+              <tbody>           
+                @foreach ($asistencias as $asistencia)
+                    <tr>
+                      <td>{{$asistencia->genericas->Id_Asignatura}}</td>
+                      <td>{{$asistencia->genericas->alumno2->name}}</td>
+                      <td>{{ $asistencia->fecha }}</td>
+                      <td>{{ $asistencia->estado }} </td>
+                    </tr>
+                    
+                    @endforeach
+              </tbody>
+             
+                  
 
 
-                </tbody>
 
-              </table>
-                   </div>
-                <input type="submit" class="btn-outline-success" value="Generar reporte PDF" style="float:right;">
-                </form>
-            </div>
+
+
+
+
+              
+            </table>
+              <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
+              </form>
+          </div>
             <!-- /.card-body -->
           </div>
 
