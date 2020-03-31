@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"UTCHEASIST2.users"},{"v":{"$numberInt":"2"},"unique":true,"key":{"email":{"$numberInt":"1"}},"name":"email_1","ns":"UTCHEASIST2.users"}],"uuid":"e4a5d83bd0f6436bbdb5b0eadfedd7b0"}

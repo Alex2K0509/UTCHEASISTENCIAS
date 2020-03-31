@@ -22,7 +22,7 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Opciones</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a  data-toggle="collapse" href="{{ route('AlumnosJustificaciones') }}" aria-expanded="false" >Solicitar justificante</a>
+                            <a  data-toggle="collapse" href="{{ route('AlumnosPrincipal') }}" aria-expanded="false" >Solicitar justificante</a>
 
                         </li>
                         <li>
@@ -60,7 +60,7 @@
         @section('sidebar')
              <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #118740; color: #000000">
                 <!-- Brand Logo -->
-                <a href="{{ route('AlumnosJustificaciones') }}" class="brand-link">
+                <a href="{{ route('AlumnosPrincipal') }}" class="brand-link">
                     <i class="fas fa-user-graduate"></i>
                     <span class="brand-text font-weight-light">Área de Alumnos</span>
                 </a>
@@ -84,7 +84,7 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="{{ route('AlumnosJustificaciones') }}" class="nav-link active">
+                                        <a href="{{ route('AlumnosPrincipal') }}" class="nav-link active">
 
                                             <p>Solicitar justificante</p>
                                         </a>

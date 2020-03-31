@@ -14,12 +14,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex" >
-
-        <div class="info" >
-          <a href="#" class="d-block" style="color: #000000">"nombre del maestro"</a>
-        </div>
-      </div>
+     
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -48,7 +43,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="" class="nav-link active">
 
                   <p>Cerrar sesión</p>
                 </a>
@@ -57,8 +52,10 @@
           </li>
 
         </ul>
+
       </nav>
       <!-- /.sidebar-menu -->
+
     </div>
     <!-- /.sidebar -->
   </aside>

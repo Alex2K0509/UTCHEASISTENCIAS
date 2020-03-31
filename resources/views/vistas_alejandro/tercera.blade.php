@@ -3,63 +3,87 @@
 @section('content')
 <div class="card">
             <div class="card-header">
-              <h3 class="card-title" style="float:top">Nombre del maestro</h3>
+              <h3 class="card-title" style="float:top">Maestro: 
+              @foreach ($maestro as $datos)
+                  {{$datos->nombre.' '.$datos->ape_pat.' '.$datos->ape_mat}}
+              @endforeach
+              </h3>
 
             </div>
  <div class="card-header">
-              <h3 class="card-title" style="text-align: center">Captura de asistencias</h3>
+              <h3 class="card-title" style="text-align: center">Materia:
+                @foreach ($maestro as $datos)
+                {{$datos->nombre_materia}}
+            @endforeach
+              </h3>
 
             </div>
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Grupo:
+                @foreach ($maestro as $datos)
+                {{$datos->Id_grupo}}
+              </h3>
+              @endforeach
+            </div>
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Horario:
+                @foreach ($horarios as $entrada)
+               {{$entrada->entrada.' - '.$entrada->salida}}
+              @endforeach
+              </h3>
+
+            </div>
+
+
             <!-- /.card-header -->
             <div class="card-body">
+
+                  
+             
+               
+                
+                  <table id="example1" class="table table-bordered table-striped">
+
                 <form action="">
               <table id="example1" class="table table-bordered table-striped">
+
                 <thead>
                 <tr>
-                  <th>Matricula</th>
-                  <th>Grupo</th>
-                  <th>Nombre</th>
-                  <th>Materia</th>
+                  <th>Matricula</th>          
+                  <th>Nombre</th>      
                   <th>Fecha</th>
-                    <th>Asistencia/Falta</th>
+                  <th>Asistencia/Falta</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody>           
+                @foreach ($genericas as $gene)
+                    @if($dato3 == $gene->asiste->fecha)
+                      <tr>
+                        <td>{{ $gene->matricula_alumno }}</td>
+                        <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>
+                        <td>{{ $gene->asiste->fecha }}</td>
 
-                <tr>
-                  <td>8118110121</td>
-                  <td>TIAM5</td>
-                  <td>Alejandro Yosmar Landaverde Vergara</td>
-                  <td>Informatica</td>
-                    <td><input type="date"></td>
-
-                    <td>
-                        <select>
-                            <option>Asistencia</option>
-                            <option>Falta</option>
+                        <td>
+                   <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
+                    @csrf
+                 
+                        <select name="estado">
+                         
+                          <option  >{{ $gene->asiste->estado }}</option>
+                          <option value="asistencia">ASISTENCIA</option>
+                          <option value="falta">FALTA</option>
                         </select>
-                    </td>
-                </tr>
-                <tr>
-                  <td>8118110190</td>
-                  <td>TIAM5</td>
-                  <td>Ramiro Flores Mariano</td>
-                  <td>Informatica</td>
-                  <td><input type="date"></td>
-                    <td>
-                        <select>
-                            <option>Asistencia</option>
-                            <option>Falta</option>
-                        </select>
-                    </td>
-                </tr>
+                        <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
 
-
+                   </form>
+                        </td>
+                      </tr>
+                    @endif
+                @endforeach       
                 </tbody>
-
               </table>
-                <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
-                </form>
+               
+                
             </div>
             <!-- /.card-body -->
           </div>

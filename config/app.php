@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Cancun',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -161,7 +161,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
+        
+=======
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
+>>>>>>> dfeb5700759e18a90ea04f3f1427546f5efdff3c
         /*
          * Package Service Providers...
          */
@@ -227,8 +232,17 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'PDF' => Barryvdh\DomPDF\Facade::class,
+=======
+<<<<<<< HEAD
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+        
+=======
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
+>>>>>>> 00d5ea1bce9879ab1b4f7f254d1c9844687f2582
 
+>>>>>>> dfeb5700759e18a90ea04f3f1427546f5efdff3c
     ],
 
 ];

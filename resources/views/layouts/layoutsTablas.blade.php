@@ -89,6 +89,7 @@
     <!-- Main content -->
     <section class="content">
     @yield('content')
+    @yield('content2')
       <!-- /.row -->
     </section>
     <!-- /.content -->
