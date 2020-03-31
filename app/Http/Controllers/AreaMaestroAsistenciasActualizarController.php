@@ -38,7 +38,11 @@ class AreaMaestroAsistenciasActualizarController extends Controller
        // dd($gen);
         //echo $gen->matricula_alumno;
         //$gen->asiste->where('fecha','=',$dato3);
+<<<<<<< HEAD
         //echo $gen->asiste->fecha;
+=======
+        echo $gen->asiste->fecha;
+>>>>>>> 9c0cda472979bf96638e2691653c837bc31f27f7
         //dd($gen->alumno);
             //foreach($gen->asiste as $as){
                // dd('hola'.$as->matricula_alumno);
