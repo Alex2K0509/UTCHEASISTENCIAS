@@ -18,10 +18,13 @@ class AreaMaestroAsistenciaController extends Controller
     public function index()
     {
         $id =Auth::user()->matricula;
-        $user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
+        //$user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
+        $user = User::find($id);
+       //dd($user->Genericas->Materias);
+        //dd(Auth::user()->Genericas());
 
       
-       
+      // dd($user);
        return view('vistas_alejandro.segundaVentanaMaestro',compact('user'));
     }
 

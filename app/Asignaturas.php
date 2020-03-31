@@ -8,7 +8,7 @@ use App\Asistencias;
 use App\Genericas;
 class Asignaturas extends Model
 {
-  protected $primarykey='Id_Asignatura';
+  protected $primaryKey='Id_Asignatura';
 protected $collection= 'collection_asignaturas';
 
 public function Asistencias(){

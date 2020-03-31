@@ -32,6 +32,9 @@ Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualiz
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
 
+Route::post('/Asistencia/{id}','AreaMaestroAsistenciasActualizarController@update')->name('Asistencia.update');
+
+Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->name('Asistencia.test');
 
 ///////////Aleajndro
 
