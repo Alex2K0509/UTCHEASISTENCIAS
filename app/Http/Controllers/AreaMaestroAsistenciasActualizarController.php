@@ -96,7 +96,7 @@ class AreaMaestroAsistenciasActualizarController extends Controller
    
         $estado=$request->input('estado');
         
-        $Asistencia=Asistencias::find($matricula);  
+        $Asistencia= Asistencias::find($matricula);  
         $Asistencia->estado=$estado;
         $Asistencia->save();
 
