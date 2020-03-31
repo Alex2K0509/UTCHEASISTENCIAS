@@ -43,9 +43,9 @@
         <p><strong>FINGER PRINT ASSISTANCE SYSTEM</strong></p>
     </header>
     <main>
-        <div class="container">
             <h5 style="text-align: center"><strong>TABLA DE ASISTENCIAS</strong></h5>
-              <table id="responsive" class="table table-bordered table-striped center">
+              <div class="mx-auto">
+              <table id="responsive" class="table table-sm table-striped table-bordered">
                 <thead>
                 <tr>
                   <th>#</th>
@@ -119,7 +119,7 @@
                 </tbody>
                 @endforeach
               </table>
-        </div>
+          </div>
     </main>
     <footer>
         <p><strong>CREADO POR: APRM</strong></p>
