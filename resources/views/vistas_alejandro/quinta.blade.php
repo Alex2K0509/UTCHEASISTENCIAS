@@ -20,7 +20,17 @@
             </div>
             <div class="card-header">
               <h3 class="card-title" style="text-align: center">Grupo:
+                @foreach ($maestro as $datos)
                 {{$datos->Id_grupo}}
+                @endforeach
+              </h3>
+
+            </div>
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Horario:
+                @foreach ($horarios as $entrada)
+               {{$entrada->entrada.' - '.$entrada->salida}}
+              @endforeach
               </h3>
 
             </div>
@@ -43,8 +53,8 @@
               <tbody>           
                 @foreach ($asistencias as $asistencia)
                     <tr>
-                      <td>{{$asistencia->genericas->Id_Asignatura}}</td>
-                      <td>{{$asistencia->genericas->alumno2->name}}</td>
+                      <td>{{$asistencia->genericas->alumno2->matricula}}</td>
+                      <td>{{$asistencia->genericas->alumno2->name.' '.$asistencia->genericas->alumno2->ApePat.' '.$asistencia->genericas->alumno2->ApeMat}}</td>
                       <td>{{ $asistencia->fecha }}</td>
                       <td>{{ $asistencia->estado }} </td>
                     </tr>

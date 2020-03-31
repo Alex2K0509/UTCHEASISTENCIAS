@@ -25,7 +25,14 @@
               </h3>
               @endforeach
             </div>
-            
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Horario:
+                @foreach ($horarios as $entrada)
+               {{$entrada->entrada.' - '.$entrada->salida}}
+              @endforeach
+              </h3>
+
+            </div>
 
 
             <!-- /.card-header -->
@@ -62,13 +69,13 @@
                  
                         <select name="estado">
                          
-                          <option >{{ $gene->asiste->estado }}</option>
-                          <option value="asistencias">ASISTENCIA</option>
+                          <option  >{{ $gene->asiste->estado }}</option>
+                          <option value="asistencia">ASISTENCIA</option>
                           <option value="falta">FALTA</option>
                         </select>
                         <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
 
-                        <td>{{ $gene->asiste->estado }} </td>
+                      
                       </tr>
                     @endif
                 @endforeach       

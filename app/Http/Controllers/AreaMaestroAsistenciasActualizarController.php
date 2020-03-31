@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Genericas;
 use App\Asignaturas;
 use App\Asistencias;
+use App\Horarios;
 use Auth;
 
 class AreaMaestroAsistenciasActualizarController extends Controller
@@ -32,7 +33,9 @@ class AreaMaestroAsistenciasActualizarController extends Controller
  
     $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->where('Tipo_usuario','=','2')->get();
  
-       return view('vistas_alejandro.tercera',compact('genericas','asignaturas','maestro','dato3'));
+    $horarios= Horarios::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->get();
+    
+       return view('vistas_alejandro.tercera',compact('horarios','genericas','asignaturas','maestro','dato3'));
     }
 
     

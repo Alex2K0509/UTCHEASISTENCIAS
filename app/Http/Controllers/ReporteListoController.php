@@ -9,6 +9,7 @@ use App\Http\AreaMaestroAsistenciaController;
 use App\Genericas;
 use App\Asignaturas;
 use App\Asistencias;
+use App\Horarios;
 use Auth;
 
 class ReporteListoController extends Controller
@@ -34,19 +35,24 @@ class ReporteListoController extends Controller
 
 
     $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->get();
+
+    
+    
     $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
     
     
     
     $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
     
+    $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
+    //dd($horarios);
 
 //dd($asistencias); //funciona
 
 //dd($asistencias);
 
 
-        return view('vistas_alejandro.quinta',compact('genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
+        return view('vistas_alejandro.quinta',compact('horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
     }
 
     /**

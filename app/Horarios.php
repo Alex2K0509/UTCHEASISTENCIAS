@@ -2,9 +2,13 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+
+use Jenssegers\Mongodb\Eloquent\Model;
 
 class Horarios extends Model
 {
-  protected $collection= 'UTCHEASIST2';
+
+	protected $collection= 'collection_horarios';
+	protected $primaryKey='Id_Asignatura';
+	protected $connection = 'mongodb';
 }
