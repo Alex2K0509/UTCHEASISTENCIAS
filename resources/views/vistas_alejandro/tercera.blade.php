@@ -30,17 +30,16 @@
 
             <!-- /.card-header -->
             <div class="card-body">
-<<<<<<< HEAD
-          
+
                   
              
                
                 
                   <table id="example1" class="table table-bordered table-striped">
-=======
+
                 <form action="">
               <table id="example1" class="table table-bordered table-striped">
->>>>>>> 9c0cda472979bf96638e2691653c837bc31f27f7
+
                 <thead>
                 <tr>
                   <th>Matricula</th>          
@@ -56,7 +55,7 @@
                         <td>{{ $gene->matricula_alumno }}</td>
                         <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>
                         <td>{{ $gene->asiste->fecha }}</td>
-<<<<<<< HEAD
+
                         <td>
                    <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
                     @csrf
@@ -68,22 +67,14 @@
                           <option value="falta">FALTA</option>
                         </select>
                         <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
-=======
+
                         <td>{{ $gene->asiste->estado }} </td>
                       </tr>
                     @endif
                 @endforeach       
                 </tbody>
               </table>
-                <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
->>>>>>> 9c0cda472979bf96638e2691653c837bc31f27f7
-                </form>
-                      </td>
-                      </tr>
-                    @endif
-                @endforeach       
-                </tbody>
-              </table>
+               
                 
             </div>
             <!-- /.card-body -->
