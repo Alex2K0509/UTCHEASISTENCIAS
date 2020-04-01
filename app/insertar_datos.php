@@ -9,7 +9,7 @@ class insertar_datos extends Model
    
 protected $collection= 'insertar_datos';
 
-public function insertar_datos(){
+public function insertar_datos_f(){//same class same funcio
 	
 	}
 }

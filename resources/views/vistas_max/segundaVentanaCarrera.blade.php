@@ -14,10 +14,9 @@
  
 
 <div class="form-group">
-      <label for="materia">Carrera:</label>
-      <select id="materia" class="custom-select">
-          <option>TI</option>
-      </select>
+      
+      
+      
     </div>
 <div class="form-group">
       <label for="grupo">Grupo:</label>
@@ -31,8 +30,8 @@
   @foreach ($generica->Materias as $Materias)
 
   <option value="{{$Materias->Id_grupo}}">{{$Materias->Id_grupo}}</option>
-  <option value="">Max es gay</option>
-@endforeach  
+  
+@endforeach 
      
   @endforeach  
 @endif

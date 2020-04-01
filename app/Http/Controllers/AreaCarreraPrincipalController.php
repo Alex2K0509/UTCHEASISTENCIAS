@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Genericas;
-use App\Asignaturas;
+use App\Carrera;
+use App\insertar_datos;
 use App\Http\AreaMaestroAsistenciasActualizarController;
 use Auth;
 class AreaCarreraPrincipalController extends Controller
@@ -34,6 +35,7 @@ class AreaCarreraPrincipalController extends Controller
     public function index3()
     {
          $insertar_datoos = insertar_datos::all();
+         
 
          return view('vistas_max.terceraVentanaCarrera', compact('insertar_datoos'));
 
