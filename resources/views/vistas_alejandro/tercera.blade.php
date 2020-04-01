@@ -43,8 +43,8 @@
                
                 
                   <table id="example1" class="table table-bordered table-striped">
-
-                <form action="">
+                    
+                
               <table id="example1" class="table table-bordered table-striped">
 
                 <thead>
@@ -67,14 +67,15 @@
                    <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
                     @csrf
                  
-                        <select name="estado">
+                        <select name="estado" class="form-control form-control-sm">
                          
                           <option  >{{ $gene->asiste->estado }}</option>
-                          <option value="asistencia">ASISTENCIA</option>
-                          <option value="falta">FALTA</option>
+                          <option value="Asistencia">Asitencia</option>
+                          <option value="Falta">Falta</option>
                         </select>
-                        <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
+                        <input type="submit" class="btn-outline-success" value="Actualizar" style="float:right;">
                    </form>
+                  
                         </td>
                       
                       </tr>

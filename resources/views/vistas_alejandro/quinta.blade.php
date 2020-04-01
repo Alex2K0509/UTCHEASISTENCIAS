@@ -34,7 +34,9 @@
               </h3>
 
             </div>
+          
           </div>
+          
             <!-- /.card-header -->
           
 
@@ -63,7 +65,7 @@
                     
                     @endforeach
               </tbody>
-            <a href="{{ route('reporte')}}">imprimir pdf</a>
+           
                   
             
 
