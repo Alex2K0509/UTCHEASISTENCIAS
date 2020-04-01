@@ -21,9 +21,23 @@
     </div>
 <div class="form-group">
       <label for="grupo">Grupo:</label>
-      <select id="grupo" class="custom-select">
-          <option>TIAM5</option>
-      </select>
+     <select name="Id_asignatura">
+
+
+  @if ($user->genericas()->count() > 0)
+ 
+  @foreach ($user->genericas as $generica)
+    
+  @foreach ($generica->Materias as $Materias)
+
+  <option value="{{$Materias->Id_grupo}}">{{$Materias->Id_grupo}}</option>
+  <option value="">Max es gay</option>
+@endforeach  
+     
+  @endforeach  
+@endif
+  
+</select>
     </div>
     
 

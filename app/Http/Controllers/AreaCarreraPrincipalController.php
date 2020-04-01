@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\insertar_datos;
-use DB;
-
+use App\User;
+use App\Genericas;
+use App\Asignaturas;
+use App\Http\AreaMaestroAsistenciasActualizarController;
+use Auth;
 class AreaCarreraPrincipalController extends Controller
 {
     /**
@@ -21,9 +23,11 @@ class AreaCarreraPrincipalController extends Controller
     }
 
     public function index2()
-    {
+    { $id =Auth::user()->matricula;
+        //$user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
+        $user = User::find($id);
          
-         return view('vistas_max.segundaVentanaCarrera');
+         return view('vistas_max.segundaVentanaCarrera',compact('user'));
 
     }
 
