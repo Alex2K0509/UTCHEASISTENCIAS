@@ -30,24 +30,19 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <li class="nav-item"> 
+                <a href="{{route('AreaMaestrosAsistencia')}}"  class="nav-link active">
+
+                  <p>Actualizar Asistencias</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="{{route('AreaMaestroReporte')}}" class="nav-link active">
 
-                  <p>Generar reporte de asistencias</p>
+                  <p>Asistencias por periodos</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{route('AreaMaestrosAsistencia')}}" class="nav-link active">
-
-                  <p>Actualizar asistencias</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link active">
-
-                  <p>Cerrar sesión</p>
-                </a>
-              </li>
+              
             </ul>
           </li>
 
