@@ -14,6 +14,7 @@ class User extends Eloquent implements Authenticatable
 {
     use AuthenticableTrait;
     use Notifiable;
+    protected $collection='users'; 
     protected $primaryKey='matricula';
     protected $connection = 'mongodb';
    
@@ -46,12 +47,8 @@ class User extends Eloquent implements Authenticatable
     ];
 
     
-    protected $collection='users'; 
-    
     public function Genericas(){
-        return $this->hasMany('App\Genericas','matricula','matricula');
-    }
-
-   
+        return $this->hasMany('App\Genericas','matricula_alumno','matricula');
+    } 
     
 }

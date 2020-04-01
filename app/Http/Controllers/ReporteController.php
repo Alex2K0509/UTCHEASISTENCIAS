@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Genericas;
 use App\Asignaturas;
+//use App\Http\AreaMaestroAsistenciasActualizarController;
 use Auth;
 class ReporteController extends Controller
 {
