@@ -17,7 +17,7 @@
 
             <div class="form-group">
                 <label for="datea">Fecha Final</label>
-                <input type="date" class="form-control" id="fecha2"  name="fecha1" required>
+                <input type="date" class="form-control" id="fecha2"  name="fecha2" required>
             </div>
 
             <input type="submit" class="btn-outline-success" style="float: right" value="Solicitar asistencias">

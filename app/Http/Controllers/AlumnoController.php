@@ -74,9 +74,27 @@ class AlumnoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Request $request)
     {
-        return view('vistas_pablo.vizualizarAsistencia');
+
+        $id =Auth::user()->matricula;
+
+        $materia=$request->materia;
+        $grupo=$request->grupo;
+        $fecha1=$request->input('date1');
+        //dd($fecha1);
+        $fecha2=$request->input('date2');
+
+        $genericas = Genericas::select('*')->where('Id_Asignatura','=', $materia)->where('Id_grupo', '=',$grupo)->get();
+        $genericas = $genericas->where('matricula_alumno','<>',$id);
+
+        $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->get();
+
+        $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
+
+        $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
+        $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
+        return view('vistas_pablo.vizualizarAsistencia',compact('horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
     }
 
     /**
