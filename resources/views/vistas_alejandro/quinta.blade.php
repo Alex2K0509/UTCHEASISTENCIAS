@@ -60,7 +60,7 @@
                 <input type="submit" class="btn-outline-success" value="Generar reporte PDF" style="float:right;">
                 </form>
             </div>
-            <!-- /.card-body -->
+            <!-- /.card-bodysss -->
           </div>
 
 @endsection()
