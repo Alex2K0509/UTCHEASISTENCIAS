@@ -74,9 +74,9 @@
                           <option value="falta">FALTA</option>
                         </select>
                         <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
-
                    </form>
                         </td>
+                      
                       </tr>
                     @endif
                 @endforeach       
