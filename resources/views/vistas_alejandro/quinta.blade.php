@@ -74,6 +74,7 @@
 
 
 
+<<<<<<< HEAD
               
             </table>
             
@@ -81,6 +82,14 @@
           </div>
         
           <!-- /.card-body -->
+=======
+              </table>
+                   </div>
+                <input type="submit" class="btn-outline-success" value="Generar reporte PDF" style="float:right;">
+                </form>
+            </div>
+            <!-- /.card-bodysss -->
+>>>>>>> inital commit
           </div>
 
 @endsection()
