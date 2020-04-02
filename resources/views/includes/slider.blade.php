@@ -95,7 +95,6 @@
                                             <p>Visualizar asistencias</p>
                                         </a>
                                     </li>
-
                                 </ul>
                             </li>
 
