@@ -31,4 +31,3 @@ class Genericas extends Model
 	
 
 }
-

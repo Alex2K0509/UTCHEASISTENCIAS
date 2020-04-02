@@ -26,8 +26,14 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      
      $dato3=$request->fecha;
 
+
     $genericas = Genericas::select('*')->where('Id_Asignatura','=', $dato)->where('Id_grupo', '=',$dato2)->get();
     $genericas = $genericas->where('matricula_alumno','<>',$id);
+
+//dd($dato3);
+$genericas = Genericas::select('*')->where('Id_Asignatura','=', $dato)->where('Id_grupo', '=',$dato2)->get();
+$genericas = $genericas->where('matricula_alumno','<>',$id);
+
 
     $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->where('Tipo_usuario','=','1')->get();
  
@@ -35,7 +41,11 @@ class AreaMaestroAsistenciasActualizarController extends Controller
  
     $horarios= Horarios::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->get();
     
+
        return view('vistas_alejandro.tercera',compact('horarios','genericas','asignaturas','maestro','dato3'));
+
+    return view('vistas_alejandro.tercera',compact('horarios','genericas','asignaturas','maestro','dato3'));
+
     }
 
     
@@ -90,6 +100,7 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request,$matricula){
         $matricula=(int) $matricula;
    
@@ -99,17 +110,40 @@ class AreaMaestroAsistenciasActualizarController extends Controller
         $Asistencia->save();
 
      return   redirect()->route('AreaMaestroPrincipalController@index');
+
+
+
+    public function update(Request $request,$matricula)
+    {
+
+        $matricula=(int) $matricula;
+   
+        $estado=$request->input('estado');
+        
+        $Asistencia = Asistencias::find($matricula);  
+        //dd($Asistencia);
+        $Asistencia->estado=$estado;
+        $Asistencia->save();
+        
+
+     return   redirect()->back()->with('Message','editado exitosamente');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function test(){
+        $test=Asistencias::where('matricula_alumno','=',8118110127)->get();
+        dd($test);
+//ejemplo
+        $A= new Asistencias();
+        $A->matricula_alumno='8118110128';
+        $A->Id_grupo='TI5';
+        $A->Id_asignatura='1111';
+        $A->fecha='2020-03-02';
+        $A->hora='17:00';
+        $A->Rfid='asdada';
+        $A->estado='asistencia';
+
+        //$A->save();
+
     }
 
 

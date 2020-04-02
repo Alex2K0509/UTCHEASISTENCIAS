@@ -38,6 +38,7 @@
             <!-- /.card-header -->
             <div class="card-body">
 
+
                   
              
                
@@ -47,6 +48,10 @@
                 <form action="">
               <table id="example1" class="table table-bordered table-striped">
 
+          
+     <table id="example1" class="table table-bordered table-striped">
+
+
                 <thead>
                 <tr>
                   <th>Matricula</th>          
@@ -55,6 +60,7 @@
                   <th>Asistencia/Falta</th>
                 </tr>
                 </thead>
+
                 <tbody>           
                 @foreach ($genericas as $gene)
                     @if($dato3 == $gene->asiste->fecha)
@@ -78,6 +84,36 @@
                         </td>
                       
                       </tr>
+
+                <tbody>          
+                  
+                @foreach ($genericas as $gene)
+              
+                
+                    @if($dato3 == $gene->asiste->fecha)
+                      <tr>
+                        <td>{{ $gene->matricula_alumno }}</td>
+                        <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>  
+                        <td>{{ $gene->asiste->fecha }}</td>
+                       
+                        <td>
+                        <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
+                    @csrf
+                 
+                        <select name="estado" class="form-control form-control-sm">
+                         
+                          <option  >{{ $gene->asiste->estado }}</option>
+                          <option value="Asistencia">Asitencia</option>
+                          <option value="Falta">Falta</option>
+                        </select>
+                        <input type="submit" class="btn-outline-success" value="Actualizar" style="float:right;">
+                   </form>
+                  
+                        </td>
+                      
+                      </tr>
+                      
+
                     @endif
                 @endforeach       
                 </tbody>
