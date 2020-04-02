@@ -17,96 +17,110 @@
 
             </div>
             <div class="card-header">
-              <h3 class="card-title" style="text-align: center">GRADO-GRUPO: 5TO-TIAM</h3>
+              <h3 class="card-title" style="text-align: center">Grupo:
+            @foreach($asignaturas as $asig)
+
+            {{$asig->Id_grupo}}
+
+            @endforeach
+              </h3>
 
             </div>
             <!-- /.card-header -->
             <div class="card-body" style="overflow-x:auto;">
-                <form action="{{ route('GenerarPDF') }}">
+               
               <table id="responsive" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Alumno</th>
-                  <th colspan="3">Ingles</th>
-                  <th colspan="3">Aplicaciones IOT</th>
-                  <th colspan="3">Desarrollo movil</th>
-                  <th colspan="3">Expresion oral y escrita</th>
-                  <th colspan="3">Integradora</th>
-                  <th colspan="3">Aplicaciones web</th>
-                  <th colspan="3">Base de datos </th>
+                <td style="text-align: center;">Matricula</td>
+                <td style="text-align: center;">Alumno</td>
+                <td style="text-align: center;">Fecha</td>
+                <td style="text-align: center;">Asistencias</td>
+                <td style="text-align: center;">Grupo</td>
+                <td style="text-align: center;">Materia</td>
+              
+                </tr>
+               
+               
+                <tr>
+
+             
+             
+  
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($insertar_datoos as $insertar_datos)
-                <tr>
-                  <td colspan="">1</td>
-                  <td>{{$insertar_datos-> alumno}}</td>
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>                                    
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>
-                  <td>A</td>
-                  <td>F</td>
-                  <td>R</td>                                    
-                </tr>
+                @foreach ($asistencias as $asistencia)
+                    <tr>
+                      <td>{{$asistencia->genericas->alumno2->matricula}}</td>
+                      <td>{{$asistencia->genericas->alumno2->name.' '.$asistencia->genericas->alumno2->ApePat.' '.$asistencia->genericas->alumno2->ApeMat}}</td>
+                      <td>{{ $asistencia->fecha }}</td>
+                      <td>{{ $asistencia->estado }} </td>
+                      <td>{{ $asistencia->Id_grupo }} </td>
+                      
+                      @if ($user->genericas()->count() > 0)
+  {{---en este primer forech nos da sus genericas ---}}
+  @foreach ($user->genericas as $generica)
+     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
+  @foreach ($generica->Materias as $Materias)
+  
+ <td> {{$Materias->nombre_materia}} </td>
+@endforeach  
+     
+  @endforeach  
+@endif
+                      
+                      </td>
+                    </tr>
+                    
+                    @endforeach
 
-                <tr>
-<td></td>
-<td></td>
-<td>{{$insertar_datos-> ENa}}</td>
-<td>{{$insertar_datos-> ENf}}</td>
-<td>{{$insertar_datos-> ENr}}</td>  
-<td>{{$insertar_datos-> IOTa}}</td>
-<td>{{$insertar_datos-> IOTf}}</td>
-<td>{{$insertar_datos-> IOTr}}</td>
-<td>{{$insertar_datos-> DMa}}</td>
-<td>{{$insertar_datos-> DMf}}</td>
-<td>{{$insertar_datos-> DMr}}</td> 
-<td>{{$insertar_datos-> EOYEa}}</td>
-<td>{{$insertar_datos-> EOYEf}}</td>
-<td>{{$insertar_datos-> EOYEr}}</td>
-<td>{{$insertar_datos-> INa}}</td>
-<td>{{$insertar_datos-> INf}}</td>
-<td>{{$insertar_datos-> INr}}</td>
-<td>{{$insertar_datos-> AWa}}</td>
-<td>{{$insertar_datos-> AWf}}</td>
-<td>{{$insertar_datos-> AWr}}</td>
-<td>{{$insertar_datos-> BDa}}</td>
-<td>{{$insertar_datos-> BDf}}</td>
-<td>{{$insertar_datos-> BDr}}</td>
-
-              	                	               	
-                </tr>
-
-                
                 </tbody>
-                @endforeach
+
               </table>
-                <input type="submit" class="btn-outline-success" value="Generar PDF" style="float:right;">
-                <form action="">
-                  
-                </form>
-                </form>
+
+
             </div>
+
+            <form action="{{ route('GenerarPDF') }}">
+               
+               <select type="submit" class="btn-outline-success" name="id_grupo"  style="float:right;">
+               <br> 
+
+
+  @if ($user->genericas()->count() > 0)
+ 
+  @foreach ($user->genericas as $generica)
+    
+  @foreach ($generica->Materias as $Materias)
+  <option>Seleccione grupo</option>
+  <option value="{{$Materias->Id_grupo}}">{{$Materias->Id_grupo}}</option>
+</select>
+<br>
+
+<br>
+
+
+  <input type="submit" class="btn-outline-success" value="Generar PDF" style="float: right;">
+  
+@endforeach 
+     
+  @endforeach  
+@endif
+  
+                
+               
+                </form>
             <!-- /.card-body -->
+
           </div>
+
+
+
 
 @endsection
 @section('footer')
     @include('includes/sidebarcarrera')
     @endsection
+
+

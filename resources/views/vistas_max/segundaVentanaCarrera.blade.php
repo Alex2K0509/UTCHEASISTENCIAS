@@ -7,7 +7,7 @@
 
 <section class="content">
         <div class="container">
-  <h2>Generar reporte de asistencias</h2>
+  <h1>Generar reporte de asistencias</h1>
 
   <form action="{{ route('AreaCarreraTabla') }}">
 
@@ -18,9 +18,10 @@
       
       
     </div>
-<div class="form-group">
-      <label for="grupo">Grupo:</label>
-     <select name="Id_asignatura">
+<div class="btn-group-vertical">
+      <label for="grupo" >Grupo:</label>
+     <select class="form-control form-control-lg" name="id_grupo">
+      <option>Seleccione grupo</option>
 
 
   @if ($user->genericas()->count() > 0)
@@ -40,8 +41,8 @@
     </div>
     
 
-
-    <button type="submit" class="btn-outline-success">Solicitar reporte</button>
+<br><br>
+    <button type="submit" class="btn-outline-success" style="float: center;">Solicitar reporte</button>
   </form>
 </div>
           <!-- /.row -->

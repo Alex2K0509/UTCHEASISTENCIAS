@@ -16,6 +16,9 @@ class Genericas extends Model
 	    return $this->hasMany('App\Asignaturas','matricula_alumno','matricula_alumno');
 	}
 
+	
+	
+
 	public function asiste(){
 		return $this->hasOne('App\Asistencias','matricula_alumno','matricula_alumno');
 	}
