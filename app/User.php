@@ -2,26 +2,30 @@
 
 namespace App;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 use Illuminate\Contracts\Auth\Authenticatable;
-use 
+
+
 
 class User extends Eloquent implements Authenticatable
 {
     use AuthenticableTrait;
     use Notifiable;
-
+    protected $collection='users'; 
+    protected $primaryKey='matricula';
     protected $connection = 'mongodb';
-
+   
+    //protected $collection= 'users';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+'name', 'email', 'password', 'ApePat', 'ApeMat', 'Rfid', 'Tipo_usuario','matricula'
     ];
 
     /**
@@ -41,4 +45,10 @@ class User extends Eloquent implements Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    
+    public function Genericas(){
+        return $this->hasMany('App\Genericas','matricula_alumno','matricula');
+    } 
+    
 }

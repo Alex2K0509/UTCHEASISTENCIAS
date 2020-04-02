@@ -45,15 +45,12 @@ return [
         ],
 
         'mongodb' => [
-    'driver' => 'mongodb',
-    'host' => env('DB_HOST', 'localhost'),
-    'port' => env('DB_PORT', 27017),
-    'database' => env('DB_DATABASE','UTCHEASIST'),
-    'username' => env('DB_USERNAME','userweb'),
+            'driver' => 'mongodb',
+            'dsn'=>'mongodb+srv://userweb:<password>@cluster0-gjr0d.mongodb.net/test?retryWrites=true&w=majority',
+            'database' => 'UTCHEASIST2',
+            'username' => env('DB_USERNAME','userweb'),
     'password' => env('DB_PASSWORD','web21*'),
-    'options' => [
-    'database' => env('DB_AUTHENTICATION_DATABASE', 'prueba'), // sets the authentication database required by mongo 3
-    ]
+        ]
 ],
 
 
@@ -106,7 +103,7 @@ return [
             'prefix_indexes' => true,
         ],
 
-    ],
+
 
     /*
     |--------------------------------------------------------------------------

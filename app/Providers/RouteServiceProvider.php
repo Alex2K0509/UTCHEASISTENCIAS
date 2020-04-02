@@ -22,7 +22,8 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
-
+//public const HOME = '/AreaMaestroPrincipal';
+//return redirect()->action('AreaMaestroPrincipalController@index');
     /**
      * Define your route model bindings, pattern filters, etc.
      *

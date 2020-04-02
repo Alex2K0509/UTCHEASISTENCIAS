@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"UTCHEASIST2.migrations"}],"uuid":"4f8789a0af884774b9037de980635efc"}
