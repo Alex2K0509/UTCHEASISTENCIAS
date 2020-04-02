@@ -66,34 +66,17 @@
                     @endforeach
               </tbody>
            
-                  
-            
-
-
-
-
-
-
-<<<<<<< HEAD
-              
             </table>
-            
-             
-          </div>
-        
-          <!-- /.card-body -->
-=======
-              </table>
-                   </div>
-                <input type="submit" class="btn-outline-success" value="Generar reporte PDF" style="float:right;">
-                </form>
             </div>
-<<<<<<< HEAD
-            <!-- /.card-bodysss -->
->>>>>>> inital commit
-=======
-            <!-- /.card-bodyssssss -->
->>>>>>> modulo maestro
+            
+            
+
+
+
+
+
+
+
           </div>
 
 @endsection()
