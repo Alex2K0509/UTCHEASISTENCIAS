@@ -1,6 +1,7 @@
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
+<<<<<<< Updated upstream
     <div class="card">
         <div class="card-header">
             <h3 class="card-title" style="float:top">Alumno:
@@ -35,6 +36,9 @@
 
         </div>
     </div>
+=======
+
+>>>>>>> Stashed changes
     <!-- /.card-header -->
 
 

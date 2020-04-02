@@ -62,6 +62,16 @@ class AlumnoController extends Controller
 
         $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
 
+<<<<<<< Updated upstream
+=======
+
+        // $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
+        $asistencias= Asistencias::select('*')->where('Id_Asignatura','=','1114')->where('Id_grupo','=','TI5')->whereBetween('fecha', ['2020-03-02', '2020-03-06'])->get();
+        $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
+
+        return view('vistas_pablo.TablaAsistencia',compact('user','horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
+
+>>>>>>> Stashed changes
         $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
         $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
 
