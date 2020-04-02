@@ -124,8 +124,4 @@ $genericas = $genericas->where('matricula_alumno','<>',$id);
         //$A->save();
 
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> modulo de max y alejandro
