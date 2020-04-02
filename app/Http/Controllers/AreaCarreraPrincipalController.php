@@ -88,7 +88,7 @@ return view('vistas_max.terceraVentanaCarrera', compact('genericas','asignaturas
     {
         //
     }
-
+//sss
     /**
      * Display the specified resource.
      *
