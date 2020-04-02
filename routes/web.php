@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 ////////pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
-<<<<<<< HEAD
+
 Route::get('/Alumno/justificaciones/email', function (){
     Mail::to('example@example.com')->send(new JustificacionEnvidada());
     return new JustificacionEnvidada();
@@ -32,33 +32,33 @@ Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('Alu
 
 ///////////Alejandro
 Auth::routes();
+Route::get('/Alumno/justificaciones','AlumnoJustificanteController@index')->name('AlumnosJustificaciones');
+Route::get('/Alumno/asistencias','AlumnoAsistenciaController@index')->name('AlumnosAsistencia');
+//pablo
+
 
 Route::get('/Areamaestro','AreaMaestroPrincipalController@index')->name('AreaMaestroPrincipal');
 Route::get('/Areamaestro/asistencias','AreaMaestroAsistenciaController@index')->name('AreaMaestrosAsistencia');
 Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index')->name('AreaMaestroActualizar');
 Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
 Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
+
+
+
+
+
+Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
+Route::get('/GenerarReporteDirector','AreaCarreraPrincipalController@index2')->name('AreaCarreraReporte');
+Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')->name('AreaCarreraTabla');
+Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
+
+
 
 Route::post('/Asistencia/{id}','AreaMaestroAsistenciasActualizarController@update')->name('Asistencia.update');
 
 Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->name('Asistencia.test');
 Route::get('/pdf','PDFController@PDF')->name('reporte');
 ///////////Aleajndro
-=======
-Route::get('/Alumno/justificaciones','AlumnoJustificanteController@index')->name('AlumnosJustificaciones');
-Route::get('/Alumno/asistencias','AlumnoAsistenciaController@index')->name('AlumnosAsistencia');
-//pablo
-
-//Alex
-Route::get('/Areamaestro','AreaMaestroPrincipalController@index')->name('AreaMaestroPrincipal');
-Route::get('/Areamaestro/asistencias','AreaMaestroAsistenciaController@index')->name('AreaMaestrosAsistencia');
-Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index')->name('AreaMaestroActualizar');
-
-Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
-Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
-
-//Alex
->>>>>>> Front-end terminado
 
 
 
@@ -70,6 +70,7 @@ Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')-
 Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
 ///////////max
 
+///////////max
 
 ///////////ramiro
 Route::get('/AdminPrincipal','AdminAreaPrincipal@index')->name('Principal');
