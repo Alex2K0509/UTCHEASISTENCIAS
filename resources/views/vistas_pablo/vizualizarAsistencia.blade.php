@@ -9,8 +9,6 @@
     <form action="{{route('AlumnosVisualizar')}}" >
         <div class="container">
             <h2>Visualizar asistencia</h2>
-<<<<<<< Updated upstream
-=======
 
             <div class="form-group">
                 <label for="materia">Materia:</label>
@@ -55,7 +53,6 @@
 
 
 
->>>>>>> Stashed changes
             <div class="form-group">
                 <label for="date3">Fecha Inicial</label>
                 <input type="date" class="form-control" id="fecha1"  name="fecha1" required>
