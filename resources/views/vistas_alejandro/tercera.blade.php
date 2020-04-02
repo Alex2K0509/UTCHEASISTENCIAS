@@ -62,6 +62,7 @@
                         <td>
                         <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
                     @csrf
+                    
                  
                         <select name="estado" class="form-control form-control-sm">
                          
