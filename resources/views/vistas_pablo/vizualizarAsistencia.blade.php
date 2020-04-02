@@ -2,8 +2,6 @@
 @section('title','Area de Alumnos')
 @section('content')
     <?php
-
-
     ?>
     <title>Area de alumnos</title>
     <form action="{{route('AlumnosVisualizar')}}" >
