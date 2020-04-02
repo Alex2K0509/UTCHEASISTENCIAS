@@ -7,28 +7,42 @@
 
 <section class="content">
         <div class="container">
-  <h2>Generar reporte de asistencias</h2>
+  <h1>Generar reporte de asistencias</h1>
 
   <form action="{{ route('AreaCarreraTabla') }}">
 
  
 
 <div class="form-group">
-      <label for="materia">Carrera:</label>
-      <select id="materia" class="custom-select">
-          <option>TI</option>
-      </select>
+      
+      
+      
     </div>
-<div class="form-group">
-      <label for="grupo">Grupo:</label>
-      <select id="grupo" class="custom-select">
-          <option>TIAM5</option>
-      </select>
+<div class="btn-group-vertical">
+      <label for="grupo" >Grupo:</label>
+     <select class="form-control form-control-lg" name="id_grupo">
+      <option>Seleccione grupo</option>
+
+
+  @if ($user->genericas()->count() > 0)
+ 
+  @foreach ($user->genericas as $generica)
+    
+  @foreach ($generica->Materias as $Materias)
+
+  <option value="{{$Materias->Id_grupo}}">{{$Materias->Id_grupo}}</option>
+  
+@endforeach 
+     
+  @endforeach  
+@endif
+  
+</select>
     </div>
     
 
-
-    <button type="submit" class="btn-outline-success">Solicitar reporte</button>
+<br><br>
+    <button type="submit" class="btn-outline-success" style="float: center;">Solicitar reporte</button>
   </form>
 </div>
           <!-- /.row -->
