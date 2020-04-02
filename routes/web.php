@@ -49,8 +49,9 @@ Route::get('/pdf','PDFController@PDF')->name('reporte');
 
 ///////////max
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
-Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
-Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
+Route::get('/GenerarReporteDirector','AreaCarreraPrincipalController@index2')->name('AreaCarreraReporte');
+Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')->name('AreaCarreraTabla');
+Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
 ///////////max
 
 
