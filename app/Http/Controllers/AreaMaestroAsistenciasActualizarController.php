@@ -100,7 +100,7 @@ $genericas = $genericas->where('matricula_alumno','<>',$id);
         $estado=$request->input('estado');
         
         $Asistencia = Asistencias::find($matricula);  
-        //dd($Asistencia);
+        
         $Asistencia->estado=$estado;
         $Asistencia->save();
         
