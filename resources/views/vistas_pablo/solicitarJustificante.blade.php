@@ -32,10 +32,10 @@
 
                         @foreach ($generica->Materias2 as $Materia)
 
-                            @foreach($Materia->carreras as $carrera)
+                           @foreach($Materia->carreras as $carrera)
                                 <input type="text" class="form-control" id="director" placeholder="{{$carrera->Nombre.' '.$carrera->ApePat.' '.$carrera->ApeMat}}" value="{{$carrera->email}}" name="director" disabled>
-                            @endforeach
                         @endforeach
+@endforeach
                     @endforeach
                 @endif
             </div>

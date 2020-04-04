@@ -29,29 +29,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
+
+      
+
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link"></a>
       </li>
+
       <li class="nav-item d-none d-sm-inline-block">
         <li class="nav-item dropdown">
-          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: black;">
-              {{ Auth::user()->name }} <span class="caret"></span>
-          </a>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color: black;">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
 
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('logout') }}"
-                 onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                  {{ __('Cerrar sesión') }}
-              </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Cerrar sesión') }}
+                                    </a>
 
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-              </form>
-          </div>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
       </li>
-</li>
+
+
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link"></a>
       </li>
+      
     </ul>
 
 
@@ -60,6 +69,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   </nav>
   <!-- /.navbar -->
+
 
   <!-- Main Sidebar Container -->
  @yield('sidebar')
@@ -98,7 +108,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       UTCHEASISTENCIAS
     </div>
     <!-- Default to the left -->
-    <strong>Creado por: ARPM. Derechos Resevardo <a href="https://adminlte.io"></a>.</strong> 
+    <strong>Creado por: <a href="http://adminlte.io">ARPM</a>.</strong> Derechos Resevardo
   </footer>
 </div>
 <!-- ./wrapper -->

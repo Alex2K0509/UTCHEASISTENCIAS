@@ -8,38 +8,31 @@ use Jenssegers\Mongodb\Eloquent\Model;
 class Genericas extends Model
 {
 
-    protected $collection = 'collection_generica';
-    protected $primaryKey = 'matricula_alumno';
-    protected $connection = 'mongodb';
+	protected $collection= 'collection_generica';
+	protected $primaryKey='matricula_alumno';
+	protected $connection = 'mongodb';
 
-    public function Materias()
-    {
-        return $this->hasMany('App\Asignaturas', 'matricula_alumno', 'matricula_alumno');
+	public function Materias(){
+	    return $this->hasMany('App\Asignaturas','matricula_alumno','matricula_alumno');
+	}
+
+	public function asiste(){
+		return $this->hasOne('App\Asistencias','matricula_alumno','matricula_alumno');
+	}
+
+	public function alumno(){
+		 return $this->hasOne('App\User','matricula','matricula_alumno');
+	}
+
+	public function alumno2(){
+		return $this->belongsTo('App\User','matricula_alumno','matricula');
+   }
+    public function directores(){
+return $this->hasOne('App\Director','Id_carrera','Id_carrera');
+    }
+    public function Materias2(){
+        return $this->hasMany('App\Asignaturas','Id_carrera','Id_carrera');
     }
 
-    public function asiste()
-    {
-        return $this->hasOne('App\Asistencias', 'matricula_alumno', 'matricula_alumno');
-    }
 
-    public function alumno()
-    {
-        return $this->hasOne('App\User', 'matricula', 'matricula_alumno');
-    }
-
-    public function alumno2()
-    {
-        return $this->belongsTo('App\User', 'matricula_alumno', 'matricula');
-    }
-
-    public function directores()
-    {
-        return $this->hasOne('App\Director', 'Id_carrera', 'Id_carrera');
-
-    }
-
-    public function Materias2()
-    {
-        return $this->hasMany('App\Asignaturas', 'Id_carrera', 'Id_carrera');
-    }
 }

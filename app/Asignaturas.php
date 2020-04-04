@@ -15,9 +15,8 @@ protected $collection= 'collection_asignaturas';
 public function Asistencias(){
   return $this->hasMany('App\Asistencias','matricula_alumno','matricula_alumno');
 }
-    public function carreras(){
-        return $this->hasMany('App\Director','Id_carrera','Id_carrera');
-    }
-
+public function carreras(){
+    return $this->hasMany('App\Director','Id_carrera','Id_carrera');
+}
 
 }
