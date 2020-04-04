@@ -20,12 +20,28 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 ////////pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
-Route::get('/Alumno/justificaciones/email', function (){
-    Mail::to('example@example.com')->send(new JustificacionEnvidada());
-    return new JustificacionEnvidada();
-});
+
+Route::post('/Alumno/justificaciones/justificacionenviada', 'EmailController@contact')->name('contact');
+
 Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistencia');
 Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
+
+
+
+///////////Alejandro
+Auth::routes();
+
+
+//Alex
+Route::get('/Areamaestro','AreaMaestroPrincipalController@index')->name('AreaMaestroPrincipal');
+Route::get('/Areamaestro/asistencias','AreaMaestroAsistenciaController@index')->name('AreaMaestrosAsistencia');
+Route::get('/Areamaestro/asistencias/actualizar','AreaMaestroAsistenciasActualizarController@index')->name('AreaMaestroActualizar');
+
+Route::get('/Areamaestro/reporte','ReporteController@index')->name('AreaMaestroReporte');
+Route::get('/Areamaestro/reporte/listo','ReporteListoController@index')->name('AreaMaestroReporteListo');
+
+//Alex
+
 
 
 
@@ -49,10 +65,26 @@ Route::get('/pdf','PDFController@PDF')->name('reporte');
 
 ///////////max
 Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
+Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
+Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
+///////////max
+
+
+
+Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
 Route::get('/GenerarReporteDirector','AreaCarreraPrincipalController@index2')->name('AreaCarreraReporte');
 Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')->name('AreaCarreraTabla');
 Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
-///////////max
+
+Route::post('/Asistencia/{id}','AreaMaestroAsistenciasActualizarController@update')->name('Asistencia.update');
+
+Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->name('Asistencia.test');
+Route::get('/pdf','PDFController@PDF')->name('reporte');
+///////////Aleajndro
+
+
+
+
 
 
 ///////////ramiro

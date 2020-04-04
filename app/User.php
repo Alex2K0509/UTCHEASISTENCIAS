@@ -14,10 +14,10 @@ class User extends Eloquent implements Authenticatable
 {
     use AuthenticableTrait;
     use Notifiable;
-    protected $collection='users'; 
+    protected $collection='users';
     protected $primaryKey='matricula';
     protected $connection = 'mongodb';
-   
+
     //protected $collection= 'users';
     /**
      * The attributes that are mass assignable.
@@ -46,9 +46,10 @@ class User extends Eloquent implements Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    
+
     public function Genericas(){
         return $this->hasMany('App\Genericas','matricula_alumno','matricula');
-    } 
-    
+    }
+
+
 }
