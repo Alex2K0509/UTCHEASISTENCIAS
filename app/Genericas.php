@@ -27,7 +27,12 @@ class Genericas extends Model
 	public function alumno2(){
 		return $this->belongsTo('App\User','matricula_alumno','matricula');
    }
+    public function directores(){
+return $this->hasOne('App\Director','Id_carrera','Id_carrera');
+    }
+    public function Materias2(){
+        return $this->hasMany('App\Asignaturas','Id_carrera','Id_carrera');
+    }
 
-	
 
 }
