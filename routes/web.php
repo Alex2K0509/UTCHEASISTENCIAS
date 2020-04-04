@@ -52,3 +52,4 @@ Route::get('/MaestrosImportarAdmin','AdminImportarMaestros@index')->name('Maestr
 Route::get('/AlumnosImportarAdmin','AdminImportarAlumnos@index')->name('AlumnosImportados');
 
 
+//datos
