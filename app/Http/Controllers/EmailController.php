@@ -12,7 +12,7 @@ class EmailController extends Controller
 
     public function contact(Request $request){
         $subject = "Aviso de justificacion";
-        $for = "8118110125@utchetumal.edu.mx";
+        $for = "alexvergara1998@gmail.com";
         Mail::send('vistas_pablo.justificacionenviada',$request->all(), function($msj) use($subject,$for){
             $msj->from("fingerprintassistancesystem@gmail.com","Nombre del alumno");
             $msj->subject($subject);
