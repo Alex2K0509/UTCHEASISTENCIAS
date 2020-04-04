@@ -13,7 +13,7 @@ class ReporteListoController extends Controller
      */
     public function index()
     {
-        return view('vistas_alejandro.quinta');
+        return view('vistas_Ramiro.quinta');
     }
 
     /**

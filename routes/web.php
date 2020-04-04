@@ -42,7 +42,6 @@ Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('Ar
 Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
 
 
-//Rutas Ramiro
 
 Route::get('/AdminPrincipal','AdminAreaPrincipal@index')->name('Principal');
 
@@ -52,4 +51,4 @@ Route::get('/MaestrosImportarAdmin','AdminImportarMaestros@index')->name('Maestr
 
 Route::get('/AlumnosImportarAdmin','AdminImportarAlumnos@index')->name('AlumnosImportados');
 
-Route::get('/MateriasImportarAdmin','AdminImportarMaterias@index')->name('MateriasImportadas');
+
