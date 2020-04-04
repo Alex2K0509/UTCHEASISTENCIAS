@@ -58,19 +58,14 @@
                       <td>{{ $asistencia->estado }} </td>
                       <td>{{ $asistencia->Id_grupo }} </td>
                       
-                      @if ($user->genericas()->count() > 0)
-  {{---en este primer forech nos da sus genericas ---}}
-  @foreach ($user->genericas as $generica)
-     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-  @foreach ($generica->Materias as $Materias)
+                     
+  @foreach ($asignaturas as $Materia)
   
- <td> {{$Materias->nombre_materia}} </td>
+ <td> {{$Materia->nombre_materia}} </td>
 @endforeach  
      
-  @endforeach  
-@endif
-                      
-                      </td>
+            
+                    
                     </tr>
                     
                     @endforeach
@@ -82,40 +77,39 @@
 
             </div>
 
-            <form action="{{ route('GenerarPDF') }}">
-               
-               <select type="submit" class="btn-outline-success" name="id_grupo"  style="float:right;">
-               <br> 
-
-
-  @if ($user->genericas()->count() > 0)
- 
-  @foreach ($user->genericas as $generica)
-    
-  @foreach ($generica->Materias as $Materias)
-  <option>Seleccione grupo</option>
-  <option value="{{$Materias->Id_grupo}}">{{$Materias->Id_grupo}}</option>
-</select>
-<br>
-
-<br>
-
-
-  <input type="submit" class="btn-outline-success" value="Generar PDF" style="float: right;">
-  
-@endforeach 
-     
-  @endforeach  
-@endif
-  
-                
-               
-                </form>
+            
+            
             <!-- /.card-body -->
 
           </div>
 
+          <form action="{{ route('GenerarPDF') }}" target="_blank">
+               
+             
+            
 
+            <label for="grupo" >Grupo:</label>
+            <select class="form-control form-control-lg" name="id_grupo">
+            @foreach ($asignaturas as $Materia)
+         
+            <option value="{{$Materia->Id_grupo}}">{{$Materia->Id_grupo}}</option>
+           
+           @endforeach  
+
+</select>  
+<label for="grupo" >Materia:</label>
+<select class="form-control form-control-lg" name="Id_asignatura">
+  @foreach ($asignaturas as $Materia)
+  
+  <option  value="{{$Materia->Id_Asignatura}}">{{$Materia->nombre_materia}}</option>
+ 
+ @endforeach  
+
+</select> 
+
+<input type="submit" class="btn-outline-success" value="Generar PDF" style="float: right;">
+             
+              </form>
 
 
 @endsection
