@@ -29,23 +29,25 @@ class PDFmaker extends Controller
     public function PDFasistencias(Request $request)
 
     {   
+        $now = new \DateTime();
         $id =Auth::user()->matricula;
        
         $user = User::find($id);
 
+        $materia=$request->Id_asignatura;
         $id_grupo=$request->id_grupo;
-      
+      //dd($id_grupo);
         
 //dd($id_asig);
 // $insertar_datoos = insertar_datos::all();         
 
 $genericas = Genericas::select('*')->where('Id_grupo', '=',$id_grupo)->where('matricula_alumno','=',$id)->get();
 
-$asignaturas= Asignaturas::select('*')->where('Id_grupo','=',$id_grupo)->where('matricula_alumno','=',$id)->get();
+$asignaturas= Asignaturas::select('*')->where('Id_grupo','=',$id_grupo)->where('matricula_alumno','=',$id)->where('Id_Asignatura','=',$materia)->get();
+//dd($asignaturas);
+$asistencias= Asistencias::select('*')->where('Id_grupo','=',$id_grupo)->where('Id_Asignatura','=',$materia)->get();
 
-$asistencias= Asistencias::select('*')->where('Id_grupo','=',$id_grupo)->where('Id_Asignatura','=','1114')->get();
-
-        $pdf = PDF::loadView('vistas_max.TablaAsistencia', compact('genericas','asignaturas','asistencias','user'));
+        $pdf = PDF::loadView('vistas_max.TablaAsistencia', compact('genericas','asignaturas','asistencias','user','now'));
 
         $pdf->setPaper('a4','landscape');
         return $pdf->stream('TablaDeAsistencias.pdf');

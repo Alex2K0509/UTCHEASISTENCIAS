@@ -29,18 +29,28 @@
             bottom: 0cm;
             left: 0cm;
             right: 0cm;
-            height: 2cm;
+            height: 2.2cm;
             background-color: #46C66B;
             color: white;
             text-align: center;
-            line-height: 35px;
+            line-height: 17px;
         }
+
+        img {
+          position: fixed;
+          top: 15px;
+          left: 20px;
+          right: 30px;
+        }
+
+        
+
     </style>
 </head>
 <body>
     <header>
         <br>
-        <p><strong>FINGER PRINT ASSISTANCE SYSTEM</strong></p>
+        <p><strong><img src="https://lh3.googleusercontent.com/proxy/nWIXBNjcYInOX3KtWCfRe0ZHNlKIt2YQiz0D1VwynoipKUxC8szEu2-T8T4NI3FZbO7pWMntgeudFUuUzQ50XsDwvlwAJ7YkZgmkhccxPVGt3WOgAwNJUHcp0eB9wtdm1g" height="50">FINGER PRINT ASSISTANCE SYSTEM</strong></p>
     </header>
     <main>
             <h5 style="text-align: center"><strong>TABLA DE ASISTENCIAS</strong></h5>
@@ -66,17 +76,10 @@
                       <td>{{ $asistencia->estado }} </td>
                       <td>{{ $asistencia->Id_grupo }} </td>
                       
-                      @if ($user->genericas()->count() > 0)
- 
-  @foreach ($user->genericas as $generica)
- 
-  @foreach ($generica->Materias as $Materias)
+                      @foreach ($asignaturas as $Materia)
   
- <td> {{$Materias->nombre_materia}} </td>
+ <td> {{$Materia->nombre_materia}} </td>
 @endforeach  
-     
-  @endforeach  
-@endif
                       
                       </td>
                     </tr>
@@ -90,7 +93,14 @@
           </div>
     </main>
     <footer>
-        <p><strong>CREADO POR: APRM</strong></p>
+        @foreach ($asignaturas as $Materia)
+  
+ <p style="color: black">Materia: {{$Materia->nombre_materia}}</p>
+ 
+ <p style="color: black">Fecha: {{$now->format('d-m-Y H:i:s')}}</p>
+ 
+@endforeach  
+        
     </footer>
 </body>
 </html>

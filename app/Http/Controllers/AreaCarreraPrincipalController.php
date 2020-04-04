@@ -36,7 +36,8 @@ class AreaCarreraPrincipalController extends Controller
     { $id =Auth::user()->matricula;
         //$user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
         $user = User::find($id);
-         
+        //$asignaturas= Asignaturas::select('*')->where('Id_grupo','=',$id_grupo)->where('Id_Asignatura','=',$materia)->get();
+
          return view('vistas_max.segundaVentanaCarrera',compact('user'));
 
     }
@@ -47,16 +48,17 @@ class AreaCarreraPrincipalController extends Controller
         
         $id =Auth::user()->matricula;
         $user = User::find($id);
-
+        $materia=$request->Id_asignatura;
         $id_grupo=$request->id_grupo; 
+
 //dd($id_asig);
 // $insertar_datoos = insertar_datos::all();         
 
 $genericas = Genericas::select('*')->where('Id_grupo', '=',$id_grupo)->where('matricula_alumno','=',$id)->get();
 
-$asignaturas= Asignaturas::select('*')->where('Id_grupo','=',$id_grupo)->where('matricula_alumno','=',$id)->get();
+$asignaturas= Asignaturas::select('*')->where('Id_grupo','=',$id_grupo)->where('matricula_alumno','=',$id)->where('Id_Asignatura','=',$materia)->get();
 
-$asistencias= Asistencias::select('*')->where('Id_grupo','=',$id_grupo)->where('Id_Asignatura','=','1114')->get();
+$asistencias= Asistencias::select('*')->where('Id_grupo','=',$id_grupo)->where('Id_Asignatura','=',$materia)->get();
 
 return view('vistas_max.terceraVentanaCarrera', compact('genericas','asignaturas','asistencias','user'));
 

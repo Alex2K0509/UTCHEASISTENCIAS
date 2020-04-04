@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-    "content-hash": "057685e8b0fb8731fa68819137a07f5e",
-
-    "content-hash": "87d4972edd5612aab7680de99af1d712",
-
+    "content-hash": "90a1450aab18b0bb29bc47548f013aec",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -35,13 +31,9 @@
                     "dev-master": "0.8-dev"
                 },
                 "laravel": {
-<<<<<<< Updated upstream
-                    "providers": ["Barryvdh\\DomPDF\\ServiceProvider"],
-=======
                     "providers": [
                         "Barryvdh\\DomPDF\\ServiceProvider"
                     ],
->>>>>>> Stashed changes
                     "aliases": {
                         "PDF": "Barryvdh\\DomPDF\\Facade"
                     }
@@ -53,13 +45,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-<<<<<<< Updated upstream
-            "license": ["MIT"],
-=======
             "license": [
                 "MIT"
             ],
->>>>>>> Stashed changes
             "authors": [
                 {
                     "name": "Barry vd. Heuvel",
@@ -67,15 +55,11 @@
                 }
             ],
             "description": "A DOMPDF Wrapper for Laravel",
-<<<<<<< Updated upstream
-            "keywords": ["dompdf", "laravel", "pdf"],
-=======
             "keywords": [
                 "dompdf",
                 "laravel",
                 "pdf"
             ],
->>>>>>> Stashed changes
             "time": "2020-02-25T20:44:34+00:00"
         },
         {
@@ -280,12 +264,6 @@
                 "psr-4": {
                     "Dompdf\\": "src/"
                 },
-<<<<<<< Updated upstream
-                "classmap": ["lib/"]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": ["LGPL-2.1"],
-=======
                 "classmap": [
                     "lib/"
                 ]
@@ -294,7 +272,6 @@
             "license": [
                 "LGPL-2.1"
             ],
->>>>>>> Stashed changes
             "authors": [
                 {
                     "name": "Fabien Ménager",
@@ -477,8 +454,6 @@
                 "proxy",
                 "trusted proxy"
             ],
-<<<<<<< Updated upstream
-=======
             "time": "2020-02-22T01:51:47+00:00"
         },
         {
@@ -668,7 +643,6 @@
                 "uri",
                 "url"
             ],
->>>>>>> Stashed changes
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
@@ -711,6 +685,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -757,6 +732,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -969,14 +945,10 @@
             ],
             "description": "The Laravel Framework.",
             "homepage": "https://laravel.com",
-<<<<<<< Updated upstream
-            "keywords": ["framework", "laravel"],
-=======
             "keywords": [
                 "framework",
                 "laravel"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-24T16:37:50+00:00"
         },
         {
@@ -1035,16 +1007,12 @@
                 }
             ],
             "description": "Powerful REPL for the Laravel framework.",
-<<<<<<< Updated upstream
-            "keywords": ["REPL", "Tinker", "laravel", "psysh"],
-=======
             "keywords": [
                 "REPL",
                 "Tinker",
                 "laravel",
                 "psysh"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-17T15:34:59+00:00"
         },
         {
@@ -1127,13 +1095,9 @@
             "type": "library",
             "extra": {
                 "laravel": {
-<<<<<<< Updated upstream
-                    "providers": ["Laraveles\\Spanish\\SpanishServiceProvider"]
-=======
                     "providers": [
                         "Laraveles\\Spanish\\SpanishServiceProvider"
                     ]
->>>>>>> Stashed changes
                 }
             },
             "autoload": {
@@ -1142,13 +1106,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-<<<<<<< Updated upstream
-            "license": ["MIT"],
-=======
             "license": [
                 "MIT"
             ],
->>>>>>> Stashed changes
             "authors": [
                 {
                     "name": "Israel Ortuño",
@@ -1163,16 +1123,12 @@
             ],
             "description": "Conjunto de traducciones en español para Laravel",
             "homepage": "https://github.com/Laraveles/spanish",
-<<<<<<< Updated upstream
-            "keywords": ["laravel", "laraveles", "spanish", "traduccion"],
-=======
             "keywords": [
                 "laravel",
                 "laraveles",
                 "spanish",
                 "traduccion"
             ],
->>>>>>> Stashed changes
             "time": "2019-11-02T08:39:28+00:00"
         },
         {
@@ -1484,16 +1440,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.32.1",
+            "version": "2.32.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ecb525c766deb3bbbb6a0082ea0e41d3d9ae477c"
+                "reference": "f10e22cf546704fab1db4ad4b9dedbc5c797a0dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ecb525c766deb3bbbb6a0082ea0e41d3d9ae477c",
-                "reference": "ecb525c766deb3bbbb6a0082ea0e41d3d9ae477c",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f10e22cf546704fab1db4ad4b9dedbc5c797a0dc",
+                "reference": "f10e22cf546704fab1db4ad4b9dedbc5c797a0dc",
                 "shasum": ""
             },
             "require": {
@@ -1546,16 +1502,12 @@
             ],
             "description": "An API extension for DateTime that supports 281 different languages.",
             "homepage": "http://carbon.nesbot.com",
-<<<<<<< Updated upstream
-            "keywords": ["date", "datetime", "time"],
-=======
             "keywords": [
                 "date",
                 "datetime",
                 "time"
             ],
->>>>>>> Stashed changes
-            "time": "2020-03-26T13:04:10+00:00"
+            "time": "2020-03-31T13:43:19+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1707,16 +1659,12 @@
                 }
             ],
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-<<<<<<< Updated upstream
-            "keywords": ["csprng", "polyfill", "pseudorandom", "random"],
-=======
             "keywords": [
                 "csprng",
                 "polyfill",
                 "pseudorandom",
                 "random"
             ],
->>>>>>> Stashed changes
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
@@ -1743,7 +1691,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": ["LGPL-3.0"],
+            "license": [
+                "LGPL-3.0"
+            ],
             "authors": [
                 {
                     "name": "Fabien Ménager",
@@ -1781,13 +1731,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-<<<<<<< Updated upstream
-            "license": ["LGPL-3.0"],
-=======
             "license": [
                 "LGPL-3.0"
             ],
->>>>>>> Stashed changes
             "authors": [
                 {
                     "name": "Fabien Ménager",
@@ -1845,16 +1791,12 @@
                 }
             ],
             "description": "Option Type for PHP",
-<<<<<<< Updated upstream
-            "keywords": ["language", "option", "php", "type"],
-=======
             "keywords": [
                 "language",
                 "option",
                 "php",
                 "type"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-21T18:07:53+00:00"
         },
         {
@@ -1935,13 +1877,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-<<<<<<< Updated upstream
-            "license": ["MIT"],
-=======
             "license": [
                 "MIT"
             ],
->>>>>>> Stashed changes
             "authors": [
                 {
                     "name": "PHP-FIG",
@@ -2000,15 +1938,11 @@
             ],
             "description": "Common interface for logging libraries",
             "homepage": "https://github.com/php-fig/log",
-<<<<<<< Updated upstream
-            "keywords": ["log", "psr", "psr-3"],
-=======
             "keywords": [
                 "log",
                 "psr",
                 "psr-3"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -2130,8 +2064,6 @@
                 "interactive",
                 "shell"
             ],
-<<<<<<< Updated upstream
-=======
             "time": "2020-03-21T06:55:27+00:00"
         },
         {
@@ -2171,7 +2103,6 @@
                     "email": "ralph.khattar@gmail.com"
                 }
             ],
->>>>>>> Stashed changes
             "description": "A polyfill for getallheaders.",
             "time": "2019-03-08T08:55:37+00:00"
         },
@@ -2260,11 +2191,6 @@
                 "identifier",
                 "uuid"
             ],
-<<<<<<< Updated upstream
-            "description": "Parser for CSS Files written in PHP",
-            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
-            "keywords": ["css", "parser", "stylesheet"],
-=======
             "time": "2020-02-21T04:36:14+00:00"
         },
         {
@@ -2310,7 +2236,6 @@
                 "parser",
                 "stylesheet"
             ],
->>>>>>> Stashed changes
             "time": "2019-02-22T07:42:52+00:00"
         },
         {
@@ -2994,14 +2919,10 @@
             ],
             "description": "A library to manipulate MIME messages",
             "homepage": "https://symfony.com",
-<<<<<<< Updated upstream
-            "keywords": ["mime", "mime-type"],
-=======
             "keywords": [
                 "mime",
                 "mime-type"
             ],
->>>>>>> Stashed changes
             "time": "2020-02-04T09:41:09+00:00"
         },
         {
@@ -3054,16 +2975,12 @@
             ],
             "description": "Symfony polyfill for ctype functions",
             "homepage": "https://symfony.com",
-<<<<<<< Updated upstream
-            "keywords": ["compatibility", "ctype", "polyfill", "portable"],
-=======
             "keywords": [
                 "compatibility",
                 "ctype",
                 "polyfill",
                 "portable"
             ],
->>>>>>> Stashed changes
             "time": "2020-02-27T09:26:54+00:00"
         },
         {
@@ -3293,16 +3210,12 @@
             ],
             "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
             "homepage": "https://symfony.com",
-<<<<<<< Updated upstream
-            "keywords": ["compatibility", "polyfill", "portable", "shim"],
-=======
             "keywords": [
                 "compatibility",
                 "polyfill",
                 "portable",
                 "shim"
             ],
->>>>>>> Stashed changes
             "time": "2020-02-27T09:26:54+00:00"
         },
         {
@@ -3355,16 +3268,12 @@
             ],
             "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
             "homepage": "https://symfony.com",
-<<<<<<< Updated upstream
-            "keywords": ["compatibility", "polyfill", "portable", "shim"],
-=======
             "keywords": [
                 "compatibility",
                 "polyfill",
                 "portable",
                 "shim"
             ],
->>>>>>> Stashed changes
             "time": "2020-02-27T09:26:54+00:00"
         },
         {
@@ -3484,16 +3393,12 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "https://symfony.com",
-<<<<<<< Updated upstream
-            "keywords": ["router", "routing", "uri", "url"],
-=======
             "keywords": [
                 "router",
                 "routing",
                 "uri",
                 "url"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-16T11:24:17+00:00"
         },
         {
@@ -3757,14 +3662,10 @@
             ],
             "description": "Symfony mechanism for exploring and dumping PHP variables",
             "homepage": "https://symfony.com",
-<<<<<<< Updated upstream
-            "keywords": ["debug", "dump"],
-=======
             "keywords": [
                 "debug",
                 "dump"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-18T07:15:43+00:00"
         },
         {
@@ -3870,30 +3771,11 @@
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-<<<<<<< Updated upstream
-            "keywords": ["dotenv", "env", "environment"],
-
-            "time": "2020-03-12T13:44:00+00:00",
-
-            "time": "2020-03-12T13:44:00+00:00",
-
-            "time": "2020-03-12T13:44:00+00:00",
-
-            "time": "2020-03-12T13:44:00+00:00",
-
-            "keywords": ["dotenv", "env", "environment"],
-
-            "time": "2020-03-12T13:44:00+00:00",
-=======
             "keywords": [
                 "dotenv",
                 "env",
                 "environment"
             ],
->>>>>>> Stashed changes
-
-            "time": "2020-03-12T13:44:00+00:00",
-
             "time": "2019-09-10T21:37:39+00:00"
         },
         {
@@ -3945,12 +3827,6 @@
                 "psr-4": {
                     "Yajra\\DataTables\\": "src/"
                 },
-<<<<<<< Updated upstream
-                "files": ["src/helper.php"]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": ["MIT"],
-=======
                 "files": [
                     "src/helper.php"
                 ]
@@ -3959,7 +3835,6 @@
             "license": [
                 "MIT"
             ],
->>>>>>> Stashed changes
             "authors": [
                 {
                     "name": "Arjay Angeles",
@@ -3967,17 +3842,12 @@
                 }
             ],
             "description": "jQuery DataTables API for Laravel 4|5",
-<<<<<<< Updated upstream
-            "keywords": ["datatables", "jquery", "laravel"],
-=======
             "keywords": [
                 "datatables",
                 "jquery",
                 "laravel"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-03T16:29:31+00:00"
-
         }
     ],
     "packages-dev": [
@@ -4083,16 +3953,12 @@
             ],
             "description": "Send PHP errors to Flare",
             "homepage": "https://github.com/facade/flare-client-php",
-<<<<<<< Updated upstream
-            "keywords": ["exception", "facade", "flare", "reporting"],
-=======
             "keywords": [
                 "exception",
                 "facade",
                 "flare",
                 "reporting"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-02T15:52:04+00:00"
         },
         {
@@ -4158,16 +4024,12 @@
             ],
             "description": "A beautiful error page for Laravel applications.",
             "homepage": "https://github.com/facade/ignition",
-<<<<<<< Updated upstream
-            "keywords": ["error", "flare", "laravel", "page"],
-=======
             "keywords": [
                 "error",
                 "flare",
                 "laravel",
                 "page"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-05T12:39:07+00:00"
         },
         {
@@ -4856,9 +4718,6 @@
             ],
             "description": "Highly opinionated mocking framework for PHP 5.3+",
             "homepage": "https://github.com/phpspec/prophecy",
-<<<<<<< Updated upstream
-            "keywords": ["Double", "Dummy", "fake", "mock", "spy", "stub"],
-=======
             "keywords": [
                 "Double",
                 "Dummy",
@@ -4867,7 +4726,6 @@
                 "spy",
                 "stub"
             ],
->>>>>>> Stashed changes
             "time": "2020-03-05T15:02:03+00:00"
         },
         {
@@ -5198,15 +5056,11 @@
             ],
             "description": "The PHP Unit Testing framework.",
             "homepage": "https://phpunit.de/",
-<<<<<<< Updated upstream
-            "keywords": ["phpunit", "testing", "xunit"],
-=======
             "keywords": [
                 "phpunit",
                 "testing",
                 "xunit"
             ],
->>>>>>> Stashed changes
             "time": "2020-01-08T08:49:49+00:00"
         },
         {
