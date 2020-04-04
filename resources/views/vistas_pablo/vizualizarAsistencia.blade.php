@@ -2,14 +2,12 @@
 @section('title','Area de Alumnos')
 @section('content')
     <?php
-
-
-
     ?>
     <title>Area de alumnos</title>
     <form action="{{route('AlumnosVisualizar')}}" >
         <div class="container">
             <h2>Visualizar asistencia</h2>
+
             <div class="form-group">
                 <label for="materia">Materia:</label>
                 <select id="materia" class="custom-select" name="materia">
@@ -50,43 +48,24 @@
 
                 </select>
 
-    ?>
-    <title>Area de alumnos</title>
-    <form action="{{route('AlumnosVisualizar')}}" >
-        <div class="container">
-            <h2>Visualizar asistencia</h2>
+
+
+
             <div class="form-group">
                 <label for="date3">Fecha Inicial</label>
                 <input type="date" class="form-control" id="fecha1"  name="fecha1" required>
-
             </div>
 
 
             <div class="form-group">
-
-                <label for="date1">Fecha inicial:</label>
-                <input type="date" class="form-control" id="date1"  name="date1">
-            </div>
-
-
-            <div class="form-group">
-                <label for="date2">Fecha final:</label>
-                <input type="date" class="form-control" id="date2"  name="date2">
-            </div>
-
                 <label for="datea">Fecha Final</label>
                 <input type="date" class="form-control" id="fecha2"  name="fecha2" required>
             </div>
 
             <input type="submit" class="btn-outline-success" style="float: right" value="Solicitar asistencias">
 
-
-
-            <button type="submit"  class="btn-outline-success">Solicitar asistencia</button>
         </div>
     </form>
-
-
 
 @endsection
 @section('sidebar')

@@ -37,20 +37,8 @@
 
             <!-- /.card-header -->
             <div class="card-body">
-
-
-                  
-             
-               
-                
-                  <table id="example1" class="table table-bordered table-striped">
-
-                <form action="">
-              <table id="example1" class="table table-bordered table-striped">
-
           
      <table id="example1" class="table table-bordered table-striped">
-
 
                 <thead>
                 <tr>
@@ -60,31 +48,6 @@
                   <th>Asistencia/Falta</th>
                 </tr>
                 </thead>
-
-                <tbody>           
-                @foreach ($genericas as $gene)
-                    @if($dato3 == $gene->asiste->fecha)
-                      <tr>
-                        <td>{{ $gene->matricula_alumno }}</td>
-                        <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>
-                        <td>{{ $gene->asiste->fecha }}</td>
-
-                        <td>
-                   <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
-                    @csrf
-                 
-                        <select name="estado">
-                         
-                          <option  >{{ $gene->asiste->estado }}</option>
-                          <option value="asistencia">ASISTENCIA</option>
-                          <option value="falta">FALTA</option>
-                        </select>
-                        <input type="submit" class="btn-outline-success" value="Grabar día" style="float:right;">
-                   </form>
-                        </td>
-                      
-                      </tr>
-
                 <tbody>          
                   
                 @foreach ($genericas as $gene)
@@ -99,6 +62,7 @@
                         <td>
                         <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
                     @csrf
+                    
                  
                         <select name="estado" class="form-control form-control-sm">
                          
@@ -113,7 +77,6 @@
                       
                       </tr>
                       
-
                     @endif
                 @endforeach       
                 </tbody>

@@ -38,8 +38,28 @@
 @endif
   
 </select>
+
     </div>
-    
+    <label for="grupo" >Materia:</label>
+    <select class="form-control form-control-lg" name="Id_asignatura">
+
+
+      {{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
+        @if ($user->genericas()->count() > 0)
+        {{---en este primer forech nos da sus genericas ---}}
+        @foreach ($user->genericas as $generica)
+           {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
+        @foreach ($generica->Materias as $Materias)
+      
+        <option value="{{$Materias->Id_Asignatura}}">{{$Materias->nombre_materia}}</option>
+      @endforeach  
+           
+        @endforeach  
+      @endif
+        
+      </select>
+         
+           
 
 <br><br>
     <button type="submit" class="btn-outline-success" style="float: center;">Solicitar reporte</button>

@@ -25,19 +25,6 @@
                 @endforeach
               </h3>
 
-
-            </div>
-            <div class="card-header">
-              <h3 class="card-title" style="text-align: center">Horario:
-                @foreach ($horarios as $entrada)
-               {{$entrada->entrada.' - '.$entrada->salida}}
-              @endforeach
-              </h3>
-
-            </div>
-          </div>
-
-
             </div>
             <div class="card-header">
               <h3 class="card-title" style="text-align: center">Horario:
@@ -50,7 +37,6 @@
           
           </div>
           
-
             <!-- /.card-header -->
           
 
@@ -79,11 +65,6 @@
                     
                     @endforeach
               </tbody>
-
-            <a href="{{ route('reporte')}}">imprimir pdf</a>
-                  
-            
-
            
             </table>
             </div>
@@ -95,16 +76,6 @@
 
 
 
-
-
-
-              
-            </table>
-            
-             
-          </div>
-        
-          <!-- /.card-body -->
 
           </div>
 

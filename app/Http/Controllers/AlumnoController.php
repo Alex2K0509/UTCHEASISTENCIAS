@@ -48,11 +48,7 @@ class AlumnoController extends Controller
     public function store(Request $request)
     {
         $id =Auth::user()->matricula;
-
         $user = user::find($id);
-
-
-
         $materia=$request->materia;
         $grupo=$request->grupo;
         $fecha1=$request->input('date1');
@@ -66,17 +62,11 @@ class AlumnoController extends Controller
 
         $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
 
-
-       // $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
+        // $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
         $asistencias= Asistencias::select('*')->where('Id_Asignatura','=','1114')->where('Id_grupo','=','TI5')->whereBetween('fecha', ['2020-03-02', '2020-03-06'])->get();
         $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
 
         return view('vistas_pablo.TablaAsistencia',compact('user','horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
-
-        $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
-        $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
-
-        return view('vistas_pablo.TablaAsistencia',compact('horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
     }
 
     /**
@@ -89,10 +79,7 @@ class AlumnoController extends Controller
     {
 
         $id =Auth::user()->matricula;
-
         $user = user::find($id);
-
-
         $materia=$request->materia;
         $grupo=$request->grupo;
         $fecha1=$request->input('date1');
@@ -108,11 +95,7 @@ class AlumnoController extends Controller
 
         $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
         $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
-
         return view('vistas_pablo.vizualizarAsistencia',compact('user','horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
-
-        return view('vistas_pablo.vizualizarAsistencia',compact('horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
-
     }
 
     /**
