@@ -68,4 +68,3 @@
 @section('sidebar')
     @include('includes.slider')
 @endsection
-
