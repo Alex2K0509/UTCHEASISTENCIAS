@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TABLA DE ASISTENCIAS</title>
+    <title>registro de asistencias</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         @page {
@@ -53,7 +53,7 @@
         <p><strong><img src="https://lh3.googleusercontent.com/proxy/nWIXBNjcYInOX3KtWCfRe0ZHNlKIt2YQiz0D1VwynoipKUxC8szEu2-T8T4NI3FZbO7pWMntgeudFUuUzQ50XsDwvlwAJ7YkZgmkhccxPVGt3WOgAwNJUHcp0eB9wtdm1g" height="50">FINGER PRINT ASSISTANCE SYSTEM</strong></p>
     </header>
     <main>
-            <h5 style="text-align: center"><strong>TABLA DE ASISTENCIAS</strong></h5>
+            <h5 style="text-align: center"><strong>REGISTRO DE ASISTENCIAS</strong></h5>
               <div class="mx-auto">
               
               <table id="responsive" class="table table-bordered table-striped">
