@@ -22,13 +22,16 @@ class AlumnoController extends Controller
     public function index()
     {
         $id =Auth::user()->matricula;
-        
+
         $user = user::find($id);
 
         $email=Auth::user()->email;
-        
+
+        $nombre=Auth::user()->name;
+        $apepat=Auth::user()->ApePat;
+        $apemat=Auth::user()->ApeMat;
        // dd($user);
-        return view('vistas_pablo.solicitarJustificante',compact('email','user'));
+        return view('vistas_pablo.solicitarJustificante',compact('email','user','nombre','apepat','apemat'));
     }
 
     /**

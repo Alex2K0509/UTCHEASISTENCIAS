@@ -7,19 +7,38 @@
         <div class="container">
  
 <center><h2>Importar Archivo CSV</h2></center>
-  <form action="{{ route('MateriasImportadas') }}">
-<fieldset>
-    <legend>Importar CSV para Materias</legend>
-    <?php if (!empty($message_import)) echo $message_import; ?>
-    <form enctype="multipart/form-data" method="POST" action="index.php">
-        <label>Selecciona un archivo .csv </label>
-        <input type="file" name="file" class="">
-        <input type="submit" value="Upload" name="submitFileUpload">
-    </form>
-  </form>
+
+  <form method="POST" action="{{ route('HorariosImportados') }}" enctype="multipart/form-data">
+    <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading">Agregar archivo para Horario</div>
+        <div class="panel-body">
+          
+            
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            
+            <div class="form-group">
+              <label class="col-md-4 control-label">Nuevo Archivo</label>
+              <div class="col-md-6">
+                <input type="file" class="form-control" name="file" >
+              </div>
+            </div>
+ 
+            <div class="form-group">
+              <div class="col-md-6 col-md-offset-4">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</section>
-</fieldset>
+
+  </form>
+
 
 @endsection()
 

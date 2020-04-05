@@ -20,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 ////////pablo
+
+
+////////pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
 
 Route::post('/Alumno/justificaciones/justificacionenviada', 'EmailController@contact')->name('contact');
@@ -27,6 +30,8 @@ Route::post('/Alumno/justificaciones/justificacionenviada', 'EmailController@con
 Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistencia');
 Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
 
+
+///////pablo
 
 ///////////Alejandro
 Auth::routes();
@@ -75,9 +80,39 @@ Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
 
 
 ///////////ramiro
-Route::get('/AdminPrincipal','AdminAreaPrincipal@index')->name('Principal');
-Route::get('/HorariosImportarAdmin','AdminImportarHorarios@index')->name('HorariosImportados');
-Route::get('/MaestrosImportarAdmin','AdminImportarMaestros@index')->name('MaestrosImportados');
-Route::get('/AlumnosImportarAdmin','AdminImportarAlumnos@index')->name('AlumnosImportados');
-Route::get('/MateriasImportarAdmin','AdminImportarMaterias@index')->name('MateriasImportadas');
+
+Route::get('/AdminPrincipal','AdminAreaPrincipalController@index')->name('Principal');
+
+Route::get('/HorariosImportarAdmin','AdminImportarHorariosController@index')->name('getHorariosImportados');
+
+Route::get('/MaestrosImportarAdmin','AdminImportarMaestrosController@index')->name('getMaestrosImportados');
+
+Route::get('/AlumnosImportarAdmin','AdminImportarAlumnosController@index')->name('getAlumnosImportados');
+
+Route::get('/MateriasImportarAdmin','AdminImportarMateriasController@index')->name('getMateriasImportadas');
+
+
+Route::post('storage/AlumnosCSV','AdminImportarAlumnosController@enviarchivo')->name('AlumnosImportados');
+Route::post('storage/HorariosCSV','AdminImportarHorariosController@enviarchivo')->name('HorariosImportados');
+Route::post('storage/MateriasCSV','AdminImportarMateriasController@enviarchivo')->name('MateriasImportadas');
+Route::post('storage/MaestrosCSV','AdminImportarMaestrosController@enviarchivo')->name('MaestrosImportados');
+
+
+Route::get('alumnocsv', function () 
+{
+    if (($handle = fopen(public_path(),'/alumno.csv','alumno')) !== FALSE) 
+    {
+        while (($data= fgetcsv($handle,100,',')) !== FALSE) 
+        {
+            $dato = new prueba();
+            $dato->nombre = $data[0];
+            $dato->apellido1 = $data[1];
+            $dato->apellido2 = $data[2];
+            $dato->save();
+        }
+        fclose($handle);
+    }
+    return $dato::all();
+
+});
 ///////////ramiro

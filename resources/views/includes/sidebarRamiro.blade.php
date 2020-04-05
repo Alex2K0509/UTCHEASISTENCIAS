@@ -84,25 +84,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="{{ route('HorariosImportados') }}" class="nav-link active">
+                                        <a href="{{ route('getHorariosImportados') }}" class="nav-link active">
 
                                             <p>Importar Horarios</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('MateriasImportadas') }}" class="nav-link active">
+                                        <a href="{{ route('getMateriasImportadas') }}" class="nav-link active">
 
                                             <p>Importar Materias</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('MaestrosImportados') }}" class="nav-link active">
+                                        <a href="{{ route('getMaestrosImportados') }}" class="nav-link active">
 
                                             <p>Importar Maestros</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('AlumnosImportados') }}" class="nav-link active">
+                                        <a href="{{ route('getAlumnosImportados') }}" class="nav-link active">
 
                                             <p>Importar Alumnos</p>
                                         </a>

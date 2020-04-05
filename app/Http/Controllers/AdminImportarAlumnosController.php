@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class AdminImportarMaestros extends Controller
+use App\prueba;
+class AdminImportarAlumnosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AdminImportarMaestros extends Controller
     public function index()
     {
         //
-        return view('vistas_Ramiro.ventanaAgregarMaestro');
+        return view('vistas_Ramiro.ventanaAgregarAlumno');
     }
 
     /**
@@ -35,7 +35,7 @@ class AdminImportarMaestros extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -69,7 +69,7 @@ class AdminImportarMaestros extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $request->file('');
     }
 
     /**
@@ -81,5 +81,22 @@ class AdminImportarMaestros extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function enviarchivo(Request $request){
+            $fecha = date("Y-m-d h:m:s");
+            $nombre = md5(time());
+            $file = $request->file('file');
+            $tipo = $file->getMimeType();
+            switch($tipo){
+                  case 'text/plain':            
+                         \Storage::disk('local')->put('/public/'.$nombre.".csv", \File::get($file));
+                  break;
+                  default:
+                   dd("Archivo Incorrecto");
+                   
+
+                   
+            }       
+            
     }
 }
