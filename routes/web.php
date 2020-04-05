@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Mail;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 ////////pablo
@@ -27,7 +28,6 @@ Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistenc
 Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
 
 
-
 ///////////Alejandro
 Auth::routes();
 
@@ -60,14 +60,6 @@ Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->nam
 Route::get('/pdf','PDFController@PDF')->name('reporte');
 ///////////Aleajndro
 
-
-
-
-///////////max
-Route::get('/DirectorLogin','AreaCarreraPrincipalController@index')->name('AreaCarreraPrincipal');
-Route::get('/GenerarReporteDirector','AreaCarreraSubController@index')->name('AreaCarreraReporte');
-Route::get('/TablaAsistenciasDirector','AreaCarreraTribController@index')->name('AreaCarreraTabla');
-///////////max
 
 
 
@@ -76,11 +68,6 @@ Route::get('/GenerarReporteDirector','AreaCarreraPrincipalController@index2')->n
 Route::get('/TablaAsistenciasDirector','AreaCarreraPrincipalController@index3')->name('AreaCarreraTabla');
 Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarPDF');
 
-Route::post('/Asistencia/{id}','AreaMaestroAsistenciasActualizarController@update')->name('Asistencia.update');
-
-Route::get('/Asistencia','AreaMaestroAsistenciasActualizarController@test')->name('Asistencia.test');
-Route::get('/pdf','PDFController@PDF')->name('reporte');
-///////////Aleajndro
 
 
 

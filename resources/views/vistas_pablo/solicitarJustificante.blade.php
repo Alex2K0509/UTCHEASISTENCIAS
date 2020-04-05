@@ -1,7 +1,7 @@
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
-    <form METHOD="POST" action={{route('contact')}}>
+    <form method="POST" action={{route('contact')}}>
         @csrf
         <title>Área de alumnos</title>
         <div class="container">
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="director">Enviado por:</label>
-                <input type="text" class="form-control" id="alumno" value="{{$user->email}}" name="alumno" disabled>
+                <input type="text" class="form-control" id="alumno" value="{{ $email}}" name="alumno" disabled>
             </div>
 
             <div class="form-group">

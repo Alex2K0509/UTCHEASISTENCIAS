@@ -9,7 +9,7 @@
         <div class="container">
   <h1>Generar reporte de asistencias</h1>
 
-  <form action="{{ route('AreaCarreraTabla') }}">
+  <form method="GET" action="{{ route('AreaCarreraTabla') }}">
 
  
 
@@ -58,7 +58,7 @@
       @endif
         
       </select>
-         {{----asassaadasdasdasdas---}}
+         
            
 
 <br><br>
