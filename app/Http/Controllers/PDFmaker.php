@@ -28,7 +28,7 @@ class PDFmaker extends Controller
 
     public function PDFasistencias(Request $request)
 
-    {   
+    {   //master 2 prueba de pull
         $now = new \DateTime();//hora
         $id =Auth::user()->matricula;
        
