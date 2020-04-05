@@ -24,22 +24,31 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-       $id=Auth::User()->matricula;
 
-       
-    $tipo=user::find($id);//analizar la opcion de tipo=2 porque laravel maneja sesisones para cada login
-    
-    if ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '2')  {
-             return view('vistas_alejandro.primeraVentanaMaestro');
-        }elseif ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '1') {
-            return view('vistas_pablo.solicitarJustificante');
-        }elseif ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '3') {
-             return view('vistas_max.primeraVentanaCarrera');
-        }elseif ($tipo->email == Auth::User()->email && $tipo->password == Auth::User()->password && $tipo->Tipo_usuario == '4') {
-             return view('vistas_ramiro.ventanaPrincipalAdmin');
+       $id=Auth::User()->matricula;
+      //$user = user::find($id);
+
+       $email=Auth::user()->email;
+        $nombre=Auth::user()->name;
+        $apepat=Auth::user()->ApePat;
+        $apemat=Auth::user()->ApeMat;
+
+
+    $user=user::find($id);//analizar la opcion de user=2 porque laravel maneja sesisones para cada login
+
+    if ($user->email == Auth::User()->email && $user->password == Auth::User()->password && $user->Tipo_usuario == '2')  {
+             return view('vistas_alejandro.primeraVentanaMaestro',compact('user','nombre','apepat','apemat'));
+        }elseif ($user->email == Auth::User()->email && $user->password == Auth::User()->password && $user->Tipo_usuario == '1') {
+
+            return view('vistas_pablo.solicitarJustificante',compact('email','user','nombre','apepat','apemat'));
+
+        }elseif ($user->email == Auth::User()->email && $user->password == Auth::User()->password && $user->Tipo_usuario == '3') {
+             return view('vistas_max.primeraVentanaCarrera',compact('user','nombre','apepat','apemat'));
+
+        }elseif ($user->email == Auth::User()->email && $user->password == Auth::User()->password && $user->Tipo_usuario == '4') {
+             return view('vistas_ramiro.ventanaPrincipalAdmin',compact('user','nombre','apepat','apemat'));
         }
-        
-    
+
+
     }
 }

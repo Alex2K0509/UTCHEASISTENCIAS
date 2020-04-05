@@ -44,7 +44,7 @@ class AreaCarreraPrincipalController extends Controller
     //area carrera tabla
     public function index3(Request $request)
     {
-        
+        //dd('hola');
         $id =Auth::user()->matricula;
         $user = User::find($id);
 

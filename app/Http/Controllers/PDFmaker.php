@@ -28,7 +28,8 @@ class PDFmaker extends Controller
 
     public function PDFasistencias(Request $request)
 
-    {   
+    {   //master 2 prueba de pull
+        $now = new \DateTime();//hora
         $id =Auth::user()->matricula;
        
         $user = User::find($id);
@@ -45,7 +46,7 @@ $asignaturas= Asignaturas::select('*')->where('Id_grupo','=',$id_grupo)->where('
 
 $asistencias= Asistencias::select('*')->where('Id_grupo','=',$id_grupo)->where('Id_Asignatura','=','1114')->get();
 
-        $pdf = PDF::loadView('vistas_max.TablaAsistencia', compact('genericas','asignaturas','asistencias','user'));
+        $pdf = PDF::loadView('vistas_max.TablaAsistencia', compact('genericas','asignaturas','asistencias','user','now'));
 
         $pdf->setPaper('a4','landscape');
         return $pdf->stream('TablaDeAsistencias.pdf');
