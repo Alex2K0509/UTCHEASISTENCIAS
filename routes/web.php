@@ -98,6 +98,35 @@ Route::post('storage/MateriasCSV','AdminImportarMateriasController@enviarchivo')
 Route::post('storage/MaestrosCSV','AdminImportarMaestrosController@enviarchivo')->name('MaestrosImportados');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Route::get('/import', 'AdminImportarMaestrosController@import')->name('maestros');
+Route::post('/import', 'AdminImportarMaestrosController@import')->name('import');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('alumnocsv', function () 
 {
     if (($handle = fopen(public_path(),'/alumno.csv','alumno')) !== FALSE) 

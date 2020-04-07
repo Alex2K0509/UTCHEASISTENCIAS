@@ -1,22 +1,41 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Mestros;
+use App\User;
+use App\Imports\MaestrosImport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 class AdminImportarMaestrosController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
-        //
-        return view('vistas_Ramiro.ventanaAgregarMaestro');
+        $users=User::all();
+        return view('vistas_Ramiro.ventanaAgregarMaestro',compact('users'));
     }
 
+    public function import(Request $request)
+    {
+        //$path1 = $request->file('file')->store('file'); 
+        //$path=storage_path('app').'/'.$path1;  
+        //$data = \Excel::import(new MaestrosImport,$path);
+        //Excel::import(new MaestrosImport)->import(request()->file('file'));
+        
+
+        
+    Excel::import(new MaestrosImport(),$request->file('import_file'));
+    return redirect()->route('home')->with('success', 'Archivo Importado con exito!');;
+        
+    }
+
+   
+   
+   
+   
+   
+   
     /**
      * Show the form for creating a new resource.
      *

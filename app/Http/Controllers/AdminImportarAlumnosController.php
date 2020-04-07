@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\prueba;
+use App\User;
 class AdminImportarAlumnosController extends Controller
 {
     /**
@@ -89,7 +89,36 @@ class AdminImportarAlumnosController extends Controller
             $tipo = $file->getMimeType();
             switch($tipo){
                   case 'text/plain':            
-                         \Storage::disk('local')->put('/public/'.$nombre.".csv", \File::get($file));
+                   \Storage::disk('local')->put('/public/csv/'.$nombre.".csv", \File::get($file));
+
+                        $path=storage_path("app\public\csv").'/'.$nombre.'.csv';
+                        //dd($ruta);
+                        //$csv_file_path = storage_path($ruta).$nombre.'.csv';
+                        
+                      
+                         $handle = fopen($path, 'r');
+                         
+                         if($handle){
+                             while (($file= fgetcsv($handle,1000,',')) !== FALSE) 
+                             {
+                              
+                               
+                                 $dato = new User();
+                                 $dato->name = $file[0];
+                                 $dato->email = $file[1];
+                                 $dato->password = $file[2];
+                                 $dato->ApePat = $file[3];
+                                 $dato->ApeMat = $file[4];
+                                 $dato->Rfid = $file[5];
+                                 $dato->Tipo_usuario = $file[6];
+                                 $dato->matricula = $file[7];
+
+                        
+                                 $dato->save();
+                             }
+                         }
+                         fclose($handle);
+                         dd('insertado');
                   break;
                   default:
                    dd("Archivo Incorrecto");
