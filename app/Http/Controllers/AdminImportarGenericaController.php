@@ -110,7 +110,7 @@ class AdminImportarGenericaController extends Controller
                             $dato->matricula_alumno= (int)$file[1];
                             $dato->Id_grupo= $file[2];
                             $dato->plan= $file[3];
-                            $dato->Id_carrera= $file[4];
+                            $dato->Id_carrera= (int)$file[4];
                             $dato->periodo= $file[5];
 
                            $dato->save();
