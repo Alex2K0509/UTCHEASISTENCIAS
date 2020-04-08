@@ -24,18 +24,19 @@ class AreaMaestroAsistenciasActualizarController extends Controller
      $dato=$request->Id_asignatura;//guardo el request
      $dato2=$request->Id_grupo;
      
-     $dato3=$request->fecha;
+     $dato3=$request->input('fecha');
 //dd($dato3);
-$genericas = Genericas::select('*')->where('Id_Asignatura','=', $dato)->where('Id_grupo', '=',$dato2)->get();
-$genericas = $genericas->where('matricula_alumno','<>',$id);
+$genericas = Genericas::select('*')->where('Id_Asignatura','=', $dato)->where('Id_grupo', '=',$dato2)->where('matricula_alumno','<>',$id)->get();
+//$genericas = $genericas->where('matricula_alumno','<>',$id);
 
     $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->where('Tipo_usuario','=','1')->get();
  
     $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->where('Tipo_usuario','=','2')->get();
  
     $horarios= Horarios::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->get();
-    
-    return view('vistas_alejandro.tercera',compact('horarios','genericas','asignaturas','maestro','dato3'));
+
+    $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$dato)->where('Id_grupo','=',$dato2)->where('fecha','=',$dato3)->get();
+    return view('vistas_alejandro.tercera',compact('horarios','genericas','asignaturas','maestro','dato3','asistencias'));
     }
 
     

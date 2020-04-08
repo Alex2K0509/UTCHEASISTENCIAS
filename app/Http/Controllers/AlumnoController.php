@@ -10,6 +10,7 @@ use App\Genericas;
 use App\Asignaturas;
 use App\Asistencias;
 use App\Horarios;
+use App\Director;
 use Auth;
 
 class AlumnoController extends Controller
@@ -22,8 +23,18 @@ class AlumnoController extends Controller
     public function index()
     {
         $id =Auth::user()->matricula;
+
         $user = user::find($id);
-        return view('vistas_pablo.solicitarJustificante',compact('user'));
+
+        $email=Auth::user()->email;
+
+        $nombre=Auth::user()->name;
+        $apepat=Auth::user()->ApePat;
+        $apemat=Auth::user()->ApeMat;
+       // dd($user);
+
+       $asignaturas= Director::select('*')->where('Id_grupo','=','TI5')->get();
+        return view('vistas_pablo.solicitarJustificante',compact('email','user','nombre','apepat','apemat'));
     }
 
     /**
@@ -35,8 +46,8 @@ class AlumnoController extends Controller
     {
         $id =Auth::user()->matricula;
         $user = user::find($id);
-
-        return view('vistas_pablo.vizualizarAsistencia',compact('user'));
+        $asignaturas= Asignaturas::select('*')->where('matricula_alumno','=',$id)->get();
+        return view('vistas_pablo.vizualizarAsistencia',compact('user'.'asignaturas','id'));
     }
 
     /**
@@ -49,21 +60,23 @@ class AlumnoController extends Controller
     {
         $id =Auth::user()->matricula;
         $user = user::find($id);
-        $materia=$request->materia;
-        $grupo=$request->grupo;
+        $materia=$request->input('materia');
+        $grupo=$request->input('grupo');
         $fecha1=$request->input('date1');
         //dd($fecha1);
         $fecha2=$request->input('date2');
 
         $genericas = Genericas::select('*')->where('Id_Asignatura','=', $materia)->where('Id_grupo', '=',$grupo)->get();
         $genericas = $genericas->where('matricula_alumno','<>',$id);
-
-        $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->get();
-
+        $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->where('matricula_alumno','=',$id)->get();
+        //$asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->get();
+        //dd($asignaturas);
         $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
 
-        // $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
-        $asistencias= Asistencias::select('*')->where('Id_Asignatura','=','1114')->where('Id_grupo','=','TI5')->whereBetween('fecha', ['2020-03-02', '2020-03-06'])->get();
+         //$asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
+         
+        $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', ['2020-03-02', '2020-03-06'])->where('matricula_alumno','=',$id)->get();
+    //dd($asistencias);
         $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
 
         return view('vistas_pablo.TablaAsistencia',compact('user','horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
@@ -80,22 +93,13 @@ class AlumnoController extends Controller
 
         $id =Auth::user()->matricula;
         $user = user::find($id);
-        $materia=$request->materia;
-        $grupo=$request->grupo;
-        $fecha1=$request->input('date1');
-        //dd($fecha1);
-        $fecha2=$request->input('date2');
+        //$maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
+       //$id_asignatura=Asignaturas::select('matricula_alumno')->where('matricula_alumno','=',$id)->get();
+       //dd($id_asisgnatura);
+       $asignaturas= Asignaturas::select('*')->where('matricula_alumno','=',$id)->get();
 
-        $genericas = Genericas::select('*')->where('Id_Asignatura','=', $materia)->where('Id_grupo', '=',$grupo)->get();
-        $genericas = $genericas->where('matricula_alumno','<>',$id);
-
-        $asignaturas= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','1')->get();
-
-        $maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
-
-        $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
-        $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
-        return view('vistas_pablo.vizualizarAsistencia',compact('user','horarios','genericas','asignaturas','asistencias','maestro','fecha1','fecha2'));
+      // dd($asignaturas);
+        return view('vistas_pablo.vizualizarAsistencia',compact('user','id','asignaturas'));
     }
 
     /**

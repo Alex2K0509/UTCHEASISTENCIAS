@@ -33,18 +33,20 @@ class AreaCarreraPrincipalController extends Controller
     }
 //index para grup
     public function index2()
-    { $id =Auth::user()->matricula;
-        //$user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
-        $user = User::find($id);
-         
-         return view('vistas_max.segundaVentanaCarrera',compact('user'));
+    {
+        $id =Auth::user()->matricula;
+        $user = user::find($id);
+        
+       $asignaturas= Asignaturas::select('*')->where('matricula_alumno','=',$id)->get();
+        //dd($asignaturas);
+         return view('vistas_max.segundaVentanaCarrera',compact('user','asignaturas','id'));
 
     }
 
     //area carrera tabla
     public function index3(Request $request)
     {
-        
+        //dd('hola');
         $id =Auth::user()->matricula;
         $user = User::find($id);
 

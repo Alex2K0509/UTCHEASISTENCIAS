@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminImportarMaterias extends Controller
+class AdminAreaPrincipalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,9 @@ class AdminImportarMaterias extends Controller
      */
     public function index()
     {
-        //
-        return view('vistas_Ramiro.ventanaImportarMateria');
+        return view('vistas_Ramiro.ventanaPrincipalAdmin');
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -82,4 +82,6 @@ class AdminImportarMaterias extends Controller
     {
         //
     }
+
+    
 }
