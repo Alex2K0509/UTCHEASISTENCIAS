@@ -23,8 +23,8 @@ class ReporteListoController extends Controller
     {
         $id =Auth::user()->matricula;
         
-        $materia=$request->materia;
-        $grupo=$request->grupo;
+        $materia=$request->input('materia');
+        $grupo=$request->input('grupo');
         $fecha1=$request->input('date1');
         //dd($fecha1);
         $fecha2=$request->input('date2');
@@ -42,8 +42,9 @@ class ReporteListoController extends Controller
     
     
     
+    //$asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
     $asistencias= Asistencias::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->whereBetween('fecha', [$fecha1, $fecha2])->get();
-    
+    //dd($asistencias);
     $horarios= Horarios::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->get();
     //dd($horarios);
 

@@ -17,11 +17,16 @@ class ReporteController extends Controller
      */
     public function index()
     {
-        $id =Auth::user()->matricula;
+        $id =Auth::User()->matricula;
         $user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
 
-      
-        return view('vistas_alejandro.cuarta',compact('user'));
+     
+        //$maestro= Asignaturas::select('*')->where('Id_Asignatura','=',$materia)->where('Id_grupo','=',$grupo)->where('Tipo_usuario','=','2')->get();
+       //$id_asignatura=Asignaturas::select('matricula_alumno')->where('matricula_alumno','=',$id)->get();
+       //dd($id_asisgnatura);
+       $asignaturas= Asignaturas::select('*')->where('matricula_alumno','=',$id)->get();
+
+        return view('vistas_alejandro.cuarta',compact('user','asignaturas'));
     }
 
     /**

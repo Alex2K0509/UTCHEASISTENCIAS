@@ -1,3 +1,4 @@
+  
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')

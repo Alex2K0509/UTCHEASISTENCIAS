@@ -22,6 +22,9 @@ class Asistencias extends Model
 		 return $this->belongsTo('App\Genericas','matricula_alumno','matricula_alumno');
 	}
 
+	public function alumnos(){
+		return $this->belongsTo('App\User','matricula','matricula_alumno');//primera llave al modelo que hacemos referencia
+	}
 
 
 }

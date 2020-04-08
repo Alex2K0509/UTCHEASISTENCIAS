@@ -31,46 +31,29 @@
 
   <tr>
     <th scope="row">
-    <select name="Id_asignatura">
-
-
-{{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
-  @if ($user->genericas()->count() > 0)
-  {{---en este primer forech nos da sus genericas ---}}
-  @foreach ($user->genericas as $generica)
-     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-  @foreach ($generica->Materias as $Materias)
-
-  <option value="{{$Materias->Id_Asignatura}}">{{$Materias->nombre_materia}}</option>
-@endforeach  
-     
-  @endforeach  
-@endif
-  
-</select>
+      
+      <select id="materia" class="custom-select" name="Id_asignatura">
+        @foreach ($asignaturas as $asig)
+        <option value="{{$asig->Id_Asignatura}}">{{$asig->nombre_materia}} </option>
+              @endforeach
+        
+      </select>
     </th>
 
   <td>
-      <select name="Id_grupo">
-{{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
-@if ($user->genericas()->count() > 0)
-{{---en este primer forech nos da sus genericas ---}}
-@foreach ($user->Genericas as $genericas)
-   {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-      <option value="{{$genericas->Id_grupo}}">
-{{$genericas->Id_grupo}}
-</option>
-
    
-@endforeach  
-@endif
-  </select>
+    <select id="grupo" class="custom-select" name="Id_grupo">
+      @foreach ($asignaturas as $asig)
+      <option value="{{$asig->Id_grupo}}">{{$asig->Id_grupo}} </option>
+            @endforeach
+
+    </select>
 
 
 </td>
 
       <td>
-        <input type="date" name="fecha">
+        <input class="form-control" type="date" name="fecha">
  
 
 </td>

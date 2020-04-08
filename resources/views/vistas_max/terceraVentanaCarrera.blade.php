@@ -16,16 +16,7 @@
               <h3 class="card-title" style="text-align: center">Carrera: TSU-TECNOLOGIAS DE LA INFORMACION</h3>
 
             </div>
-            <div class="card-header">
-              <h3 class="card-title" style="text-align: center">Grupo:
-            @foreach($asignaturas as $asig)
-
-            {{$asig->Id_grupo}}
-
-            @endforeach
-              </h3>
-
-            </div>
+            
             <!-- /.card-header -->
             <div class="card-body" style="overflow-x:auto;">
                
@@ -116,5 +107,3 @@
 @section('footer')
     @include('includes/sidebarcarrera')
     @endsection
-
-

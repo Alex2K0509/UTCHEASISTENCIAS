@@ -50,22 +50,22 @@
                 </thead>
                 <tbody>          
                   
-                @foreach ($genericas as $gene)
+                  @foreach ($asistencias as $asistencia)
               
                 
-                    @if($dato3 == $gene->asiste->fecha)
+               
                       <tr>
-                        <td>{{ $gene->matricula_alumno }}</td>
-                        <td>@if(!empty($gene->alumno->name)){{ $gene->alumno->name.' '.$gene->alumno->ApePat.' '.$gene->alumno->ApeMat }} @endif</td>  
-                        <td>{{ $gene->asiste->fecha }}</td>
+                        <td>{{$asistencia->genericas->alumno2->matricula}}</td>
+                        <td>{{$asistencia->genericas->alumno2->name.' '.$asistencia->genericas->alumno2->ApePat.' '.$asistencia->genericas->alumno2->ApeMat}}</td>
+                        <td>{{ $asistencia->fecha }}</td>
                        
                         <td>
-                        <form action="{{ route('Asistencia.update',$gene->matricula_alumno) }}" method="POST"  >
+                        <form action="{{ route('Asistencia.update',$asistencia->genericas->alumno2->matricula) }}" method="POST"  >
                     @csrf
                  
                         <select name="estado" class="form-control form-control-sm">
                          
-                          <option  >{{ $gene->asiste->estado }}</option>
+                          <option  >{{ $asistencia->estado }}</option>
                           <option value="Asistencia">Asitencia</option>
                           <option value="Falta">Falta</option>
                         </select>
@@ -75,8 +75,7 @@
                         </td>
                       
                       </tr>
-                      
-                    @endif
+                
                 @endforeach       
                 </tbody>
               </table>
