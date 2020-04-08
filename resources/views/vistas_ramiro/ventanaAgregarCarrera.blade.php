@@ -5,17 +5,17 @@
 
           <section class="content">
         <div class="container">
- 
-<center><h2>Importar Archivo CSV</h2></center>
+          
+  <center><h2>Importar Archivo CSV</h2></center>
 
-  <form method="POST" action="{{ route('MateriasImportadas') }}" enctype="multipart/form-data">
-    <div class="row">
+  <form method="POST" action="{{ route('carrerasImportadas') }}" enctype="multipart/form-data">
+
+<div class="row">
   <div class="col-md-10 col-md-offset-1">
     <div class="panel panel-default">
-      <div class="panel-heading">Agregar archivo para Materias </div>
+      <div class="panel-heading">Agregar archivo para Carrera</div>
         <div class="panel-body">
           
-            
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             
             <div class="form-group">
@@ -36,16 +36,15 @@
     </div>
   </div>
 </div>
-@if (Session::has('message'))
+    </form>
+          </section>
+    @if (Session::has('message'))
 
     <div class="alert alert-success" >{{ Session::get('message') }}</div>
 
 @endif
 @csrf
           </section>
-  </form>
-
-
 @endsection()
 
 @section('sidebaradmin')

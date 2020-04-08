@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
-use App\User;
-class AdminImportarMaestrosController extends Controller
+use App\Director;
+class AdminImportarCarrerasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,7 @@ class AdminImportarMaestrosController extends Controller
      */
     public function index()
     {
-        return view('vistas_ramiro.ventanaAgregarMaestro');
+       return view('vistas_ramiro.ventanaAgregarCarrera');
     }
 
     /**
@@ -84,7 +83,6 @@ class AdminImportarMaestrosController extends Controller
     {
         //
     }
-
     public function enviarchivo(Request $request){
         $fecha = date("Y-m-d h:m:s");
         $nombre = md5(time());
@@ -106,22 +104,24 @@ class AdminImportarMaestrosController extends Controller
                          {
                           
                            
-                             $dato = new User();
-                             $dato->name = $file[0];
-                             $dato->email = $file[1];
-                             $dato->password = Hash::make( $file[2]);
-                             $dato->ApePat = $file[3];
-                             $dato->ApeMat = $file[4];
-                             $dato->Rfid = $file[5];
-                             $dato->Tipo_usuario = $file[6];
-                             $dato->matricula =(int) $file[7];
+                            $dato = new Director();
+                            $dato->matricula_alumno =(int) $file[0];
+                            $dato->email = $file[1];
+                            $dato->carrera = $file[2];
+                            $dato->Nombre = $file[3];
+                            $dato->ApePat = $file[4];
+                            $dato->ApeMat = $file[5];
+                            $dato->Id_grupo = $file[6];
+                            $dato->Id_carrera = $file[7];
+                            $dato->tipo = $file[8];
+                            $dato->save();
 
                     
                              $dato->save();
                          }
                      }
                      fclose($handle);
-                     Session::flash('message', "Archivo csv con Maestros insertado correctamente: ".''.$dato);
+                     Session::flash('message', "Archivo csv con Carreras insertado correctamente: ".''.$dato);
                      return redirect()->back();
               break;
               default:
@@ -132,5 +132,4 @@ class AdminImportarMaestrosController extends Controller
         }       
         
 }
-    
 }

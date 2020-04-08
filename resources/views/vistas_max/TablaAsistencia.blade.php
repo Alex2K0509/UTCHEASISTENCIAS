@@ -50,7 +50,7 @@
 <body>
     <header>
         <br>
-        <p><strong><img src="https://lh3.googleusercontent.com/proxy/nWIXBNjcYInOX3KtWCfRe0ZHNlKIt2YQiz0D1VwynoipKUxC8szEu2-T8T4NI3FZbO7pWMntgeudFUuUzQ50XsDwvlwAJ7YkZgmkhccxPVGt3WOgAwNJUHcp0eB9wtdm1g" height="50">FINGER PRINT ASSISTANCE SYSTEM</strong></p>
+        <p><strong><img src="https://lh3.googleusercontent.com/proxy/r2bC68DbLufyx9sPs8fkXZ6gfk2Hlq9KbcjHM7ra9o2j2sTTMXpK3Fc2y3QbCSUIM9bPxY4cIeUF87qIMYD9OddVPv2VeIIUjxNiMS2qic2Hd9MQSnOaPIymZtQmBGMrzw" height="50">FINGER PRINT ASSISTANCE SYSTEM</strong></p>
     </header>
     <main>
             <h5 style="text-align: center"><strong>REGISTRO DE ASISTENCIAS</strong></h5>

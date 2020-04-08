@@ -39,7 +39,7 @@ class HomeController extends Controller
              return view('vistas_alejandro.primeraVentanaMaestro',compact('user','name'));
         }elseif ($user->email == Auth::User()->email && $user->password == Auth::User()->password && $user->Tipo_usuario == '1') {
             
-            return view('vistas_pablo.solicitarJustificante',compact('email','user','nombre','apepat','apemat'));
+            return view('vistas_pablo.solicitarJustificante',compact('email','user','nombre','apepat','apemat','id'));
 
         }elseif ($user->email == Auth::User()->email && $user->password == Auth::User()->password && $user->Tipo_usuario == '3') {
              return view('vistas_max.primeraVentanaCarrera',compact('user','name'));

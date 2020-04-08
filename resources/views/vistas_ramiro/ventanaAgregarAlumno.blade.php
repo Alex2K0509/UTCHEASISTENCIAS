@@ -5,7 +5,7 @@
 
           <section class="content">
         <div class="container">
-  
+          
   <center><h2>Importar Archivo CSV</h2></center>
 
   <form method="POST" action="{{ route('AlumnosImportados') }}" enctype="multipart/form-data">
@@ -37,8 +37,13 @@
   </div>
 </div>
     </form>
-  
+    @if (Session::has('message'))
 
+    <div class="alert alert-success" >{{ Session::get('message') }}</div>
+
+@endif
+@csrf
+          </section>
 @endsection()
 
 @section('sidebaradmin')

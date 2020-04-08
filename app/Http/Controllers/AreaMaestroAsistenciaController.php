@@ -19,13 +19,13 @@ class AreaMaestroAsistenciaController extends Controller
     {
         $id =Auth::user()->matricula;
         //$user = user::find($id);//solo con user podemos acceder a cualquier relacion siempre que esta contenga el mismo primary key que user
-        $user = User::find($id);
+        $user = user::find($id);
        //dd($user->Genericas->Materias);
         //dd(Auth::user()->Genericas());
 
-      
+        $asignaturas= Asignaturas::select('*')->where('matricula_alumno','=',$id)->get();
       // dd($user);
-       return view('vistas_alejandro.segundaVentanaMaestro',compact('user'));
+       return view('vistas_alejandro.segundaVentanaMaestro',compact('user','asignaturas'));
     }
 
     /**

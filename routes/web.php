@@ -98,8 +98,14 @@ Route::post('storage/MateriasCSV','AdminImportarMateriasController@enviarchivo')
 Route::post('storage/MaestrosCSV','AdminImportarMaestrosController@enviarchivo')->name('MaestrosImportados');
 
 
+Route::get('/Genericasimportadas','AdminImportarGenericaController@index')->name('generica');
+Route::post('storage/GenericasCSV','AdminImportarGenericaController@enviarchivo')->name('genericaImportados');
 
+Route::get('/CarrerasImportadas','AdminImportarCarrerasController@index')->name('carrera');
+Route::post('storage/CarrerasCSV','AdminImportarCarrerasController@enviarchivo')->name('carrerasImportadas');
 
+Route::get('/Adminimportado','AdminImportarAdministradoresController@index')->name('Administrador');
+Route::post('storage/AdministradoresCSV','AdminImportarAdministradoresController@enviarchivo')->name('AdministradorImportado');
 
 
 
@@ -112,7 +118,7 @@ Route::post('storage/MaestrosCSV','AdminImportarMaestrosController@enviarchivo')
 
 
 //Route::get('/import', 'AdminImportarMaestrosController@import')->name('maestros');
-Route::post('/import', 'AdminImportarMaestrosController@import')->name('import');
+//Route::post('/import', 'AdminImportarMaestrosController@import')->name('import');
 
 
 

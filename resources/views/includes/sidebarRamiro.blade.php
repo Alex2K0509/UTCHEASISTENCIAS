@@ -98,7 +98,7 @@
                                     <li class="nav-item">
                                         <a href="{{ route('getMaestrosImportados') }}" class="nav-link active">
 
-                                            <p>Importar Maestros</p>
+                                            <p>Importar Maestro</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -107,10 +107,23 @@
                                             <p>Importar Alumnos</p>
                                         </a>
                                     </li>
+                                   
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link active">
+                                        <a href="{{ route('generica') }}" class="nav-link active">
 
-                                            <p>Cerrar sesión</p>
+                                            <p>Importar Genericas</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('carrera') }}" class="nav-link active">
+
+                                            <p>Importar Carreras</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('Administrador') }}" class="nav-link active">
+
+                                            <p>Importar Administrador</p>
                                         </a>
                                     </li>
                                 </ul>

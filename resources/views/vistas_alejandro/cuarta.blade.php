@@ -7,18 +7,9 @@
 <div class="form-group">
         <label for="materia">Materia:</label>
         <select id="materia" class="custom-select" name="materia">
-   {{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
-  @if ($user->genericas()->count() > 0)
-  {{---en este primer forech nos da sus genericas ---}}
-  @foreach ($user->genericas as $generica)
-     {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-  @foreach ($generica->Materias as $Materias)
-
-  <option value="{{$Materias->Id_Asignatura}}">{{$Materias->nombre_materia}}</option>
-@endforeach  
-     
-  @endforeach  
-@endif
+          @foreach ($asignaturas as $asig)
+          <option value="{{$asig->Id_Asignatura}}">{{$asig->nombre_materia}} </option>
+                @endforeach
           
         </select>
 </div>
@@ -27,18 +18,9 @@
 <div class="form-group">
         <label for="grupo">Grupo:</label>
         <select id="grupo" class="custom-select" name="grupo">
-     {{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
-@if ($user->genericas()->count() > 0)
-{{---en este primer forech nos da sus genericas ---}}
-@foreach ($user->Genericas as $genericas)
-   {{---en este segundo foreach nos esta dando las asignaturas que tiene ---}}
-      <option value="{{$genericas->Id_grupo}}">
-{{$genericas->Id_grupo}}
-</option>
-
-   
-@endforeach  
-@endif
+          @foreach ($asignaturas as $asig)
+          <option value="{{$asig->Id_grupo}}">{{$asig->Id_grupo}} </option>
+                @endforeach
 
         </select>
 </div>

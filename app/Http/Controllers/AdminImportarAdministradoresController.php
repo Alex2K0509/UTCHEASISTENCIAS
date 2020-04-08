@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 use App\User;
-class AdminImportarMaestrosController extends Controller
+class AdminImportarAdministradoresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class AdminImportarMaestrosController extends Controller
      */
     public function index()
     {
-        return view('vistas_ramiro.ventanaAgregarMaestro');
+        return view('vistas_ramiro.ventanaAgregaraAdministradores');
     }
 
     /**
@@ -121,7 +121,7 @@ class AdminImportarMaestrosController extends Controller
                          }
                      }
                      fclose($handle);
-                     Session::flash('message', "Archivo csv con Maestros insertado correctamente: ".''.$dato);
+                     Session::flash('message', "Archivo csv con Administradores insertado correctamente: ".''.$dato);
                      return redirect()->back();
               break;
               default:

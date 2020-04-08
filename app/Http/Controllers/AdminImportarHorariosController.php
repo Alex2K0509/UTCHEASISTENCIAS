@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
+use App\Horarios;
+use Illuminate\Support\Facades\Session;
 class AdminImportarHorariosController extends Controller
 {
     /**
@@ -89,14 +91,42 @@ class AdminImportarHorariosController extends Controller
             $file = $request->file('file');
             $tipo = $file->getMimeType();
             switch($tipo){
-                  case 'text/plain':            
-                         \Storage::disk('local')->put('/public/'.$nombre.".csv", \File::get($file));
-                  break;
-                  default:
-                   dd("Archivo Incorrecto");
-                    //    dd($file);
-            }       
+                case 'text/plain':            
+                 \Storage::disk('local')->put('/public/csv/'.$nombre.".csv", \File::get($file));
 
-            dd($tipo);
+                      $path=storage_path("app\public\csv").'/'.$nombre.'.csv';
+                      //dd($ruta);
+                      //$csv_file_path = storage_path($ruta).$nombre.'.csv';
+                      
+                    
+                       $handle = fopen($path, 'r');
+                       
+                       if($handle){
+                           while (($file= fgetcsv($handle,1000,',')) !== FALSE) 
+                           {
+                            
+                             
+                               $dato = new Horarios();
+                               $dato->dia=$file[0];
+                               $dato->entrada=$file[1];
+                               $dato->salida=$file[2];
+                               $dato->Id_grupo=$file[3];
+                               $dato->Id_Asignatura=$file[4];
+                      
+                               $dato->save();
+                           }
+                       }
+                       fclose($handle);
+                       Session::flash('message', "Archivo csv con Horarios insertado correctamente: ".''.$dato);
+                       return redirect()->back();
+                break;
+                default:
+                 dd("Archivo Incorrecto, verifique que sea un archivo con extensión '.csv' ");
+                 
+
+                 
+          }       
+
+        
     }
 }

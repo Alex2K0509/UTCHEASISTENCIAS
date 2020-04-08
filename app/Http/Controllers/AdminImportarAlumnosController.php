@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\User;
+use Illuminate\Support\Facades\Session;
 class AdminImportarAlumnosController extends Controller
 {
     /**
@@ -106,22 +108,23 @@ class AdminImportarAlumnosController extends Controller
                                  $dato = new User();
                                  $dato->name = $file[0];
                                  $dato->email = $file[1];
-                                 $dato->password = $file[2];
+                                 $dato->password = Hash::make( $file[2]);
                                  $dato->ApePat = $file[3];
                                  $dato->ApeMat = $file[4];
                                  $dato->Rfid = $file[5];
                                  $dato->Tipo_usuario = $file[6];
-                                 $dato->matricula = $file[7];
+                                 $dato->matricula =(int) $file[7];
 
                         
                                  $dato->save();
                              }
                          }
                          fclose($handle);
-                         dd('insertado');
+                         Session::flash('message', "Archivo csv con Alumnos insertado correctamente: ".''.$dato);
+                         return redirect()->back();
                   break;
                   default:
-                   dd("Archivo Incorrecto");
+                   dd("Archivo Incorrecto, verifique que sea un archivo con extensión '.csv' ");
                    
 
                    
