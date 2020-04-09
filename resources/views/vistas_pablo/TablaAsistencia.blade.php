@@ -4,7 +4,33 @@
 
     
     <!-- /.card-header -->
+    <div class="card">
+        <div class="card-header">
+          <h3 class="card-title" style="float:top">Concentrado de asistencias</h3>
 
+        </div>
+<div class="card-header">
+          <h3 class="card-title" style="text-align: center">Carrera: TSU-TECNOLOGIAS DE LA INFORMACION</h3>
+
+        </div>
+        <div class="card-header">
+          <h3 class="card-title" style="text-align: center">Grupo:
+            @foreach ($asignaturas as $dato)
+           {{$dato->Id_grupo}}
+          @endforeach
+          </h3>
+
+        </div>
+        <div class="card-header">
+          <h3 class="card-title" style="text-align: center">Materia:
+            @foreach ($asignaturas as $dato)
+           {{$dato->nombre_materia}}
+          @endforeach
+          </h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body" style="overflow-x:auto;">
+        
 
     <div class="card-body">
 

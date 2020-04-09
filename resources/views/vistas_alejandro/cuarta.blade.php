@@ -1,7 +1,7 @@
 @extends('layouts.layoutsTablas')
 @section('content')
     <div class="container">
-  <h2>Visualizar asistencias por periodos de fechas</h2>
+  <h2>Generar concentrado de asistencias por periodos de fechas</h2>
   <form method="GET" action="{{ route('AreaMaestroReporteListo') }}">
 
 <div class="form-group">
@@ -38,7 +38,7 @@
 </div>
 
 
-    <button type="submit"  class="btn-outline-success">Solicitar reporte</button>
+    <button type="submit"  class="btn-outline-success">Solicitar concentrado</button>
   </form>
 </div>
     @endsection
