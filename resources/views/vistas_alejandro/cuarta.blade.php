@@ -1,7 +1,7 @@
 @extends('layouts.layoutsTablas')
 @section('content')
     <div class="container">
-  <h2>Generar reporte por periodos de fechas</h2>
+  <h2>Visualizar asistencias por periodos de fechas</h2>
   <form method="GET" action="{{ route('AreaMaestroReporteListo') }}">
 
 <div class="form-group">
@@ -10,7 +10,7 @@
           @foreach ($asignaturas as $asig)
           <option value="{{$asig->Id_Asignatura}}">{{$asig->nombre_materia}} </option>
                 @endforeach
-          
+
         </select>
 </div>
 

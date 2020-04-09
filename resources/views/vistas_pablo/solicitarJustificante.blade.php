@@ -1,4 +1,4 @@
-  
+
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="director">Enviado por:</label>
-                <input type="text" class="form-control" id="alumno" value="{{ $email}}" name="email" disabled>
+                <input type="text" class="form-control"name="correo"  value="{{ $email}}"  readonly>
             </div>
                 <input type="text" name="alumno" value="{{$nombre.' '.$apepat.' '.$apemat}}" hidden>
 
