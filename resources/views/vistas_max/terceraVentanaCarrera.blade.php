@@ -16,7 +16,21 @@
               <h3 class="card-title" style="text-align: center">Carrera: TSU-TECNOLOGIAS DE LA INFORMACION</h3>
 
             </div>
-            
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Grupo:
+                @foreach ($asignaturas as $dato)
+               {{$dato->Id_grupo}}
+              @endforeach
+              </h3>
+
+            </div>
+            <div class="card-header">
+              <h3 class="card-title" style="text-align: center">Materia:
+                @foreach ($asignaturas as $dato)
+               {{$dato->nombre_materia}}
+              @endforeach
+              </h3>
+            </div>
             <!-- /.card-header -->
             <div class="card-body" style="overflow-x:auto;">
                
@@ -27,8 +41,7 @@
                 <td style="text-align: center;">Alumno</td>
                 <td style="text-align: center;">Fecha</td>
                 <td style="text-align: center;">Asistencias</td>
-                <td style="text-align: center;">Grupo</td>
-                <td style="text-align: center;">Materia</td>
+              
               
                 </tr>
                
@@ -47,13 +60,10 @@
                       <td>{{$asistencia->genericas->alumno2->name.' '.$asistencia->genericas->alumno2->ApePat.' '.$asistencia->genericas->alumno2->ApeMat}}</td>
                       <td>{{ $asistencia->fecha }}</td>
                       <td>{{ $asistencia->estado }} </td>
-                      <td>{{ $asistencia->Id_grupo }} </td>
+                    
                       
                      
-  @foreach ($asignaturas as $Materia)
-  
- <td> {{$Materia->nombre_materia}} </td>
-@endforeach  
+
      
             
                     
