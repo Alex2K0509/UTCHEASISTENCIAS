@@ -107,7 +107,17 @@
  @endforeach  
 
 </select> 
+<div class="form-group">
+  <label for="date1">Fecha inicial:</label>
+  <input type="date" class="form-control" id="date1"  name="date1">
+</div>
 
+
+<div class="form-group">
+  <label for="date2">Fecha final:</label>
+  <input type="date" class="form-control" id="date2"  name="date2">
+</div>
+ 
 <input type="submit" class="btn-outline-success" value="Generar PDF" style="float: right;">
              
               </form>

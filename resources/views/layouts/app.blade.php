@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-   <link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
+    <link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
     <title>Fingerprint Assistance System</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
