@@ -42,8 +42,7 @@
       
         
       </select>
-         
-           
+     
 
 <br><br>
     <button type="submit" class="btn-outline-success" style="float: center;">Solicitar reporte</button>
