@@ -1,4 +1,3 @@
-  
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
@@ -6,7 +5,6 @@
         @if (Session::has('message'))
 
             <div class="alert alert-success" >{{ Session::get('message') }}</div>
-
         @endif
         @csrf
         <title>Área de alumnos</title>
@@ -14,7 +12,13 @@
             <h2>Solicitar Justificación</h2>
             <div class="form-group">
                 <label for="materia">Motivo de la falta:</label>
-                <textarea class="form-control" id="motivo"  name="motivo" required></textarea>
+                <select class="custom-select" id="motivo"  name="motivo" required>
+                   <option>Salud</option>
+                    <option>Motivo Personal</option>
+                    <option>Motivo academico</option>
+
+                </select>
+                
             </div>
             <div class="form-group">
                 <label for="justificante">Justificante:</label>
@@ -51,7 +55,8 @@
                 @endif
             </div>
 
-            <button type="submit" class="btn btn-info btn-sm" >Enviar</button>
+            <button type="submit" class="btn btn-success btn-sm" >Enviar</button>
+            <button type="submit" class="btn btn-info btn-sm" >Generar PDF</button>
 
             </div>
         </div>
