@@ -61,5 +61,10 @@ class EmailController extends Controller
 
 
     }
-
+    public function subirArchivo(Request $request)
+    {
+        //Recibimos el archivo y lo guardamos en la carpeta storage/app/public
+        $request->file('justificante')->store('public');
+        dd("subido y guardado");
+    }
 }

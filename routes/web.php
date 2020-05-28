@@ -24,12 +24,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 ////////pablo
 Route::get('/Alumno','AlumnoController@index')->name('AlumnosPrincipal');
-
 Route::post('/Alumno/justificaciones/justificacionenviada', 'EmailController@contact')->name('contact');
-
+Route::post('/Alumno/justificaciones/subir', 'EmailController@subirArchivo')->name('subir');
+Route::post('/Alumno/justificaciones/justificacion', 'AlumnoController@edit')->name('justificante');
 Route::get('/Alumno/asistencias','AlumnoController@show')->name('AlumnosAsistencia');
 Route::get('/Alumno/asistencias/visualizar','AlumnoController@store')->name('AlumnosVisualizar');
-
+Route::get('pdf', 'PDFmaker@PDFasistencias')->name('GenerarJustificacion');
 
 ///////pablo
 
@@ -133,11 +133,11 @@ Route::post('storage/AdministradoresCSV','AdminImportarAdministradoresController
 
 
 
-Route::get('alumnocsv', function () 
+Route::get('alumnocsv', function ()
 {
-    if (($handle = fopen(public_path(),'/alumno.csv','alumno')) !== FALSE) 
+    if (($handle = fopen(public_path(),'/alumno.csv','alumno')) !== FALSE)
     {
-        while (($data= fgetcsv($handle,100,',')) !== FALSE) 
+        while (($data= fgetcsv($handle,100,',')) !== FALSE)
         {
             $dato = new prueba();
             $dato->nombre = $data[0];

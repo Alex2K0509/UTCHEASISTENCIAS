@@ -13,12 +13,13 @@
             <div class="form-group">
                 <label for="materia">Motivo de la falta:</label>
                 <select class="custom-select" id="motivo"  name="motivo" required>
+                    <option>Seleccione uno</option>
                    <option>Salud</option>
                     <option>Motivo Personal</option>
                     <option>Motivo academico</option>
 
                 </select>
-                
+
             </div>
             <div class="form-group">
                 <label for="justificante">Justificante:</label>
@@ -56,7 +57,7 @@
             </div>
 
             <button type="submit" class="btn btn-success btn-sm" >Enviar</button>
-            <button type="submit" class="btn btn-info btn-sm" >Generar PDF</button>
+            <input type="submit"   class="btn-outline-success" value="Generar PDF" style="float:right;">
 
             </div>
         </div>
