@@ -4,8 +4,8 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>FingerPrintAsystemSistem</title>
+        <link rel="icon" type="image/png" href="{{ asset('/assets/images3/green-school.png')}}" />
+        <title>FingerPrint Assistance System</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -63,7 +63,7 @@
                 margin-bottom: 30px;
             }
         </style>
-      
+
     </head>
     <body>
 
