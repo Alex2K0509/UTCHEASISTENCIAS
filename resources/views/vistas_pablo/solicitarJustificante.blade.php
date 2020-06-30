@@ -5,6 +5,7 @@
         @if (Session::has('message'))
 
             <div class="alert alert-success" >{{ Session::get('message') }}</div>
+
         @endif
         @csrf
         <title>Área de alumnos</title>
@@ -12,14 +13,7 @@
             <h2>Solicitar Justificación</h2>
             <div class="form-group">
                 <label for="materia">Motivo de la falta:</label>
-                <select class="custom-select" id="motivo"  name="motivo" required>
-                    <option>Seleccione uno</option>
-                   <option>Salud</option>
-                    <option>Motivo Personal</option>
-                    <option>Motivo academico</option>
-
-                </select>
-
+                <textarea class="form-control" id="motivo"  name="motivo" required></textarea>
             </div>
             <div class="form-group">
                 <label for="justificante">Justificante:</label>
@@ -32,9 +26,9 @@
             </div>
             <div class="form-group">
                 <label for="director">Enviado por:</label>
-                <input type="text" class="form-control" id="alumno" value="{{ $email}}" name="email" disabled>
+                <input type="text" class="form-control"name="correo"  value="{{ $email}}"  readonly>
             </div>
-                <input type="text" name="alumno" value="{{$nombre.' '.$apepat.' '.$apemat}}" hidden>
+            <input type="text" name="alumno" value="{{$nombre.' '.$apepat.' '.$apemat}}" hidden>
 
 
             <div class="form-group">
@@ -45,21 +39,20 @@
 
                         @foreach ($generica->Materias2 as $Materia)
 
-                           @foreach($Materia->carreras as $carrera)
+                            @foreach($Materia->carreras as $carrera)
 
                                 <input type="text" class="form-control" value="{{$carrera->email}} " name="director" readonly >
 
 
+                            @endforeach
                         @endforeach
-@endforeach
                     @endforeach
                 @endif
             </div>
 
-            <button type="submit" class="btn btn-success btn-sm" >Enviar</button>
-            <input type="submit"   class="btn-outline-success" value="Generar PDF" style="float:right;">
+            <button type="submit" class="btn btn-info btn-sm" >Enviar</button>
 
-            </div>
+        </div>
         </div>
     </form>
 
