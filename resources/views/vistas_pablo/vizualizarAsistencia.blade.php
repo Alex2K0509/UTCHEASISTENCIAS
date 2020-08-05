@@ -13,12 +13,12 @@
             <div class="form-group">
                 <label for="materia">Materia:</label>
                 <select id="materia" class="custom-select" name="materia">
-                    {{---el if es para ver si hay una relacion entree usuarios y generica, puede ser coun-exist---}}
-                 
+
+
                       @foreach ($asignaturas as $asig)
                 <option value="{{$asig->Id_Asignatura}}">{{$asig->nombre_materia}} </option>
                       @endforeach
-               
+
 
                 </select>
             </div>
@@ -49,6 +49,7 @@
 
             <input type="submit" class="btn-outline-success" style="float: right" value="Solicitar asistencias">
 
+        </div>
         </div>
     </form>
 

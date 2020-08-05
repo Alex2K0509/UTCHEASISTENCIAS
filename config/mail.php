@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'pruebalaravel2020@gmail.com', 'name' => 'App Name'],
+    'from' => ['address' => 'fingerprintassistancesystem@gmail.com', 'name' => 'App Name'],
 
 
     /*

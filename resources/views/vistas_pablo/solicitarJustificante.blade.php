@@ -2,9 +2,10 @@
 @extends('layouts.layoutsTablas')
 @section('title','Area de Alumnos')
 @section('content')
+    {{--Formulario para solicitar justificacion--}}
     <form method="POST" action={{route('contact')}}>
         @if (Session::has('message'))
-
+        {{--Alert para confirmar el envio del correo--}}
             <div class="alert alert-success" >{{ Session::get('message') }}</div>
 
         @endif
@@ -29,19 +30,21 @@
                 <label for="director">Enviado por:</label>
                 <input type="text" class="form-control"name="correo"  value="{{ $email}}"  readonly>
             </div>
-                <input type="text" name="alumno" value="{{$nombre.' '.$apepat.' '.$apemat}}" hidden>
+            {{-- Se usa la informacion del alumno que redacto el correo --}}
+            <input type="text" name="alumno" value="{{$nombre.' '.$apepat.' '.$apemat}}" hidden>
 
 
             <div class="form-group">
                 <label for="director1">Director de carrera:</label>
+                {{---el if es para ver si hay una relacion entre usuarios y generica, puede ser coun-exist---}}
                 @if ($user->genericas()->count() > 0)
 
                     @foreach ($user->genericas as $generica)
 
                         @foreach ($generica->Materias2 as $Materia)
 
-                           @foreach($Materia->carreras as $carrera)
-
+                            @foreach($Materia->carreras as $carrera)
+                    {{--Los foreachs anteriores son para relacionar al usuario con una carrera--}}
                                 <input type="text" class="form-control" value="{{$carrera->email}} " name="director" readonly >
 
 

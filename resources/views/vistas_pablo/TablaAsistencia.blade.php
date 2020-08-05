@@ -9,16 +9,25 @@
           <h3 class="card-title" style="float:top">Concentrado de asistencias</h3>
 
         </div>
-<div class="card-header">
-          <h3 class="card-title" style="text-align: center">Carrera: TSU-TECNOLOGIAS DE LA INFORMACION</h3>
+        <div class="card-header">
+            {{---el if es para ver si hay una relacion entre usuarios y generica, puede ser coun-exist---}}
+            @if ($user->genericas()->count() > 0)
+
+                @foreach ($user->genericas as $generica)
+
+                    @foreach ($generica->Materias2 as $Materia)
+
+                        @foreach($Materia->carreras as $carrera)
+                            <h3 class="card-title" style="text-align: center">Carrera: {{$carrera->carrera}}</h3>
 
         </div>
         <div class="card-header">
-          <h3 class="card-title" style="text-align: center">Grupo:
-            @foreach ($asignaturas as $dato)
-           {{$dato->Id_grupo}}
-          @endforeach
-          </h3>
+            <h3 class="card-title" style="text-align: center">Grupo:
+
+                @foreach ($asignaturas as $dato)
+                    {{$dato->Id_grupo}}
+                @endforeach
+            </h3>
 
         </div>
         <div class="card-header">
