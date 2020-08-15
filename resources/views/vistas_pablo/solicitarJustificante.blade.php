@@ -5,11 +5,11 @@
     {{--Formulario para solicitar justificacion--}}
     <form method="POST" action={{route('contact')}}>
         @if (Session::has('message'))
-        {{--Alert para confirmar el envio del correo--}}
+            {{--Alert para confirmar el envio del correo electronico--}}
             <div class="alert alert-success" >{{ Session::get('message') }}</div>
 
         @endif
-        @csrf
+        @csrf{{--Esta etiqueta nos ayuda a proteger de los ataques CSRF--}}
         <title>Área de alumnos</title>
         <div class="container">
             <h2>Solicitar Justificación</h2>
@@ -36,7 +36,7 @@
 
             <div class="form-group">
                 <label for="director1">Director de carrera:</label>
-                {{---el if es para ver si hay una relacion entre usuarios y generica, puede ser coun-exist---}}
+                {{---El if  es para ver si hay una relacion entre la coleccion usuarios y la coleccion generica, puede ser un count exist --}}
                 @if ($user->genericas()->count() > 0)
 
                     @foreach ($user->genericas as $generica)
@@ -44,7 +44,8 @@
                         @foreach ($generica->Materias2 as $Materia)
 
                             @foreach($Materia->carreras as $carrera)
-                    {{--Los foreachs anteriores son para relacionar al usuario con una carrera--}}
+                                {{--Los foreachs anteriores son para relacionar el usuario con una carrera para obtener el correo del director--}}
+
                                 <input type="text" class="form-control" value="{{$carrera->email}} " name="director" readonly >
 
 
